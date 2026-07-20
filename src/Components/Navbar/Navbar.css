@@ -1,0 +1,343 @@
+/*=========================
+ GOOGLE FONT
+=========================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*=========================
+NAVBAR
+=========================*/
+
+.navbar-area {
+  position: fixed;
+
+  top: 20px;
+
+  left: 0;
+
+  width: 100%;
+
+  z-index: 9999;
+
+  transition: 0.4s;
+  /* border: 2px solid black; */
+}
+
+.navbar-area.sticky {
+  top: 0;
+
+  background: #fff;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+
+  padding: 15px 0;
+
+  /* border: none; */
+  /* border-bottom: 2px solid black; */
+}
+
+.navbar-main {
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 18px;
+
+  padding: 18px 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  transition: 0.4s;
+  margin: 0;
+}
+/*=========================
+LOGO
+=========================*/
+
+.logo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 4rem;
+
+  font-weight: 700;
+
+  color: #202124;
+}
+
+.logo img {
+  width: 3rem;
+  border-radius: 0.5rem;
+}
+
+/*=========================
+MENU
+=========================*/
+
+.nav-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 38px;
+
+  margin: 0;
+}
+
+.nav-links a {
+  color: #1f2937;
+
+  font-size: 17px;
+
+  font-weight: 500;
+
+  position: relative;
+
+  transition: 0.3s;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -8px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #6d5dfc;
+
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #6d5dfc;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+/*=========================
+BUTTON
+=========================*/
+
+.contact-btn {
+  padding: 14px 35px;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+
+  color: #222;
+
+  border: 2px solid #222;
+
+  transition: 0.4s;
+}
+
+.contact-btn:hover {
+  background: #6d5dfc;
+
+  color: #fff;
+
+  border-color: #6d5dfc;
+}
+
+/*=========================
+DROPDOWN
+=========================*/
+
+.dropdown {
+  position: relative;
+
+  cursor: pointer;
+}
+
+.dropdown span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  position: absolute;
+
+  top: 55px;
+
+  left: 0;
+
+  width: 250px;
+
+  background: #fff;
+
+  border-radius: 15px;
+
+  padding: 15px 0;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(20px);
+
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+
+  padding: 12px 25px;
+
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f7ff;
+
+  padding-left: 35px;
+
+  color: #6d5dfc;
+}
+
+/*=========================
+MOBILE
+=========================*/
+
+.mobile-btn {
+  display: none;
+
+  background: none;
+
+  border: none;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .mobile-btn {
+    display: block;
+
+    z-index: 9999;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .nav-links {
+    position: fixed;
+
+    right: -110%;
+
+    top: 0;
+
+    width: 320px;
+
+    height: 80vh;
+
+    background: #fff;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    transition: 0.4s;
+
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .navbar-main {
+    padding: 18px 22px;
+  }
+
+  .logo span {
+    font-size: 26px;
+  }
+
+  .dropdown-menu {
+    position: relative;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: none;
+
+    box-shadow: none;
+
+    display: none;
+
+    width: 100%;
+
+    margin-top: 15px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo img {
+    width: 45px;
+  }
+
+  .logo span {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+}

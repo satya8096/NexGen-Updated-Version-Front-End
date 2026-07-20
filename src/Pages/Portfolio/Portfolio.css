@@ -1,0 +1,4609 @@
+/*==================================================
+PORTFOLIO HERO
+==================================================*/
+
+.nxPortfolioHero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 55%, #ffffff 100%);
+
+  padding: 8rem 0 6rem;
+}
+
+/*==================================================
+BACKGROUND GRID
+==================================================*/
+
+.nxPortfolioHero__grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(109, 91, 255, 0.05) 0.0625rem, transparent 0.0625rem),
+    linear-gradient(
+      90deg,
+      rgba(109, 91, 255, 0.05) 0.0625rem,
+      transparent 0.0625rem
+    );
+
+  background-size: 3.75rem 3.75rem;
+
+  animation: nxPortfolioGridMove 18s linear infinite;
+
+  z-index: 1;
+}
+
+@keyframes nxPortfolioGridMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(3.75rem);
+  }
+}
+
+/*==================================================
+BLUR BACKGROUND
+==================================================*/
+
+.nxPortfolioHero__blur {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(5rem);
+
+  opacity: 0.35;
+}
+
+.nxPortfolioHero__blurOne {
+  width: 26rem;
+
+  height: 26rem;
+
+  background: #6d5bff;
+
+  top: -8rem;
+
+  left: -8rem;
+
+  animation: nxPortfolioBlurOne 8s ease-in-out infinite;
+}
+
+.nxPortfolioHero__blurTwo {
+  width: 22rem;
+
+  height: 22rem;
+
+  background: #00c2ff;
+
+  right: -6rem;
+
+  bottom: -5rem;
+
+  animation: nxPortfolioBlurTwo 10s ease-in-out infinite;
+}
+
+@keyframes nxPortfolioBlurOne {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translate(2rem, 1rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes nxPortfolioBlurTwo {
+  0% {
+    transform: translate(0);
+  }
+
+  50% {
+    transform: translate(-2rem, -1rem);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+/*==================================================
+FLOATING SHAPES
+==================================================*/
+
+.nxPortfolioHero__circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.12),
+    rgba(0, 194, 255, 0.15)
+  );
+
+  z-index: 1;
+}
+
+.circleOne {
+  width: 5rem;
+
+  height: 5rem;
+
+  left: 8%;
+
+  top: 18%;
+
+  animation: nxPortfolioFloat 6s ease-in-out infinite;
+}
+
+.circleTwo {
+  width: 8rem;
+
+  height: 8rem;
+
+  right: 12%;
+
+  top: 20%;
+
+  animation: nxPortfolioFloat 9s ease-in-out infinite;
+}
+
+.circleThree {
+  width: 4rem;
+
+  height: 4rem;
+
+  right: 28%;
+
+  bottom: 14%;
+
+  animation: nxPortfolioFloat 7s ease-in-out infinite;
+}
+
+@keyframes nxPortfolioFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1.5rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.nxPortfolioHero__content {
+  position: relative;
+
+  z-index: 5;
+}
+
+.nxPortfolioHero__badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  background: #eef2ff;
+
+  color: #6d5bff;
+
+  padding: 0.8rem 1.6rem;
+
+  border-radius: 6rem;
+
+  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.286);
+  margin-bottom: 2rem;
+}
+
+.nxPortfolioHero__badge span {
+  width: 0.6rem;
+
+  height: 0.6rem;
+
+  border-radius: 50%;
+
+  background: #00c2ff;
+  animation: nxPortfolioBadgePulse 2s infinite;
+}
+
+@keyframes nxPortfolioBadgePulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nxPortfolioHero__content h2 {
+  font-size: 2rem;
+
+  line-height: 1.8;
+
+  font-weight: 900;
+
+  color: #111827;
+
+  margin-bottom: 2rem;
+}
+
+.nxPortfolioHero__content h2 span {
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  background-clip: text;
+  font-size: 1.2rem;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.nxPortfolioHero__content p {
+  font-size: 1.125rem;
+
+  color: #64748b;
+
+  line-height: 2rem;
+
+  max-width: 38rem;
+
+  margin-bottom: 2.5rem;
+}
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.nxPortfolioHero__buttons {
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 3rem;
+}
+
+.nxPortfolioHero__primaryBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  padding: 1rem 2rem;
+
+  border-radius: 4rem;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioHero__primaryBtn:hover {
+  transform: translateY(-0.3rem);
+
+  color: #fff;
+}
+
+.nxPortfolioHero__secondaryBtn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 1rem 2rem;
+
+  border: 0.1rem solid #dbe4f2;
+
+  border-radius: 4rem;
+
+  text-decoration: none;
+
+  color: #111827;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+
+  background: #fff;
+}
+
+.nxPortfolioHero__secondaryBtn:hover {
+  background: #111827;
+
+  color: #fff;
+}
+
+/*==================================================
+STATISTICS
+==================================================*/
+
+.nxPortfolioHero__stats {
+  display: flex;
+
+  gap: 2.5rem;
+
+  flex-wrap: wrap;
+}
+
+.nxPortfolioHero__stats div {
+  position: relative;
+}
+
+.nxPortfolioHero__stats div::after {
+  content: "";
+
+  position: absolute;
+
+  right: -1.25rem;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 0.08rem;
+
+  height: 2.5rem;
+
+  background: #e2e8f0;
+}
+
+.nxPortfolioHero__stats div:last-child::after {
+  display: none;
+}
+
+.nxPortfolioHero__stats h2 {
+  font-size: 2.4rem;
+
+  font-weight: 900;
+
+  color: #111827;
+
+  margin-bottom: 0.4rem;
+}
+
+.nxPortfolioHero__stats p {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  color: #64748b;
+}
+
+/*==================================================
+RIGHT VISUAL
+==================================================*/
+
+.nxPortfolioHero__visual {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  min-height: 42rem;
+}
+
+/*==================================================
+BROWSER WINDOW
+==================================================*/
+
+.nxPortfolioHero__browser {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 38rem;
+
+  background: #ffffff;
+
+  border-radius: 1.8rem;
+
+  overflow: hidden;
+
+  border: 0.08rem solid #e7edf6;
+
+  box-shadow: 0 2rem 4rem rgba(15, 23, 42, 0.08);
+
+  animation: nxPortfolioBrowserFloat 6s ease-in-out infinite;
+}
+
+@keyframes nxPortfolioBrowserFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nxPortfolioHero__browserTop {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 1rem 1.5rem;
+
+  background: #f8fafc;
+
+  border-bottom: 0.08rem solid #edf2f7;
+}
+
+.browserDots {
+  display: flex;
+
+  gap: 0.5rem;
+}
+
+.browserDots span {
+  width: 0.75rem;
+
+  height: 0.75rem;
+
+  border-radius: 50%;
+}
+
+.browserDots span:nth-child(1) {
+  background: #ff5f57;
+}
+
+.browserDots span:nth-child(2) {
+  background: #febc2e;
+}
+
+.browserDots span:nth-child(3) {
+  background: #28c840;
+}
+
+.browserAddress {
+  font-size: 0.82rem;
+
+  color: #64748b;
+
+  background: #ffffff;
+
+  padding: 0.45rem 1rem;
+
+  border-radius: 2rem;
+  margin-bottom: 3rem;
+  border: 0.08rem solid #edf2f7;
+}
+
+.nxPortfolioHero__browserBody {
+  position: relative;
+
+  overflow: hidden;
+}
+
+.nxPortfolioHero__browserBody img {
+  width: 100%;
+
+  display: block;
+
+  transition: 0.6s;
+}
+
+.nxPortfolioHero__browser:hover img {
+  transform: scale(1.05);
+}
+
+/*==================================================
+FLOATING GLASS CARDS
+==================================================*/
+
+.nxPortfolioHero__floatingCard {
+  position: absolute;
+
+  background: rgba(255, 255, 255, 0.82);
+
+  backdrop-filter: blur(1rem);
+
+  border: 0.08rem solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 1.4rem;
+
+  padding: 1.2rem;
+
+  width: 13rem;
+
+  box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.08);
+
+  animation: nxPortfolioCardFloat 5s ease-in-out infinite;
+}
+
+@keyframes nxPortfolioCardFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.8rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floatingOne {
+  left: -2rem;
+
+  top: 5rem;
+}
+
+.floatingTwo {
+  right: -2rem;
+
+  top: 12rem;
+
+  animation-delay: 1.5s;
+}
+
+.floatingThree {
+  left: 2rem;
+
+  bottom: 2rem;
+
+  animation-delay: 3s;
+}
+
+.floatingIcon {
+  width: 3.4rem;
+
+  height: 3.4rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 1rem;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  font-size: 1.3rem;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioHero__floatingCard h4 {
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 0.4rem;
+}
+
+.nxPortfolioHero__floatingCard p {
+  margin: 0;
+
+  font-size: 0.9rem;
+
+  color: #64748b;
+}
+
+/*==================================================
+ROTATING STAMP
+==================================================*/
+/*====================================
+ROTATING STAMP
+====================================*/
+
+.nxPortfolioHero__stamp {
+  position: absolute;
+  right: -2rem;
+  bottom: -1rem;
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stampCenter i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  font-size: 1.9rem;
+  color: #fff;
+
+  line-height: 1;
+
+  transform: translateY(-1px);
+}
+.stampCenter img {
+  width: 58%;
+  height: 58%;
+  object-fit: contain;
+  display: block;
+  border-radius: 100%;
+}
+/*==================================================
+SCROLL INDICATOR
+==================================================*/
+
+.nxPortfolioHero__scroll {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 2rem;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  z-index: 10;
+}
+
+.nxPortfolioHero__scroll span {
+  font-size: 0.8rem;
+
+  color: #64748b;
+
+  letter-spacing: 0.18rem;
+
+  text-transform: uppercase;
+}
+
+.scrollMouse {
+  width: 1.8rem;
+
+  height: 3rem;
+
+  border: 0.12rem solid #6d5bff;
+
+  border-radius: 2rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  padding-top: 0.45rem;
+}
+
+.scrollWheel {
+  width: 0.28rem;
+
+  height: 0.7rem;
+
+  border-radius: 2rem;
+
+  background: #6d5bff;
+
+  animation: nxPortfolioWheel 1.5s infinite;
+}
+
+@keyframes nxPortfolioWheel {
+  0% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: translateY(1rem);
+  }
+}
+
+/*==================================================
+PORTFOLIO HERO
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 87.5rem) {
+  .nxPortfolioHero {
+    padding: 7rem 0 5rem;
+  }
+
+  .nxPortfolioHero__content h1 {
+    font-size: 4rem;
+  }
+
+  .nxPortfolioHero__browser {
+    max-width: 34rem;
+  }
+
+  .floatingOne {
+    left: -1rem;
+  }
+
+  .floatingTwo {
+    right: -1rem;
+  }
+}
+
+@media (max-width: 75rem) {
+  .nxPortfolioHero {
+    min-height: auto;
+
+    padding: 7rem 0 6rem;
+  }
+
+  .nxPortfolioHero .row {
+    row-gap: 4rem;
+  }
+
+  .nxPortfolioHero__content {
+    text-align: center;
+  }
+
+  .nxPortfolioHero__content p {
+    margin-left: auto;
+
+    margin-right: auto;
+  }
+
+  .nxPortfolioHero__buttons {
+    justify-content: center;
+  }
+
+  .nxPortfolioHero__stats {
+    justify-content: center;
+  }
+
+  .nxPortfolioHero__visual {
+    min-height: 36rem;
+  }
+
+  .nxPortfolioHero__browser {
+    max-width: 36rem;
+  }
+
+  .floatingOne {
+    top: 2rem;
+
+    left: 0;
+  }
+
+  .floatingTwo {
+    right: 0;
+
+    top: 10rem;
+  }
+
+  .floatingThree {
+    left: 1rem;
+
+    bottom: 1rem;
+  }
+
+  .nxPortfolioHero__stamp {
+    right: 0;
+
+    bottom: -2rem;
+  }
+}
+
+@media (max-width: 62rem) {
+  .nxPortfolioHero {
+    padding: 6rem 0 5rem;
+  }
+
+  .nxPortfolioHero__content h1 {
+    font-size: 3.4rem;
+  }
+
+  .nxPortfolioHero__content p {
+    font-size: 1.05rem;
+  }
+
+  .nxPortfolioHero__stats {
+    gap: 1.5rem;
+  }
+
+  .nxPortfolioHero__stats h2 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioHero__browser {
+    max-width: 32rem;
+  }
+
+  .nxPortfolioHero__floatingCard {
+    width: 11rem;
+
+    padding: 1rem;
+  }
+
+  .floatingIcon {
+    width: 3rem;
+
+    height: 3rem;
+
+    font-size: 1.1rem;
+  }
+
+  .nxPortfolioHero__floatingCard h4 {
+    font-size: 1rem;
+  }
+
+  .nxPortfolioHero__floatingCard p {
+    font-size: 0.82rem;
+  }
+
+  .nxPortfolioHero__stamp {
+    width: 10rem;
+
+    height: 10rem;
+  }
+
+  .stampCenter {
+    width: 4.2rem;
+
+    height: 4.2rem;
+
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioHero {
+    padding: 6rem 0 4rem;
+  }
+
+  .nxPortfolioHero__content h1 {
+    font-size: 2.8rem;
+  }
+
+  .nxPortfolioHero__content p {
+    font-size: 1rem;
+
+    line-height: 1.8rem;
+  }
+
+  .nxPortfolioHero__buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .nxPortfolioHero__primaryBtn,
+  .nxPortfolioHero__secondaryBtn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .nxPortfolioHero__stats {
+    gap: 1.25rem;
+  }
+
+  .nxPortfolioHero__stats div::after {
+    display: none;
+  }
+
+  .nxPortfolioHero__visual {
+    display: none;
+    min-height: 28rem;
+  }
+
+  .nxPortfolioHero__browser {
+    max-width: 100%;
+  }
+
+  .nxPortfolioHero__floatingCard {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: 1rem;
+
+    left: auto;
+
+    right: auto;
+
+    top: auto;
+
+    bottom: auto;
+
+    animation: none;
+  }
+
+  .nxPortfolioHero__stamp {
+    display: none;
+  }
+
+  .nxPortfolioHero__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioHero {
+    padding: 5rem 0 3rem;
+  }
+
+  .nxPortfolioHero__content h1 {
+    font-size: 2.2rem;
+  }
+
+  .nxPortfolioHero__badge {
+    font-size: 0.85rem;
+  }
+
+  .nxPortfolioHero__content p {
+    font-size: 0.95rem;
+  }
+
+  .nxPortfolioHero__browserTop {
+    padding: 0.8rem 1rem;
+  }
+
+  .browserAddress {
+    display: none;
+  }
+
+  .browserDots span {
+    width: 0.6rem;
+
+    height: 0.6rem;
+  }
+
+  .floatingIcon {
+    width: 2.8rem;
+
+    height: 2.8rem;
+  }
+}
+
+/*==================================================
+HOVER EFFECTS
+==================================================*/
+
+.nxPortfolioHero__browser {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.nxPortfolioHero__browser:hover {
+  transform: translateY(-0.6rem);
+
+  box-shadow: 0 2.5rem 5rem rgba(109, 91, 255, 0.18);
+}
+
+.nxPortfolioHero__floatingCard {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nxPortfolioHero__floatingCard:hover {
+  transform: translateY(-0.5rem);
+
+  box-shadow: 0 2rem 3rem rgba(15, 23, 42, 0.12);
+}
+
+.nxPortfolioHero__primaryBtn {
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.25);
+}
+
+.nxPortfolioHero__primaryBtn:hover {
+  box-shadow: 0 1.5rem 3rem rgba(109, 91, 255, 0.35);
+}
+
+.nxPortfolioHero__secondaryBtn:hover {
+  border-color: #111827;
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioHero__browser,
+.nxPortfolioHero__floatingCard,
+.nxPortfolioHero__circle,
+.nxPortfolioHero__blur {
+  will-change: transform;
+}
+
+.nxPortfolioHero img {
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+}
+
+/* ======================================================================== */
+
+/*==================================================
+FEATURED PROJECT SPOTLIGHT
+==================================================*/
+
+.nxPortfolioSpotlight {
+  position: relative;
+
+  padding: 2rem 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+/*==============================
+BACKGROUND
+==============================*/
+
+.nxPortfolioSpotlight::before {
+  content: "";
+
+  position: absolute;
+
+  width: 32rem;
+
+  height: 32rem;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.08),
+    rgba(0, 194, 255, 0.08)
+  );
+
+  top: -16rem;
+
+  right: -10rem;
+
+  filter: blur(4rem);
+}
+
+.nxPortfolioSpotlight::after {
+  content: "";
+
+  position: absolute;
+
+  width: 24rem;
+
+  height: 24rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.05);
+
+  left: -8rem;
+
+  bottom: -10rem;
+
+  filter: blur(4rem);
+}
+
+/*==============================
+IMAGE AREA
+==============================*/
+
+.nxPortfolioSpotlight__preview {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 2rem;
+
+  overflow: hidden;
+
+  border: 0.08rem solid #e5edf8;
+
+  box-shadow: 0 2rem 5rem rgba(15, 23, 42, 0.08);
+
+  transition: 0.45s;
+}
+
+.nxPortfolioSpotlight__preview:hover {
+  transform: translateY(-0.6rem);
+
+  box-shadow: 0 2.5rem 6rem rgba(109, 91, 255, 0.15);
+}
+
+.nxPortfolioSpotlight__preview img {
+  width: 100%;
+
+  display: block;
+
+  transition: 0.8s;
+}
+
+.nxPortfolioSpotlight__preview:hover img {
+  transform: scale(1.05);
+}
+
+/*==============================
+BADGES
+==============================*/
+
+.nxPortfolioSpotlight__badge {
+  position: absolute;
+
+  top: 1.5rem;
+
+  left: 1.5rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 0.9rem 1.5rem;
+
+  border-radius: 4rem;
+
+  background: #ffffff;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.08);
+}
+
+.nxPortfolioSpotlight__badge i {
+  color: #6d5bff;
+}
+
+.nxPortfolioSpotlight__floating {
+  position: absolute;
+
+  right: 1.5rem;
+
+  bottom: 1.5rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 1rem 1.6rem;
+
+  border-radius: 4rem;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(1rem);
+
+  color: #111827;
+
+  font-weight: 700;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.08);
+
+  animation: nxPortfolioSpotFloat 4s ease-in-out infinite;
+}
+
+.nxPortfolioSpotlight__floating i {
+  color: #22c55e;
+}
+
+@keyframes nxPortfolioSpotFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.6rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*==============================
+CONTENT
+==============================*/
+
+.nxPortfolioSpotlight__content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.nxPortfolioSpotlight__content h3 {
+  font-size: 2rem;
+
+  font-weight: 900;
+
+  color: #111827;
+
+  margin-bottom: 1.5rem;
+}
+
+.nxPortfolioSpotlight__content p {
+  color: #64748b;
+
+  line-height: 2rem;
+
+  margin-bottom: 2rem;
+}
+
+/*==============================
+TECH STACK
+==============================*/
+
+.nxPortfolioSpotlight__tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.nxPortfolioSpotlight__tech span {
+  padding: 0.8rem 1.3rem;
+
+  border-radius: 3rem;
+
+  background: #f8fafc;
+
+  border: 0.08rem solid #e7edf6;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioSpotlight__tech span:hover {
+  background: #6d5bff;
+
+  color: #ffffff;
+}
+
+/*==============================
+STATS
+==============================*/
+
+.nxPortfolioSpotlight__stats {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.5rem;
+
+  margin-bottom: 2.5rem;
+}
+
+.nxPortfolioSpotlight__stats div {
+  background: #ffffff;
+
+  border: 0.08rem solid #e7edf6;
+
+  border-radius: 1.4rem;
+
+  padding: 1.6rem;
+
+  text-align: center;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioSpotlight__stats div:hover {
+  transform: translateY(-0.4rem);
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.08);
+}
+
+.nxPortfolioSpotlight__stats h4 {
+  font-size: 2rem;
+
+  font-weight: 900;
+
+  color: #111827;
+
+  margin-bottom: 0.5rem;
+}
+
+.nxPortfolioSpotlight__stats small {
+  color: #64748b;
+
+  font-size: 0.95rem;
+}
+
+/*==============================
+BUTTONS
+==============================*/
+
+.nxPortfolioSpotlight__buttons {
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+}
+
+.nxPortfolioSpotlight__live {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 1rem 2rem;
+
+  border-radius: 4rem;
+
+  text-decoration: none;
+
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioSpotlight__live:hover {
+  color: #ffffff;
+
+  transform: translateY(-0.3rem);
+}
+
+.nxPortfolioSpotlight__case {
+  border: none;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  padding: 1rem 2rem;
+
+  border-radius: 4rem;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioSpotlight__case:hover {
+  transform: translateY(-0.3rem);
+}
+
+/*==================================================
+FEATURED PROJECT
+DECORATIVE ELEMENTS
+==================================================*/
+
+.nxPortfolioSpotlight__preview::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -0.08rem;
+
+  border-radius: 2rem;
+
+  padding: 0.08rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.45),
+    rgba(0, 194, 255, 0.45)
+  );
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioSpotlight__preview:hover::before {
+  opacity: 1;
+}
+
+.nxPortfolioSpotlight__preview::after {
+  content: "";
+
+  position: absolute;
+
+  width: 10rem;
+
+  height: 10rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.18);
+
+  filter: blur(3rem);
+
+  right: -3rem;
+
+  top: -3rem;
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioSpotlight__preview:hover::after {
+  opacity: 1;
+}
+
+/*==================================================
+BUTTON MICRO INTERACTIONS
+==================================================*/
+
+.nxPortfolioSpotlight__live i {
+  transition: 0.35s;
+}
+
+.nxPortfolioSpotlight__live:hover i {
+  transform: translate(0.3rem, -0.3rem);
+}
+
+.nxPortfolioSpotlight__case {
+  cursor: pointer;
+}
+
+.nxPortfolioSpotlight__case:hover {
+  background: #1f2937;
+}
+
+/*==================================================
+TECH PILLS
+==================================================*/
+
+.nxPortfolioSpotlight__tech span {
+  cursor: default;
+}
+
+.nxPortfolioSpotlight__tech span:hover {
+  transform: translateY(-0.2rem);
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 75rem) {
+  .nxPortfolioSpotlight {
+    padding: 7rem 0;
+  }
+
+  .nxPortfolioSpotlight__heading {
+    margin-bottom: 4rem;
+  }
+
+  .nxPortfolioSpotlight__heading h2 {
+    font-size: 2.8rem;
+  }
+
+  .nxPortfolioSpotlight__content {
+    text-align: center;
+  }
+
+  .nxPortfolioSpotlight__tech {
+    justify-content: center;
+  }
+
+  .nxPortfolioSpotlight__buttons {
+    justify-content: center;
+  }
+  .nxPortfolioHero {
+    padding: 8rem 0rem;
+  }
+}
+
+@media (max-width: 62rem) {
+  .nxPortfolioSpotlight {
+    padding: 6rem 0;
+  }
+
+  .nxPortfolioSpotlight__heading h2 {
+    font-size: 2.4rem;
+  }
+
+  .nxPortfolioSpotlight__content h3 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioSpotlight__stats {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioSpotlight {
+    padding: 5rem 0;
+  }
+
+  .nxPortfolioSpotlight__heading {
+    margin-bottom: 3rem;
+  }
+
+  .nxPortfolioSpotlight__heading h2 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioSpotlight__heading p {
+    font-size: 1rem;
+  }
+
+  .nxPortfolioSpotlight__badge {
+    left: 1rem;
+
+    top: 1rem;
+
+    padding: 0.8rem 1.2rem;
+
+    font-size: 0.85rem;
+  }
+
+  .nxPortfolioSpotlight__floating {
+    display: none;
+  }
+
+  .nxPortfolioSpotlight__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .nxPortfolioSpotlight__buttons {
+    flex-direction: column;
+  }
+
+  .nxPortfolioSpotlight__live,
+  .nxPortfolioSpotlight__case {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioSpotlight__heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .nxPortfolioSpotlight__content h3 {
+    font-size: 1.7rem;
+  }
+
+  .nxPortfolioSpotlight__preview {
+    border-radius: 1.5rem;
+  }
+
+  .nxPortfolioSpotlight__badge {
+    position: relative;
+
+    left: auto;
+
+    top: auto;
+
+    margin: 1rem;
+
+    width: max-content;
+  }
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioSpotlight__preview,
+.nxPortfolioSpotlight__stats div,
+.nxPortfolioSpotlight__live,
+.nxPortfolioSpotlight__case {
+  will-change: transform;
+}
+
+.nxPortfolioSpotlight img {
+  max-width: 100%;
+
+  height: auto;
+
+  display: block;
+}
+
+/* ========================================================================= */
+/*==================================================
+LIVE PROJECTS
+==================================================*/
+
+.nxPortfolioLive {
+  position: relative;
+
+  padding: 2rem 0;
+
+  background: #f8fbff;
+
+  overflow: hidden;
+}
+
+.nxPortfolioLive::before {
+  content: "";
+
+  position: absolute;
+
+  width: 32rem;
+
+  height: 32rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.05);
+
+  filter: blur(5rem);
+
+  top: -12rem;
+
+  right: -8rem;
+}
+
+.nxPortfolioLive::after {
+  content: "";
+
+  position: absolute;
+
+  width: 24rem;
+
+  height: 24rem;
+
+  border-radius: 50%;
+
+  background: rgba(0, 194, 255, 0.05);
+
+  filter: blur(5rem);
+
+  bottom: -10rem;
+
+  left: -8rem;
+}
+
+/*==================================================
+TOP BAR
+==================================================*/
+
+.nxPortfolioLive__topBar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  margin-bottom: 2.5rem;
+
+  flex-wrap: wrap;
+}
+
+/*==================================================
+SEARCH
+==================================================*/
+
+.nxPortfolioLive__search {
+  position: relative;
+
+  flex: 1;
+
+  min-width: 18rem;
+}
+
+.nxPortfolioLive__search i {
+  position: absolute;
+
+  left: 1.4rem;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #94a3b8;
+}
+
+.nxPortfolioLive__search input {
+  width: 100%;
+
+  height: 3.8rem;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 4rem;
+
+  background: #ffffff;
+
+  padding: 0 1.5rem 0 3.6rem;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.06);
+
+  border: 0.08rem solid #e5edf8;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__search input:focus {
+  border-color: #6d5bff;
+
+  box-shadow: 0 0 0 0.25rem rgba(109, 91, 255, 0.12);
+}
+
+/*==================================================
+FILTERS
+==================================================*/
+
+.nxPortfolioLive__filters {
+  display: flex;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  justify-content: flex-end;
+}
+
+.nxPortfolioLive__filters button {
+  border: none;
+
+  background: #ffffff;
+
+  border: 0.08rem solid #e5edf8;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 4rem;
+
+  font-weight: 600;
+
+  color: #475569;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__filters button:hover {
+  transform: translateY(-0.2rem);
+
+  background: #6d5bff;
+
+  color: #ffffff;
+}
+
+.nxPortfolioLive__filters .activeFilter {
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  border-color: transparent;
+}
+
+/*==================================================
+COUNT
+==================================================*/
+
+.nxPortfolioLive__count {
+  margin-bottom: 2rem;
+
+  color: #64748b;
+
+  font-size: 1rem;
+}
+
+.nxPortfolioLive__count strong {
+  color: #111827;
+
+  margin: 0 0.4rem;
+}
+
+/*==================================================
+LOADING
+==================================================*/
+
+.nxPortfolioLive__loading {
+  background: #ffffff;
+
+  border-radius: 1.5rem;
+
+  padding: 3rem;
+
+  text-align: center;
+
+  font-weight: 700;
+
+  color: #6d5bff;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.06);
+}
+
+/*==================================================
+ERROR
+==================================================*/
+
+.nxPortfolioLive__error {
+  background: #fee2e2;
+
+  color: #dc2626;
+
+  border-radius: 1rem;
+
+  padding: 1.2rem;
+
+  margin-bottom: 2rem;
+}
+
+/* ================================================================== */
+/*==================================================
+PROJECT GRID
+==================================================*/
+
+.nxPortfolioLive .row {
+  position: relative;
+
+  z-index: 2;
+}
+
+.nxPortfolioLive__card {
+  position: relative;
+
+  height: 100%;
+
+  background: #ffffff;
+
+  border-radius: 1.8rem;
+
+  overflow: hidden;
+
+  border: 0.08rem solid #e8eef7;
+
+  transition: 0.45s;
+
+  box-shadow: 0 1.2rem 2.5rem rgba(15, 23, 42, 0.05);
+}
+
+.nxPortfolioLive__card:hover {
+  transform: translateY(-0.8rem);
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.16);
+}
+
+/*====================================
+Gradient Border
+====================================*/
+
+.nxPortfolioLive__card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -0.08rem;
+
+  border-radius: 1.8rem;
+
+  padding: 0.08rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.45),
+    rgba(0, 194, 255, 0.45)
+  );
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioLive__card:hover::before {
+  opacity: 1;
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.nxPortfolioLive__image {
+  position: relative;
+
+  overflow: hidden;
+
+  /* height: 18rem; */
+
+  background: #eef3f9;
+}
+
+.nxPortfolioLive__image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.8s;
+}
+
+.nxPortfolioLive__card:hover .nxPortfolioLive__image img {
+  transform: scale(1.08);
+}
+
+/*==================================================
+OVERLAY
+==================================================*/
+
+.nxPortfolioLive__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.05),
+    rgba(15, 23, 42, 0.82)
+  );
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioLive__card:hover .nxPortfolioLive__overlay {
+  opacity: 1;
+}
+
+.nxPortfolioLive__overlay a {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  text-decoration: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  padding: 1rem 1.8rem;
+
+  border-radius: 4rem;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__overlay a:hover {
+  background: #6d5bff;
+
+  color: #ffffff;
+}
+
+.nxPortfolioLive__overlay a i {
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__overlay a:hover i {
+  transform: translate(0.25rem, -0.25rem);
+}
+
+/*==================================================
+BODY
+==================================================*/
+
+.nxPortfolioLive__body {
+  padding: 2rem;
+}
+
+.nxPortfolioLive__body span {
+  display: inline-flex;
+
+  align-items: center;
+
+  background: #eef2ff;
+
+  color: #6d5bff;
+
+  padding: 0.55rem 1rem;
+
+  border-radius: 3rem;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioLive__body h3 {
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 1rem;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__card:hover h3 {
+  color: #6d5bff;
+}
+
+.nxPortfolioLive__body p {
+  color: #64748b;
+
+  line-height: 1.8rem;
+
+  margin-bottom: 1.6rem;
+}
+
+/*==================================================
+TECHNOLOGY TAGS
+==================================================*/
+
+.nxPortfolioLive__technology {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+
+  margin-bottom: 2rem;
+}
+
+.nxPortfolioLive__technology small {
+  background: #f8fafc;
+
+  border: 0.08rem solid #e5edf8;
+
+  border-radius: 3rem;
+
+  padding: 0.55rem 1rem;
+
+  font-size: 0.82rem;
+
+  font-weight: 600;
+
+  color: #475569;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__technology small:hover {
+  background: #6d5bff;
+
+  color: #ffffff;
+
+  border-color: #6d5bff;
+}
+
+/*==================================================
+FOOTER
+==================================================*/
+
+.nxPortfolioLive__footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.nxPortfolioLive__footer a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 3rem;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__footer a:hover {
+  color: #ffffff;
+
+  transform: translateY(-0.2rem);
+}
+
+.nxPortfolioLive__footer button {
+  border: none;
+
+  background: #f3f6fa;
+
+  color: #111827;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 3rem;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioLive__footer button:hover {
+  background: #111827;
+
+  color: #ffffff;
+}
+
+/* ===================================================================== */
+/*==================================================
+EMPTY STATE
+==================================================*/
+
+.nxPortfolioLive__empty {
+  background: #ffffff;
+
+  border: 0.08rem dashed #d7e3f4;
+
+  border-radius: 2rem;
+
+  padding: 5rem 2rem;
+
+  text-align: center;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.04);
+}
+
+.nxPortfolioLive__emptyIcon {
+  width: 6rem;
+
+  height: 6rem;
+
+  margin: 0 auto 2rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  font-size: 2rem;
+}
+
+.nxPortfolioLive__empty h3 {
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioLive__empty p {
+  color: #64748b;
+
+  max-width: 32rem;
+
+  margin: auto;
+
+  line-height: 1.8rem;
+}
+
+/*==================================================
+SKELETON
+==================================================*/
+
+.nxPortfolioLive__skeleton {
+  background: #ffffff;
+
+  border-radius: 1.8rem;
+
+  overflow: hidden;
+
+  border: 0.08rem solid #e8eef7;
+
+  animation: nxPortfolioSkeletonPulse 1.6s infinite;
+}
+
+.nxPortfolioLive__skeletonImage {
+  height: 18rem;
+
+  background: #e9eef7;
+}
+
+.nxPortfolioLive__skeletonBody {
+  padding: 2rem;
+}
+
+.nxPortfolioLive__line {
+  height: 1rem;
+
+  background: #e9eef7;
+
+  border-radius: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioLive__line.large {
+  width: 85%;
+}
+
+.nxPortfolioLive__line.medium {
+  width: 65%;
+}
+
+.nxPortfolioLive__line.small {
+  width: 40%;
+}
+
+@keyframes nxPortfolioSkeletonPulse {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/*==================================================
+HOVER MICRO ANIMATIONS
+==================================================*/
+
+.nxPortfolioLive__card img {
+  will-change: transform;
+}
+
+.nxPortfolioLive__card:hover .nxPortfolioLive__technology small {
+  border-color: #6d5bff;
+}
+
+.nxPortfolioLive__card:hover .nxPortfolioLive__body span {
+  background: #6d5bff;
+
+  color: #fff;
+}
+
+.nxPortfolioLive__footer button,
+.nxPortfolioLive__footer a {
+  transition:
+    transform 0.35s,
+    background 0.35s,
+    color 0.35s;
+}
+
+.nxPortfolioLive__footer button:hover,
+.nxPortfolioLive__footer a:hover {
+  transform: translateY(-0.2rem);
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 75rem) {
+  .nxPortfolioLive {
+    padding: 7rem 0;
+  }
+}
+
+@media (max-width: 62rem) {
+  .nxPortfolioLive__heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .nxPortfolioLive__topBar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .nxPortfolioLive__filters {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioLive {
+    padding: 5rem 0;
+  }
+
+  .nxPortfolioLive__heading {
+    margin-bottom: 3rem;
+  }
+
+  .nxPortfolioLive__heading h2 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioLive__heading p {
+    font-size: 1rem;
+  }
+
+  .nxPortfolioLive__search {
+    min-width: 100%;
+  }
+
+  .nxPortfolioLive__filters {
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    flex-wrap: nowrap;
+
+    padding-bottom: 0.5rem;
+
+    scrollbar-width: none;
+  }
+
+  .nxPortfolioLive__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nxPortfolioLive__filters button {
+    white-space: nowrap;
+  }
+
+  .nxPortfolioLive__footer {
+    flex-direction: column;
+  }
+
+  .nxPortfolioLive__footer a,
+  .nxPortfolioLive__footer button {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioLive__heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .nxPortfolioLive__body {
+    padding: 1.5rem;
+  }
+
+  .nxPortfolioLive__body h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioLive__card,
+.nxPortfolioLive__overlay,
+.nxPortfolioLive__footer a,
+.nxPortfolioLive__footer button {
+  will-change: transform;
+}
+
+.nxPortfolioLive img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+}
+
+/* ================================================================= */
+/*==================================================
+DEVELOPMENT PROCESS
+==================================================*/
+
+.nxPortfolioProcess {
+  position: relative;
+
+  padding: 2rem 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.nxPortfolioProcess::before {
+  content: "";
+
+  position: absolute;
+
+  width: 28rem;
+
+  height: 28rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.05);
+
+  filter: blur(5rem);
+
+  left: -10rem;
+
+  top: -8rem;
+}
+
+.nxPortfolioProcess::after {
+  content: "";
+
+  position: absolute;
+
+  width: 24rem;
+
+  height: 24rem;
+
+  border-radius: 50%;
+
+  background: rgba(0, 194, 255, 0.05);
+
+  filter: blur(5rem);
+
+  right: -8rem;
+
+  bottom: -10rem;
+}
+
+/*==================================================
+TIMELINE
+==================================================*/
+
+.nxPortfolioProcess__wrapper {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2rem;
+
+  z-index: 2;
+}
+
+.nxPortfolioProcess__wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+
+  right: 10%;
+
+  top: 4.4rem;
+
+  height: 0.25rem;
+
+  border-radius: 5rem;
+
+  background: linear-gradient(90deg, #6d5bff, #00c2ff);
+
+  z-index: 0;
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.nxPortfolioProcess__card {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 2rem;
+
+  padding: 3rem 2rem;
+
+  text-align: center;
+
+  border: 0.08rem solid #e7edf6;
+
+  box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.05);
+
+  transition: 0.45s;
+
+  z-index: 2;
+}
+
+.nxPortfolioProcess__card:hover {
+  transform: translateY(-0.8rem);
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.15);
+}
+
+/*==================================================
+STEP NUMBER
+==================================================*/
+
+.nxPortfolioProcess__number {
+  position: absolute;
+
+  right: 1.5rem;
+
+  top: 1.2rem;
+
+  font-size: 3rem;
+
+  font-weight: 900;
+
+  color: rgba(109, 91, 255, 0.08);
+
+  user-select: none;
+}
+
+/*==================================================
+ICON
+==================================================*/
+
+.nxPortfolioProcess__icon {
+  width: 5.5rem;
+
+  height: 5.5rem;
+
+  margin: 0 auto 2rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 1.5rem;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  font-size: 2rem;
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.25);
+
+  transition: 0.4s;
+}
+
+.nxPortfolioProcess__card:hover .nxPortfolioProcess__icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/*==================================================
+TEXT
+==================================================*/
+
+.nxPortfolioProcess__card h3 {
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioProcess__card p {
+  color: #64748b;
+
+  line-height: 1.9rem;
+
+  margin: 0;
+}
+
+/*==================================================
+GRADIENT BORDER
+==================================================*/
+
+.nxPortfolioProcess__card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -0.08rem;
+
+  border-radius: 2rem;
+
+  padding: 0.08rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.35),
+    rgba(0, 194, 255, 0.35)
+  );
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioProcess__card:hover::before {
+  opacity: 1;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 75rem) {
+  .nxPortfolioProcess__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nxPortfolioProcess__wrapper::before {
+    display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioProcess {
+    padding: 5rem 0;
+  }
+
+  .nxPortfolioProcess__heading {
+    margin-bottom: 3rem;
+  }
+
+  .nxPortfolioProcess__heading h2 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioProcess__wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+  .nxPortfolioProcess__card {
+    padding: 2.5rem 1.8rem;
+  }
+
+  .nxPortfolioProcess__icon {
+    width: 5rem;
+
+    height: 5rem;
+
+    font-size: 1.7rem;
+  }
+
+  .nxPortfolioProcess__number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioProcess__heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .nxPortfolioProcess__card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioProcess__card,
+.nxPortfolioProcess__icon {
+  will-change: transform;
+}
+
+/* ============================================================================ */
+
+/*==================================================
+SAMPLE WEBSITE CONCEPTS
+==================================================*/
+
+.nxPortfolioConcepts {
+  position: relative;
+
+  padding: 2rem 0;
+
+  background: #f8fbff;
+
+  overflow: hidden;
+}
+
+.nxPortfolioConcepts::before {
+  content: "";
+
+  position: absolute;
+
+  width: 32rem;
+
+  height: 32rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.05);
+
+  filter: blur(5rem);
+
+  top: -10rem;
+
+  left: -8rem;
+}
+
+.nxPortfolioConcepts::after {
+  content: "";
+
+  position: absolute;
+
+  width: 26rem;
+
+  height: 26rem;
+
+  border-radius: 50%;
+
+  background: rgba(0, 194, 255, 0.05);
+
+  filter: blur(5rem);
+
+  bottom: -10rem;
+
+  right: -8rem;
+}
+
+/*==================================================
+HEADING
+==================================================*/
+
+.nxPortfolioConcepts__heading {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  max-width: 48rem;
+
+  margin: 0 auto 4rem;
+}
+
+.nxPortfolioConcepts__heading span {
+  display: inline-block;
+
+  padding: 0.8rem 1.8rem;
+
+  border-radius: 4rem;
+
+  background: #eef2ff;
+
+  color: #6d5bff;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08rem;
+  border: 1px solid rgba(0, 0, 0, 0.286);
+
+  margin-bottom: 1.5rem;
+}
+
+.nxPortfolioConcepts__heading h2 {
+  font-size: 2rem;
+
+  font-weight: 900;
+
+  line-height: 1.8;
+
+  color: #111827;
+
+  margin-bottom: 1.5rem;
+}
+
+.nxPortfolioConcepts__heading p {
+  color: #64748b;
+
+  line-height: 2rem;
+
+  font-size: 1.05rem;
+}
+
+/*==================================================
+FILTERS
+==================================================*/
+
+.nxPortfolioConcepts__filters {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 3.5rem;
+}
+
+.nxPortfolioConcepts__filters button {
+  border: none;
+
+  outline: none;
+
+  padding: 1rem 1.8rem;
+
+  border-radius: 4rem;
+
+  background: #ffffff;
+
+  color: #475569;
+
+  font-weight: 700;
+
+  border: 0.08rem solid #e5edf8;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioConcepts__filters button:hover {
+  transform: translateY(-0.2rem);
+
+  background: #6d5bff;
+
+  color: #ffffff;
+}
+
+.nxPortfolioConcepts__filters .activeConcept {
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  border-color: transparent;
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.nxPortfolioConcepts__card {
+  position: relative;
+
+  height: 100%;
+
+  background: #ffffff;
+
+  border-radius: 1.8rem;
+
+  overflow: hidden;
+
+  border: 0.08rem solid #e7edf6;
+
+  transition: 0.45s;
+
+  box-shadow: 0 1.2rem 2.5rem rgba(15, 23, 42, 0.06);
+}
+
+.nxPortfolioConcepts__card:hover {
+  transform: translateY(-0.8rem);
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.15);
+}
+
+/*==================================================
+GRADIENT BORDER
+==================================================*/
+
+/* .nxPortfolioConcepts__card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -0.08rem;
+
+  border-radius: 1.8rem;
+
+  padding: 0.08rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.45),
+    rgba(0, 194, 255, 0.45)
+  );
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  opacity: 0;
+
+  transition: 0.45s;
+} */
+
+.nxPortfolioConcepts__card::before {
+  pointer-events: none;
+  z-index: 0;
+}
+.nxPortfolioConcepts__body {
+  position: relative;
+  z-index: 2;
+}
+.nxPortfolioConcepts__card:hover::before {
+  opacity: 1;
+}
+
+/* ====================================================================== */
+/*==================================================
+IMAGE
+==================================================*/
+
+.nxPortfolioConcepts__image {
+  position: relative;
+
+  height: 12rem;
+
+  overflow: hidden;
+
+  background: #eef2f7;
+  position: relative;
+  z-index: 2;
+}
+
+.nxPortfolioConcepts__image img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.8s;
+}
+
+.nxPortfolioConcepts__card:hover .nxPortfolioConcepts__image img {
+  transform: scale(1.08);
+}
+
+/*==================================================
+OVERLAY
+==================================================*/
+
+.nxPortfolioConcepts__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.08),
+    rgba(15, 23, 42, 0.82)
+  );
+
+  opacity: 0;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioConcepts__card:hover .nxPortfolioConcepts__overlay {
+  opacity: 1;
+}
+
+.nxPortfolioConcepts__overlay a {
+  border: none;
+
+  background: #ffffff;
+
+  color: #111827;
+
+  padding: 1rem 2rem;
+
+  border-radius: 5rem;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioConcepts__overlay a:hover {
+  background: #6d5bff;
+
+  color: #ffffff;
+
+  transform: translateY(-0.2rem);
+}
+
+/*==================================================
+BODY
+==================================================*/
+
+.nxPortfolioConcepts__body {
+  padding: 2rem;
+  height: 26rem;
+}
+
+.nxPortfolioConcepts__body span {
+  display: inline-block;
+
+  padding: 0.55rem 1rem;
+
+  border-radius: 3rem;
+
+  background: #eef2ff;
+
+  color: #6d5bff;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioConcepts__body h3 {
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 1rem;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioConcepts__card:hover .nxPortfolioConcepts__body h3 {
+  color: #6d5bff;
+}
+
+.nxPortfolioConcepts__body p {
+  color: #64748b;
+
+  line-height: 1.9rem;
+
+  margin-bottom: 1.8rem;
+}
+
+/*==================================================
+TECH TAGS
+==================================================*/
+
+.nxPortfolioConcepts__tech {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.8rem;
+
+  margin-bottom: 2rem;
+}
+
+.nxPortfolioConcepts__tech small {
+  padding: 0.55rem 1rem;
+
+  border-radius: 3rem;
+
+  background: #f8fafc;
+
+  border: 0.08rem solid #e5edf8;
+
+  color: #475569;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioConcepts__tech small:hover {
+  background: #6d5bff;
+
+  border-color: #6d5bff;
+
+  color: #ffffff;
+
+  transform: translateY(-0.15rem);
+}
+
+/*==================================================
+FOOTER
+==================================================*/
+
+.nxPortfolioConcepts__footer {
+  margin-top: auto;
+  position: relative;
+  padding: 0rem 2rem 1rem 2rem;
+  z-index: 100;
+}
+
+.nxPortfolioConcepts__footer a {
+  width: 100%;
+  display: block;
+  border: none;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+  margin: 0.5rem 0rem;
+  transition: 0.35s;
+  position: relative;
+  z-index: 101;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nxPortfolioConcepts__footer a:hover {
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.25);
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 62rem) {
+  .nxPortfolioConcepts__heading h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioConcepts {
+    padding: 5rem 0;
+  }
+
+  .nxPortfolioConcepts__heading {
+    margin-bottom: 3rem;
+  }
+
+  .nxPortfolioConcepts__heading h2 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioConcepts__heading p {
+    font-size: 1rem;
+  }
+
+  .nxPortfolioConcepts__filters {
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+
+    padding-bottom: 0.5rem;
+
+    scrollbar-width: none;
+  }
+
+  .nxPortfolioConcepts__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nxPortfolioConcepts__filters a {
+    white-space: nowrap;
+  }
+
+  .nxPortfolioConcepts__image {
+    height: 16rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioConcepts__heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .nxPortfolioConcepts__body {
+    padding: 1.5rem;
+  }
+
+  .nxPortfolioConcepts__body h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioConcepts__card,
+.nxPortfolioConcepts__overlay,
+.nxPortfolioConcepts__footer a {
+  will-change: transform;
+}
+
+.nxPortfolioConcepts__image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+/* =================================================================== */
+/*==================================================
+TECHNOLOGY STACK
+==================================================*/
+
+.nxPortfolioTech {
+  position: relative;
+
+  padding: 2rem 0;
+
+  background: #ffffff;
+
+  overflow: hidden;
+}
+
+.nxPortfolioTech::before {
+  content: "";
+
+  position: absolute;
+
+  width: 32rem;
+
+  height: 32rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.05);
+
+  filter: blur(6rem);
+
+  left: -12rem;
+
+  top: -10rem;
+}
+
+.nxPortfolioTech::after {
+  content: "";
+
+  position: absolute;
+
+  width: 26rem;
+
+  height: 26rem;
+
+  border-radius: 50%;
+
+  background: rgba(0, 194, 255, 0.05);
+
+  filter: blur(6rem);
+
+  right: -10rem;
+
+  bottom: -10rem;
+}
+
+/*==================================================
+HEADING
+==================================================*/
+
+.nxPortfolioTech__heading {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 48rem;
+
+  margin: 0 auto 6rem;
+
+  text-align: center;
+}
+/*==================================================
+MAIN WRAPPER
+==================================================*/
+
+.nxPortfolioTech__wrapper {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 52rem;
+}
+
+/*==================================================
+CENTER
+==================================================*/
+
+.nxPortfolioTech__center {
+  position: absolute;
+
+  left: 50%;
+
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 20;
+}
+
+.nxPortfolioTech__core {
+  width: 20rem;
+
+  height: 20rem;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  border: 0.12rem solid rgba(109, 91, 255, 0.15);
+
+  box-shadow: 0 2rem 5rem rgba(15, 23, 42, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.nxPortfolioTech__core::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -1rem;
+
+  border-radius: 50%;
+
+  border: 0.15rem dashed rgba(109, 91, 255, 0.2);
+
+  animation: nxRotateCircle 35s linear infinite;
+}
+
+.nxPortfolioTech__logo {
+  width: 6rem;
+
+  height: 6rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  font-size: 2rem;
+
+  font-weight: 900;
+
+  margin-bottom: 1.2rem;
+
+  box-shadow: 0 1.5rem 3rem rgba(109, 91, 255, 0.25);
+}
+
+.nxPortfolioTech__core h3 {
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 0.8rem;
+}
+
+.nxPortfolioTech__core p {
+  color: #64748b;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7rem;
+
+  max-width: 14rem;
+}
+
+/*==================================================
+TECH GRID
+==================================================*/
+
+.nxPortfolioTech__items {
+  position: relative;
+
+  width: 100%;
+
+  height: 52rem;
+}
+
+/*==================================================
+FLOATING POSITIONS
+==================================================*/
+/*
+.nxPortfolioTech__card {
+  position: absolute;
+
+  width: 15rem;
+
+  background: #ffffff;
+
+  border-radius: 1.5rem;
+
+  padding: 1.6rem;
+
+  border: 0.08rem solid #e8eef7;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.05);
+
+  transition: 0.4s;
+}
+
+.nxPortfolioTech__card:nth-child(1) {
+  left: 50%;
+
+  top: 0;
+
+  transform: translateX(-50%);
+}
+
+.nxPortfolioTech__card:nth-child(2) {
+  right: 8%;
+
+  top: 10%;
+}
+
+.nxPortfolioTech__card:nth-child(3) {
+  right: 0;
+
+  top: 38%;
+}
+
+.nxPortfolioTech__card:nth-child(4) {
+  right: 8%;
+
+  bottom: 10%;
+}
+
+
+.nxPortfolioTech__card:nth-child(5) {
+  left: 50%;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+}
+.nxPortfolioTech__card:nth-child(6) {
+  left: 8%;
+
+  bottom: 10%;
+}
+
+.nxPortfolioTech__card:nth-child(7) {
+  left: 0;
+
+  top: 38%;
+}
+
+.nxPortfolioTech__card:nth-child(8) {
+  left: 8%;
+
+  top: 10%;
+}
+
+.nxPortfolioTech__card:hover {
+  box-shadow: 0 2rem 4rem rgba(110, 91, 255, 0.302);
+}
+.nxPortfolioTech__icon{
+  padding: 1rem 0rem;
+  font-size: 1rem;
+} */
+/*==================================================
+TECH STACK WRAPPER
+==================================================*/
+
+.nxPortfolioTech__items {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 70rem;
+  margin: auto;
+}
+
+/*==================================================
+TECH CARD
+==================================================*/
+
+.nxPortfolioTech__card {
+  position: absolute;
+
+  width: 16.5rem;
+  min-height: 16rem;
+
+  padding: 1rem;
+
+  border-radius: 1.7rem;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.65);
+
+  box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.08);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.45s,
+    box-shadow 0.45s,
+    border-color 0.45s;
+}
+
+/* Gradient Glow */
+
+.nxPortfolioTech__card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  padding: 1px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.35),
+    rgba(0, 194, 255, 0.35)
+  );
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Top Glow */
+
+.nxPortfolioTech__card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 8rem;
+
+  height: 8rem;
+
+  right: -2rem;
+
+  top: -2rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.08);
+
+  filter: blur(30px);
+}
+
+/*==================================================
+HOVER
+==================================================*/
+
+.nxPortfolioTech__card:hover {
+  transform: translateY(-12px) scale(1.03);
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.18);
+
+  border-color: #6d5bff;
+}
+
+/*==================================================
+ICON
+==================================================*/
+
+.nxPortfolioTech__icon {
+  width: 4.4rem;
+
+  height: 4.4rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border-radius: 1.2rem;
+
+  margin-bottom: 1.3rem;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  font-size: 1.7rem;
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.2);
+}
+
+.nxPortfolioTech__card h4 {
+  font-size: 1.3rem;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  margin-bottom: 0.8rem;
+}
+
+.nxPortfolioTech__card p {
+  color: #64748b;
+
+  line-height: 1.8;
+
+  margin-bottom: 1.4rem;
+
+  font-size: 0.96rem;
+}
+
+/*==================================================
+LEVEL BAR
+==================================================*/
+
+.nxPortfolioTech__level {
+  width: 100%;
+
+  height: 0.55rem;
+
+  border-radius: 50px;
+
+  overflow: hidden;
+
+  background: #eef2f7;
+
+  margin-bottom: 0.8rem;
+}
+
+.nxPortfolioTech__level div {
+  height: 100%;
+
+  border-radius: 50px;
+
+  background: linear-gradient(90deg, #6d5bff, #00c2ff);
+}
+
+.nxPortfolioTech__card small {
+  font-weight: 700;
+
+  color: #6d5bff;
+}
+
+/*==================================================
+CARD POSITIONS
+(Larger Circle)
+==================================================*/
+
+/* Top */
+
+.nxPortfolioTech__card:nth-child(1) {
+  left: 50%;
+
+  top: 0;
+
+  transform: translateX(-50%);
+}
+
+/* Top Right */
+
+.nxPortfolioTech__card:nth-child(2) {
+  right: 2%;
+
+  top: 8%;
+}
+
+/* Right */
+
+.nxPortfolioTech__card:nth-child(3) {
+  right: -5%;
+
+  top: 39%;
+}
+
+/* Bottom Right */
+
+.nxPortfolioTech__card:nth-child(4) {
+  right: 2%;
+
+  bottom: 8%;
+}
+
+/* Bottom */
+
+.nxPortfolioTech__card:nth-child(5) {
+  left: 50%;
+
+  bottom: 0;
+
+  transform: translateX(-50%);
+}
+
+/* Bottom Left */
+
+.nxPortfolioTech__card:nth-child(6) {
+  left: 2%;
+
+  bottom: 8%;
+}
+
+/* Left */
+
+.nxPortfolioTech__card:nth-child(7) {
+  left: -5%;
+
+  top: 39%;
+}
+
+/* Top Left */
+
+.nxPortfolioTech__card:nth-child(8) {
+  left: 2%;
+
+  top: 8%;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 1200px) {
+  .nxPortfolioTech__items {
+    height: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.8rem;
+  }
+
+  .nxPortfolioTech__card {
+    position: relative;
+
+    left: auto !important;
+
+    right: auto !important;
+
+    top: auto !important;
+
+    bottom: auto !important;
+
+    transform: none !important;
+
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nxPortfolioTech__items {
+    grid-template-columns: 1fr;
+  }
+}
+/*==================================================
+ANIMATION
+==================================================*/
+
+@keyframes nxRotateCircle {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ======================================================================= */
+
+/* ============================================================= */
+/*==================================================
+WHY CHOOSE NEXGEN
+==================================================*/
+
+.nxPortfolioWhy {
+  position: relative;
+
+  padding: 2rem 0;
+
+  background: #f8fbff;
+
+  overflow: hidden;
+}
+
+.nxPortfolioWhy::before {
+  content: "";
+
+  position: absolute;
+
+  width: 28rem;
+
+  height: 28rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.05);
+
+  filter: blur(6rem);
+
+  top: -10rem;
+
+  left: -10rem;
+}
+
+.nxPortfolioWhy::after {
+  content: "";
+
+  position: absolute;
+
+  width: 24rem;
+
+  height: 24rem;
+
+  border-radius: 50%;
+
+  background: rgba(0, 194, 255, 0.05);
+
+  filter: blur(6rem);
+
+  bottom: -10rem;
+
+  right: -8rem;
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.nxPortfolioWhy__card {
+  position: relative;
+
+  background: #ffffff;
+
+  border-radius: 2rem;
+
+  padding: 2.5rem;
+
+  height: 100%;
+
+  border: 0.08rem solid #e7edf6;
+
+  overflow: hidden;
+
+  transition: 0.45s;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.05);
+}
+
+.nxPortfolioWhy__card:hover {
+  transform: translateY(-0.8rem);
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.16);
+}
+
+/*==================================================
+TOP GLOW
+==================================================*/
+
+.nxPortfolioWhy__card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 0.35rem;
+
+  background: linear-gradient(90deg, #6d5bff, #00c2ff);
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioWhy__card:hover::before {
+  transform: scaleX(1);
+}
+
+/*==================================================
+BACKGROUND GLOW
+==================================================*/
+
+.nxPortfolioWhy__card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 18rem;
+
+  height: 18rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.08);
+
+  right: -10rem;
+
+  top: -10rem;
+
+  transition: 0.45s;
+}
+
+.nxPortfolioWhy__card:hover::after {
+  transform: scale(1.3);
+}
+
+/*==================================================
+ICON
+==================================================*/
+
+.nxPortfolioWhy__icon {
+  width: 5rem;
+
+  height: 5rem;
+
+  border-radius: 1.5rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  font-size: 2rem;
+
+  margin-bottom: 2rem;
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.25);
+
+  transition: 0.4s;
+}
+
+.nxPortfolioWhy__card:hover .nxPortfolioWhy__icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/*==================================================
+TEXT
+==================================================*/
+
+.nxPortfolioWhy__card h3 {
+  font-size: 1.6rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 1rem;
+}
+
+.nxPortfolioWhy__card p {
+  color: #64748b;
+
+  line-height: 1.9rem;
+
+  margin-bottom: 2rem;
+}
+
+/*==================================================
+ARROW
+==================================================*/
+
+.nxPortfolioWhy__arrow {
+  width: 3.5rem;
+
+  height: 3.5rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #f1f5f9;
+
+  color: #6d5bff;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioWhy__card:hover .nxPortfolioWhy__arrow {
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  transform: translateX(0.4rem);
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 62rem) {
+  .nxPortfolioWhy__heading h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioWhy {
+    padding: 5rem 0;
+  }
+
+  .nxPortfolioWhy__heading {
+    margin-bottom: 3rem;
+  }
+
+  .nxPortfolioWhy__heading h2 {
+    font-size: 2rem;
+  }
+
+  .nxPortfolioWhy__card {
+    padding: 2rem;
+  }
+
+  .nxPortfolioWhy__icon {
+    width: 4.5rem;
+
+    height: 4.5rem;
+
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioWhy__heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .nxPortfolioWhy__card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioWhy__card,
+.nxPortfolioWhy__icon,
+.nxPortfolioWhy__arrow {
+  will-change: transform;
+}
+
+/* =================================================================== */
+/*==================================================
+FINAL CTA
+==================================================*/
+
+.nxPortfolioCTA {
+  position: relative;
+
+  padding: 2rem 0;
+
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+}
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+.nxPortfolioCTA::before {
+  content: "";
+
+  position: absolute;
+
+  width: 34rem;
+
+  height: 34rem;
+
+  border-radius: 50%;
+
+  background: rgba(109, 91, 255, 0.08);
+
+  filter: blur(7rem);
+
+  top: -14rem;
+
+  left: -12rem;
+}
+
+.nxPortfolioCTA::after {
+  content: "";
+
+  position: absolute;
+
+  width: 30rem;
+
+  height: 30rem;
+
+  border-radius: 50%;
+
+  background: rgba(0, 194, 255, 0.08);
+
+  filter: blur(7rem);
+
+  right: -10rem;
+
+  bottom: -12rem;
+}
+
+/*==================================================
+WRAPPER
+==================================================*/
+
+.nxPortfolioCTA__wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 2.5rem;
+
+  padding: 2rem;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(1.2rem);
+
+  border: 0.08rem solid rgba(255, 255, 255, 0.8);
+
+  box-shadow: 0 2rem 5rem rgba(15, 23, 42, 0.08);
+}
+
+/*==================================================
+FLOATING SHAPES
+==================================================*/
+
+.nxPortfolioCTA__shape {
+  position: absolute;
+
+  border-radius: 50%;
+
+  animation: nxPortfolioFloat 8s ease-in-out infinite;
+}
+
+.shapeOne {
+  width: 8rem;
+
+  height: 8rem;
+
+  background: rgba(109, 91, 255, 0.12);
+
+  top: -2rem;
+
+  left: 8%;
+}
+
+.shapeTwo {
+  width: 5rem;
+
+  height: 5rem;
+
+  background: rgba(0, 194, 255, 0.16);
+
+  right: 12%;
+
+  top: 15%;
+
+  animation-delay: 2s;
+}
+
+.shapeThree {
+  width: 7rem;
+
+  height: 7rem;
+
+  background: rgba(109, 91, 255, 0.1);
+
+  right: 18%;
+
+  bottom: -2rem;
+
+  animation-delay: 4s;
+}
+
+@keyframes nxPortfolioFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.nxPortfolioCTA__content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 52rem;
+
+  margin: auto;
+}
+
+/*==================================================
+BADGE
+==================================================*/
+
+.nxPortfolioCTA__badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  padding: 0.9rem 1.6rem;
+
+  border-radius: 5rem;
+
+  background: #eef2ff;
+
+  color: #6d5bff;
+
+  font-weight: 700;
+
+  margin-bottom: 2rem;
+}
+
+.nxPortfolioCTA__badge span {
+  width: 0.8rem;
+
+  height: 0.8rem;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  animation: nxPulse 1.8s infinite;
+}
+
+@keyframes nxPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+  }
+
+  70% {
+    box-shadow: 0 0 0 0.8rem rgba(34, 197, 94, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+/*==================================================
+HEADING
+==================================================*/
+
+.nxPortfolioCTA__content h2 {
+  font-size: 2rem;
+
+  font-weight: 900;
+
+  line-height: 1.8;
+
+  margin-bottom: 1.8rem;
+
+  background: linear-gradient(135deg, #111827, #6d5bff);
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.nxPortfolioCTA__content p {
+  font-size: 1.1rem;
+
+  color: #64748b;
+
+  line-height: 2rem;
+
+  max-width: 42rem;
+
+  margin: 0 auto 3rem;
+}
+
+/*==================================================
+TRUST
+==================================================*/
+
+.nxPortfolioCTA__trust {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-bottom: 3rem;
+}
+
+.nxPortfolioCTA__trust div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  padding: 0.9rem 1.3rem;
+
+  border-radius: 5rem;
+
+  background: #ffffff;
+
+  border: 0.08rem solid #e8eef7;
+
+  font-weight: 600;
+
+  color: #475569;
+}
+
+.nxPortfolioCTA__trust i {
+  color: #22c55e;
+}
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.nxPortfolioCTA__buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+}
+
+.nxPortfolioCTA__primary,
+.nxPortfolioCTA__secondary {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+
+  text-decoration: none;
+
+  padding: 1.15rem 2.3rem;
+
+  border-radius: 5rem;
+
+  font-weight: 700;
+
+  transition: 0.35s;
+}
+
+.nxPortfolioCTA__primary {
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #ffffff;
+
+  box-shadow: 0 1.5rem 3rem rgba(109, 91, 255, 0.25);
+}
+
+.nxPortfolioCTA__primary:hover {
+  transform: translateY(-0.35rem);
+
+  color: #ffffff;
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.35);
+}
+
+.nxPortfolioCTA__secondary {
+  background: #ffffff;
+
+  color: #111827;
+
+  border: 0.08rem solid #e8eef7;
+}
+
+.nxPortfolioCTA__secondary:hover {
+  background: #f8fbff;
+
+  transform: translateY(-0.35rem);
+
+  color: #111827;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width: 62rem) {
+  .nxPortfolioCTA__wrapper {
+    padding: 5rem 3rem;
+  }
+
+  .nxPortfolioCTA__content h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .nxPortfolioCTA {
+    padding: 5rem 0;
+  }
+
+  .nxPortfolioCTA__wrapper {
+    padding: 4rem 2rem;
+
+    border-radius: 2rem;
+  }
+
+  .nxPortfolioCTA__content h2 {
+    font-size: 2.2rem;
+  }
+
+  .nxPortfolioCTA__content p {
+    font-size: 1rem;
+  }
+
+  .nxPortfolioCTA__buttons {
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .nxPortfolioCTA__primary,
+  .nxPortfolioCTA__secondary {
+    width: 100%;
+
+    justify-content: center;
+
+    max-width: 22rem;
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxPortfolioCTA__content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/*==================================================
+PERFORMANCE
+==================================================*/
+
+.nxPortfolioCTA__primary,
+.nxPortfolioCTA__secondary,
+.nxPortfolioCTA__wrapper {
+  will-change: transform;
+}

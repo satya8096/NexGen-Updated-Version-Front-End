@@ -1,0 +1,1637 @@
+/*==========================================================
+NEXGEN SUPPORT PORTAL
+PART 1
+==========================================================*/
+
+.nxSupportPortal {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 45%, #f8fbff 100%);
+  overflow: hidden;
+}
+
+.nxSupportPortal::before {
+  content: "";
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  left: -10rem;
+  top: -8rem;
+  border-radius: 50%;
+  background: rgba(109, 91, 255, 0.08);
+  filter: blur(7rem);
+}
+
+.nxSupportPortal::after {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  right: -10rem;
+  bottom: -8rem;
+  border-radius: 50%;
+  background: rgba(0, 194, 255, 0.08);
+  filter: blur(7rem);
+}
+
+/*==========================================================
+FORM
+==========================================================*/
+
+.nxSupportPortal form {
+  position: relative;
+  z-index: 2;
+}
+
+/*==========================================================
+CARD
+==========================================================*/
+
+.nxSupportPortal__card {
+  position: relative;
+
+  background: #fff;
+
+  border-radius: 1.8rem;
+
+  padding: 2.4rem;
+
+  margin-bottom: 2rem;
+
+  border: 1px solid #edf1f8;
+
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.05);
+
+  transition: 0.35s;
+
+  overflow: hidden;
+}
+
+.nxSupportPortal__card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 0.25rem;
+
+  background: linear-gradient(90deg, #6d5bff, #00c2ff);
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: 0.35s;
+}
+
+.nxSupportPortal__card:hover {
+  transform: translateY(-0.35rem);
+
+  box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.12);
+}
+
+.nxSupportPortal__card:hover::before {
+  transform: scaleX(1);
+}
+
+/*==========================================================
+CARD TITLE
+==========================================================*/
+
+.nxSupportPortal__cardTitle {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.25rem;
+
+  margin-bottom: 2rem;
+}
+
+.nxSupportPortal__icon {
+  width: 4rem;
+
+  height: 4rem;
+
+  border-radius: 1rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  font-size: 1.3rem;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 0.8rem 1.5rem rgba(109, 91, 255, 0.25);
+}
+
+.nxSupportPortal__cardTitle h3 {
+  font-size: 1.4rem;
+
+  font-weight: 800;
+
+  margin-bottom: 0.35rem;
+
+  color: #111827;
+}
+
+.nxSupportPortal__cardTitle p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+/*==========================================================
+FIELD
+==========================================================*/
+
+.nxSupportPortal__field {
+  margin-bottom: 1.5rem;
+}
+
+.nxSupportPortal__field label {
+  display: block;
+
+  font-weight: 700;
+
+  font-size: 0.95rem;
+
+  margin-bottom: 0.7rem;
+
+  color: #1e293b;
+}
+
+.nxSupportPortal__field label span {
+  color: #ef4444;
+
+  margin-left: 0.25rem;
+}
+
+/*==========================================================
+INPUT
+==========================================================*/
+
+.nxSupportPortal__field input,
+.nxSupportPortal__field textarea,
+.nxSupportPortal__field select {
+  width: 100%;
+
+  padding: 1rem 1.25rem;
+
+  border-radius: 1rem;
+
+  border: 1px solid #e2e8f0;
+
+  background: #fff;
+
+  font-size: 1rem;
+
+  transition: 0.3s;
+
+  outline: none;
+}
+
+.nxSupportPortal__field textarea {
+  resize: vertical;
+
+  min-height: 11rem;
+
+  line-height: 1.8;
+}
+
+.nxSupportPortal__field input:focus,
+.nxSupportPortal__field textarea:focus,
+.nxSupportPortal__field select:focus {
+  border-color: #6d5bff;
+
+  box-shadow: 0 0 0 0.25rem rgba(109, 91, 255, 0.12);
+}
+
+/*==========================================================
+PLACEHOLDER
+==========================================================*/
+
+.nxSupportPortal__field input::placeholder,
+.nxSupportPortal__field textarea::placeholder {
+  color: #94a3b8;
+}
+
+/*==========================================================
+ERROR
+==========================================================*/
+
+.nxSupportPortal__field small,
+.nxSupportPortal__error {
+  display: block;
+
+  margin-top: 0.55rem;
+
+  font-size: 0.85rem;
+
+  font-weight: 600;
+
+  color: #ef4444;
+}
+
+/*==========================================================
+TEXTAREA FOOTER
+==========================================================*/
+
+.nxSupportPortal__textareaFooter {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-top: 0.75rem;
+}
+
+.nxSupportPortal__textareaFooter small {
+  margin: 0;
+
+  color: #94a3b8;
+
+  font-size: 0.82rem;
+}
+
+.nxSupportPortal__textareaFooter span {
+  font-weight: 700;
+
+  color: #6d5bff;
+
+  font-size: 0.85rem;
+}
+
+/*==========================================================
+COMMON ANIMATION
+==========================================================*/
+
+.nxSupportPortal__card,
+.nxSupportPortal__field input,
+.nxSupportPortal__field textarea,
+.nxSupportPortal__field select {
+  will-change: transform;
+}
+
+/* =============================================================== */
+/*==========================================================
+NEXGEN SUPPORT PORTAL
+PART 2
+CATEGORY • PRIORITY • CONTACT
+==========================================================*/
+
+/*==========================================================
+GRID
+==========================================================*/
+
+.nxSupportPortal__optionGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+  gap: 1.4rem;
+}
+
+/*==========================================================
+OPTION CARD
+==========================================================*/
+
+.nxSupportPortal__option {
+  position: relative;
+
+  background: #ffffff;
+
+  border: 0.08rem solid #e7edf7;
+
+  border-radius: 1.4rem;
+
+  padding: 1.8rem;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition: 0.35s;
+
+  user-select: none;
+}
+
+.nxSupportPortal__option::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(109, 91, 255, 0.08),
+    rgba(0, 194, 255, 0.08)
+  );
+
+  opacity: 0;
+
+  transition: 0.35s;
+}
+
+.nxSupportPortal__option:hover {
+  transform: translateY(-0.45rem);
+
+  border-color: #6d5bff;
+
+  box-shadow: 0 1.6rem 3rem rgba(109, 91, 255, 0.15);
+}
+
+.nxSupportPortal__option:hover::before {
+  opacity: 1;
+}
+
+/*==========================================================
+ICON
+==========================================================*/
+
+.nxSupportPortal__optionIcon {
+  width: 4.8rem;
+
+  height: 4.8rem;
+
+  margin: auto;
+
+  margin-bottom: 1.3rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 1.45rem;
+
+  background: #f8fbff;
+
+  color: #6d5bff;
+
+  transition: 0.35s;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.nxSupportPortal__option:hover .nxSupportPortal__optionIcon {
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  transform: rotate(10deg) scale(1.08);
+}
+
+/*==========================================================
+TITLE
+==========================================================*/
+
+.nxSupportPortal__option h4 {
+  font-size: 1.08rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 0.6rem;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.nxSupportPortal__option p {
+  margin: 0;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: #64748b;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/*==========================================================
+ACTIVE
+==========================================================*/
+
+.nxSupportPortal__option.active {
+  border-color: transparent;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  transform: translateY(-0.4rem);
+
+  box-shadow: 0 2rem 3.5rem rgba(109, 91, 255, 0.22);
+}
+
+.nxSupportPortal__option.active h4,
+.nxSupportPortal__option.active p {
+  color: #ffffff;
+}
+
+.nxSupportPortal__option.active .nxSupportPortal__optionIcon {
+  background: #ffffff;
+
+  color: #6d5bff;
+}
+
+/*==========================================================
+CHECK BADGE
+==========================================================*/
+
+.nxSupportPortal__optionCheck {
+  position: absolute;
+
+  right: 1rem;
+
+  top: 1rem;
+
+  width: 2rem;
+
+  height: 2rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #fff;
+
+  color: #6d5bff;
+
+  opacity: 0;
+
+  transform: scale(0.6);
+
+  transition: 0.35s;
+}
+
+.nxSupportPortal__option.active .nxSupportPortal__optionCheck {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+/*==========================================================
+PRIORITY COLORS
+==========================================================*/
+
+.nxPriorityLow {
+  border-left: 0.3rem solid #22c55e;
+}
+
+.nxPriorityMedium {
+  border-left: 0.3rem solid #f59e0b;
+}
+
+.nxPriorityHigh {
+  border-left: 0.3rem solid #ef4444;
+}
+
+.nxPriorityCritical {
+  border-left: 0.3rem solid #7f1d1d;
+}
+
+/*==========================================================
+ACTIVE PRIORITY
+==========================================================*/
+
+.nxPriorityLow.active {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.nxPriorityMedium.active {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+.nxPriorityHigh.active {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.nxPriorityCritical.active {
+  background: linear-gradient(135deg, #7f1d1d, #991b1b);
+}
+
+/*==========================================================
+HOVER ANIMATION
+==========================================================*/
+
+@keyframes nxSupportPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nxSupportPortal__option.active .nxSupportPortal__optionIcon {
+  animation: nxSupportPulse 2.5s infinite;
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width: 62rem) {
+  .nxSupportPortal__optionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 36rem) {
+  .nxSupportPortal__optionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .nxSupportPortal__option {
+    padding: 1.5rem;
+  }
+
+  .nxSupportPortal__optionIcon {
+    width: 4rem;
+
+    height: 4rem;
+
+    font-size: 1.2rem;
+  }
+}
+
+/* ======================================================= */
+
+/*==========================================================
+NEXGEN SUPPORT PORTAL
+PART 3
+UPLOAD • SUMMARY • TECH INFO
+==========================================================*/
+
+/*==========================================================
+UPLOAD AREA
+==========================================================*/
+
+.nxSupportPortal__upload {
+  position: relative;
+
+  border: 0.15rem dashed #cfd8e7;
+
+  border-radius: 1.6rem;
+
+  padding: 3rem 2rem;
+
+  background: #fbfdff;
+
+  text-align: center;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+
+  overflow: hidden;
+}
+
+.nxSupportPortal__upload:hover {
+  border-color: #6d5bff;
+
+  background: #f8f6ff;
+}
+
+.nxSupportPortal__upload input {
+  display: none;
+}
+
+.nxSupportPortal__uploadIcon {
+  width: 5rem;
+
+  height: 5rem;
+
+  margin: auto auto 1.5rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  font-size: 1.8rem;
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.25);
+}
+
+.nxSupportPortal__upload h4 {
+  font-size: 1.25rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  margin-bottom: 0.6rem;
+}
+
+.nxSupportPortal__upload p {
+  color: #64748b;
+
+  margin-bottom: 1rem;
+}
+
+.nxSupportPortal__upload small {
+  display: block;
+
+  color: #94a3b8;
+}
+
+/*==========================================================
+ATTACHMENTS
+==========================================================*/
+
+.nxSupportPortal__attachments {
+  margin-top: 2rem;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+  gap: 1rem;
+}
+
+.nxSupportPortal__attachment {
+  background: #fff;
+
+  border: 1px solid #e7edf6;
+
+  border-radius: 1rem;
+
+  padding: 1rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  transition: 0.35s;
+}
+
+.nxSupportPortal__attachment:hover {
+  transform: translateY(-0.25rem);
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.12);
+}
+
+.nxSupportPortal__attachmentIcon {
+  width: 3.5rem;
+
+  height: 3.5rem;
+
+  border-radius: 0.8rem;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #eef2ff;
+
+  color: #6d5bff;
+
+  flex-shrink: 0;
+
+  font-size: 1.1rem;
+}
+
+.nxSupportPortal__attachmentInfo {
+  flex: 1;
+}
+
+.nxSupportPortal__attachmentInfo h6 {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  color: #111827;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.nxSupportPortal__attachmentInfo small {
+  color: #64748b;
+}
+
+.nxSupportPortal__attachmentRemove {
+  width: 2.5rem;
+
+  height: 2.5rem;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #fff0f0;
+
+  color: #ef4444;
+
+  transition: 0.3s;
+}
+
+.nxSupportPortal__attachmentRemove:hover {
+  background: #ef4444;
+
+  color: #fff;
+}
+
+/*==========================================================
+SUMMARY GRID
+==========================================================*/
+
+.nxSupportPortal__summaryGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+  gap: 1rem;
+}
+
+.nxSupportPortal__summaryItem {
+  background: #f8fbff;
+
+  border: 1px solid #e8eef7;
+
+  border-radius: 1.2rem;
+
+  padding: 1.4rem;
+
+  transition: 0.35s;
+}
+
+.nxSupportPortal__summaryItem:hover {
+  transform: translateY(-0.25rem);
+
+  border-color: #6d5bff;
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.12);
+}
+
+.nxSupportPortal__summaryItem span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 0.82rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.nxSupportPortal__summaryItem h6 {
+  margin: 0;
+
+  color: #111827;
+
+  font-weight: 800;
+
+  font-size: 1rem;
+
+  word-break: break-word;
+}
+
+/*==========================================================
+TECH INFO
+==========================================================*/
+
+.nxSupportPortal__techGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+  gap: 1.2rem;
+}
+
+.nxSupportPortal__techCard {
+  background: #fff;
+
+  border: 1px solid #e7edf7;
+
+  border-radius: 1.3rem;
+
+  padding: 1.5rem;
+
+  transition: 0.35s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.nxSupportPortal__techCard::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0;
+
+  width: 0.25rem;
+
+  height: 100%;
+
+  background: linear-gradient(180deg, #6d5bff, #00c2ff);
+}
+
+.nxSupportPortal__techCard:hover {
+  transform: translateY(-0.35rem);
+
+  box-shadow: 0 1.5rem 3rem rgba(109, 91, 255, 0.14);
+}
+
+.nxSupportPortal__techCard label {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 0.82rem;
+
+  margin-bottom: 0.4rem;
+}
+
+.nxSupportPortal__techCard h5 {
+  margin: 0;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  color: #111827;
+
+  word-break: break-word;
+}
+
+/*==========================================================
+FILE COUNTER
+==========================================================*/
+
+.nxSupportPortal__fileCount {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding: 0.6rem 1rem;
+
+  background: #eef2ff;
+
+  border-radius: 3rem;
+
+  color: #6d5bff;
+
+  font-weight: 700;
+
+  margin-top: 1rem;
+}
+
+.nxSupportPortal__fileCount i {
+  font-size: 0.9rem;
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width: 768px) {
+  .nxSupportPortal__upload {
+    padding: 2rem 1rem;
+  }
+
+  .nxSupportPortal__summaryGrid,
+  .nxSupportPortal__techGrid,
+  .nxSupportPortal__attachments {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==================================================================== */
+/*==========================================================
+NEXGEN SUPPORT PORTAL
+PART 4
+SUBMIT • SECURITY • RESPONSE • EMERGENCY
+==========================================================*/
+
+/*==========================================================
+RESPONSE CARD
+==========================================================*/
+
+.nxSupportPortal__response {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ffffff, #f9fbff);
+
+  border: 1px solid #e8eef7;
+
+  border-radius: 1.5rem;
+
+  padding: 2rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.nxSupportPortal__response::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top right,
+    rgba(109, 91, 255, 0.08),
+    transparent 60%
+  );
+
+  pointer-events: none;
+}
+
+.nxSupportPortal__responseIcon {
+  width: 5rem;
+
+  height: 5rem;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  color: #fff;
+
+  font-size: 1.6rem;
+
+  flex-shrink: 0;
+
+  box-shadow: 0 1rem 2rem rgba(109, 91, 255, 0.25);
+}
+
+.nxSupportPortal__response h4 {
+  margin-bottom: 0.45rem;
+
+  font-weight: 800;
+
+  color: #111827;
+}
+
+.nxSupportPortal__response p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/*==========================================================
+SECURITY
+==========================================================*/
+
+.nxSupportPortal__security {
+  display: flex;
+
+  gap: 1rem;
+
+  align-items: flex-start;
+
+  background: #f8fbff;
+
+  border: 1px solid #e7edf6;
+
+  border-radius: 1.4rem;
+
+  padding: 1.5rem;
+
+  margin-bottom: 2rem;
+}
+
+.nxSupportPortal__security i {
+  font-size: 1.5rem;
+
+  color: #6d5bff;
+
+  margin-top: 0.2rem;
+}
+
+.nxSupportPortal__security h5 {
+  font-size: 1.05rem;
+
+  font-weight: 800;
+
+  margin-bottom: 0.4rem;
+}
+
+.nxSupportPortal__security p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/*==========================================================
+CHECKBOX
+==========================================================*/
+
+.nxSupportPortal__agree {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.nxSupportPortal__agree input {
+  display: none;
+}
+
+.nxSupportPortal__agree label {
+  position: relative;
+
+  padding-left: 3rem;
+
+  cursor: pointer;
+
+  line-height: 1.8;
+
+  color: #475569;
+
+  user-select: none;
+}
+
+.nxSupportPortal__agree label::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  top: 0.1rem;
+
+  width: 1.6rem;
+
+  height: 1.6rem;
+
+  border-radius: 0.45rem;
+
+  border: 2px solid #d6dce8;
+
+  transition: 0.3s;
+
+  background: #fff;
+}
+
+.nxSupportPortal__agree input:checked + label::before {
+  background: #6d5bff;
+
+  border-color: #6d5bff;
+}
+
+.nxSupportPortal__agree label::after {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0.42rem;
+
+  top: 0.15rem;
+
+  color: #fff;
+
+  font-size: 0.9rem;
+
+  opacity: 0;
+
+  transition: 0.3s;
+}
+
+.nxSupportPortal__agree input:checked + label::after {
+  opacity: 1;
+}
+
+/*==========================================================
+SUBMIT BUTTON
+==========================================================*/
+
+.nxSupportPortal__submit {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  padding: 1.2rem 2rem;
+
+  border-radius: 1rem;
+
+  font-size: 1rem;
+
+  font-weight: 800;
+
+  color: #fff;
+
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #6d5bff, #00c2ff);
+
+  transition: 0.35s;
+
+  box-shadow: 0 1.2rem 2.5rem rgba(109, 91, 255, 0.22);
+}
+
+.nxSupportPortal__submit:hover {
+  transform: translateY(-0.25rem);
+
+  box-shadow: 0 2rem 3rem rgba(109, 91, 255, 0.28);
+}
+
+.nxSupportPortal__submit:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.nxSupportPortal__submit i {
+  margin-right: 0.7rem;
+}
+
+.nxSupportPortal__submit::before {
+  content: "";
+
+  position: absolute;
+
+  left: -100%;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.nxSupportPortal__submit:hover::before {
+  left: 100%;
+}
+
+/*==========================================================
+LOADING
+==========================================================*/
+
+.nxSupportPortal__loading {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+.nxSupportPortal__loading i {
+  animation: nxSupportRotate 1s linear infinite;
+}
+
+@keyframes nxSupportRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*==========================================================
+EMERGENCY
+==========================================================*/
+
+.nxSupportPortal__emergency {
+  margin-top: 2.5rem;
+
+  padding: 2rem;
+
+  border-radius: 1.5rem;
+
+  background: linear-gradient(135deg, #111827, #1f2937);
+
+  color: #fff;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.nxSupportPortal__emergency::before {
+  content: "";
+
+  position: absolute;
+
+  width: 18rem;
+
+  height: 18rem;
+
+  right: -8rem;
+
+  top: -8rem;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nxSupportPortal__emergency h4 {
+  font-weight: 800;
+
+  margin-bottom: 1rem;
+}
+
+.nxSupportPortal__emergency p {
+  color: #d1d5db;
+
+  line-height: 1.8;
+
+  margin-bottom: 1.5rem;
+}
+
+.nxSupportPortal__emergency a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.75rem;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 3rem;
+
+  background: #fff;
+
+  color: #111827;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.nxSupportPortal__emergency a:hover {
+  transform: translateY(-0.2rem);
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width: 768px) {
+  .nxSupportPortal__response {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .nxSupportPortal__security {
+    flex-direction: column;
+  }
+
+  .nxSupportPortal__agree {
+    align-items: flex-start;
+  }
+}
+/* ========================================================================= */
+/*==========================================================
+NEXGEN SUPPORT PORTAL
+PART 5
+FINAL POLISH
+==========================================================*/
+
+/*==========================================================
+BACKGROUND DECORATIONS
+==========================================================*/
+
+.nxSupportPortal {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.nxSupportPortal::before {
+  content: "";
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  top: -12rem;
+  left: -10rem;
+  border-radius: 50%;
+  background: rgba(109, 91, 255, 0.06);
+  filter: blur(7rem);
+  animation: nxSupportBlobOne 14s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.nxSupportPortal::after {
+  content: "";
+  position: absolute;
+  width: 28rem;
+  height: 28rem;
+  bottom: -10rem;
+  right: -8rem;
+  border-radius: 50%;
+  background: rgba(0, 194, 255, 0.06);
+  filter: blur(7rem);
+  animation: nxSupportBlobTwo 16s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes nxSupportBlobOne {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(2rem, 2rem) scale(1.12);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes nxSupportBlobTwo {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-2rem, -1rem) scale(1.08);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/*==========================================================
+SECTION ANIMATION
+==========================================================*/
+
+.nxSupportPortal__fadeUp {
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: nxSupportFadeUp 0.8s ease forwards;
+}
+
+@keyframes nxSupportFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nxSupportPortal__delay1 {
+  animation-delay: 0.15s;
+}
+
+.nxSupportPortal__delay2 {
+  animation-delay: 0.3s;
+}
+
+.nxSupportPortal__delay3 {
+  animation-delay: 0.45s;
+}
+
+.nxSupportPortal__delay4 {
+  animation-delay: 0.6s;
+}
+
+/*==========================================================
+FORM CONTROLS
+==========================================================*/
+
+.nxSupportPortal input,
+.nxSupportPortal textarea,
+.nxSupportPortal select,
+.nxSupportPortal button {
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.3s,
+    background 0.3s;
+}
+
+.nxSupportPortal input:focus,
+.nxSupportPortal textarea:focus,
+.nxSupportPortal select:focus {
+  outline: none;
+  border-color: #6d5bff;
+  box-shadow: 0 0 0 0.25rem rgba(109, 91, 255, 0.15);
+}
+
+.nxSupportPortal textarea {
+  resize: vertical;
+  min-height: 10rem;
+}
+
+/*==========================================================
+SCROLLBAR
+==========================================================*/
+
+.nxSupportPortal *::-webkit-scrollbar {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.nxSupportPortal *::-webkit-scrollbar-thumb {
+  background: rgba(109, 91, 255, 0.35);
+  border-radius: 10rem;
+}
+
+.nxSupportPortal *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/*==========================================================
+HOVER ELEVATION
+==========================================================*/
+
+.nxSupportPortal__card,
+.nxSupportPortal__summaryItem,
+.nxSupportPortal__techCard,
+.nxSupportPortal__attachment,
+.nxSupportPortal__option {
+  transition:
+    transform 0.35s,
+    box-shadow 0.35s,
+    border-color 0.35s;
+}
+
+.nxSupportPortal__card:hover,
+.nxSupportPortal__summaryItem:hover,
+.nxSupportPortal__techCard:hover,
+.nxSupportPortal__attachment:hover,
+.nxSupportPortal__option:hover {
+  transform: translateY(-0.35rem);
+}
+
+/*==========================================================
+RESPONSIVE
+==========================================================*/
+
+@media (max-width: 1200px) {
+  .nxSupportPortal {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .nxSupportPortal {
+    padding: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .nxSupportPortal {
+    padding: 3.5rem 0;
+  }
+
+  .nxSupportPortal::before,
+  .nxSupportPortal::after {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .nxSupportPortal {
+    padding: 3rem 0;
+  }
+
+  .nxSupportPortal h2 {
+    font-size: 1.8rem;
+  }
+
+  .nxSupportPortal p {
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+}
+
+/*==========================================================
+ACCESSIBILITY
+==========================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}
+
+/*==========================================================
+PERFORMANCE
+==========================================================*/
+
+.nxSupportPortal__card,
+.nxSupportPortal__option,
+.nxSupportPortal__submit,
+.nxSupportPortal__attachment,
+.nxSupportPortal__techCard {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/*==========================================================
+TEXT SELECTION
+==========================================================*/
+
+.nxSupportPortal ::selection {
+  background: rgba(109, 91, 255, 0.22);
+  color: #111827;
+}
+
+/*==========================================================
+END
+==========================================================*/

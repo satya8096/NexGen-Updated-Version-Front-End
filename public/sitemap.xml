@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://nexgenwebdesigns.com/</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+   <url>
+    <loc>https://nexgenwebdesigns.com/services</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://nexgenwebdesigns.com/about-us</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.85</priority>
+  </url>
+
+    <url>
+    <loc>https://nexgenwebdesigns.com/portfolio</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://nexgenwebdesigns.com/careers</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://nexgenwebdesigns.com/contact-us</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://nexgenwebdesigns.com/blogs</loc>
+    <lastmod>2025-05-19</lastmod>
+    <priority>0.65</priority>
+  </url>
+
+</urlset>

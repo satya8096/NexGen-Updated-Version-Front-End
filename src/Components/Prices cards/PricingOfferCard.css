@@ -1,0 +1,973 @@
+/* ===========================================================
+   NEXGEN PREMIUM PRICING CARD
+   PART 3 (BASE STYLES)
+=========================================================== */
+
+.nxgPriceGlowOne,
+.nxgPriceGlowTwo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(5rem);
+  pointer-events: none;
+  z-index: -2;
+}
+/*
+.nxgPriceGlowOne {
+  width: 22rem;
+  height: 22rem;
+  top: -6rem;
+  left: -6rem;
+  background: rgba(37, 99, 235, 0.12);
+} */
+/*
+.nxgPriceGlowTwo {
+  width: 18rem;
+  height: 18rem;
+  right: -5rem;
+  bottom: -5rem;
+  background: rgba(124, 58, 237, 0.1);
+} */
+
+/* ===========================================================
+   CARD
+=========================================================== */
+
+.nxgPriceCard {
+  position: relative;
+  width: 20rem;
+
+  padding: 2.3rem;
+
+  border-radius: 2rem;
+
+  backdrop-filter: blur(1.5rem);
+
+  /* border: 0.0625rem solid rgba(255, 255, 255, 0.45); */
+
+  /* box-shadow:
+    0 2rem 5rem rgba(15, 23, 42, 0.1),
+    0 0.4rem 1rem rgba(15, 23, 42, 0.05); */
+
+  overflow: hidden;
+}
+
+/* ===========================================================
+   BORDER
+=========================================================== */
+
+.nxgPriceBorder {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 0.08rem;
+  pointer-events: none;
+}
+
+/* ===========================================================
+   SHINE
+=========================================================== */
+
+.nxgPriceShine {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 45%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* ===========================================================
+   BADGE
+=========================================================== */
+
+.nxgPriceTopBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding: 0.65rem 1.2rem;
+
+  border-radius: 999rem;
+
+  background: #0f172a;
+  color: #fff;
+
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+
+  margin-bottom: 1.8rem;
+}
+
+.nxgPriceBadgePulse {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+/* ===========================================================
+   SALE
+=========================================================== */
+
+.nxgPriceSaleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-bottom: 1.6rem;
+}
+
+.nxgPriceLive {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.45rem 0.9rem;
+
+  border-radius: 999rem;
+
+  background: rgba(34, 197, 94, 0.12);
+
+  color: #16a34a;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.nxgPriceLiveDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.nxgPriceSaleWrapper h5 {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+}
+
+/* ===========================================================
+   DISCOUNT
+=========================================================== */
+
+.nxgPriceDiscount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.7rem 1.25rem;
+
+  border-radius: 999rem;
+
+  background: linear-gradient(135deg, #ff6a00, #ff2d55);
+
+  color: #fff;
+
+  font-weight: 800;
+
+  font-size: 0.95rem;
+
+  margin-bottom: 1.9rem;
+}
+
+/* ===========================================================
+   TITLE
+=========================================================== */
+
+.nxgPriceTitle {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 1.7rem;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  margin-bottom: 1.5rem;
+}
+
+/* ===========================================================
+   OLD PRICE
+=========================================================== */
+
+.nxgPriceOldPrice {
+  color: #94a3b8;
+
+  text-decoration: line-through;
+
+  font-size: 1.35rem;
+
+  font-weight: 600;
+}
+
+/* ===========================================================
+   CURRENT PRICE
+=========================================================== */
+
+.nxgPriceCurrentPrice {
+  margin-top: 0.25rem;
+
+  font-size: 2.5rem;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  color: #2563eb;
+}
+
+/* ===========================================================
+   SAVINGS
+=========================================================== */
+
+.nxgPriceSavings {
+  display: inline-flex;
+
+  margin-top: 1rem;
+
+  padding: 0.7rem 1.2rem;
+
+  border-radius: 999rem;
+
+  background: rgba(34, 197, 94, 0.1);
+
+  color: #15803d;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+}
+
+/* ===========================================================
+   DIVIDER
+=========================================================== */
+
+.nxgPriceDivider {
+  width: 100%;
+  height: 0.0625rem;
+
+  background: rgba(148, 163, 184, 0.25);
+
+  margin: 2rem 0;
+}
+
+/* ===========================================================
+   OFFER TITLE
+=========================================================== */
+
+.nxgPriceOfferTitle {
+  text-align: center;
+
+  color: #475569;
+
+  font-size: 0.95rem;
+
+  font-weight: 700;
+
+  margin-bottom: 1.4rem;
+}
+
+/* ===========================================================
+   COUNTDOWN
+=========================================================== */
+
+.nxgPriceCountdown {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+.nxgPriceTimeBox {
+  flex: 1;
+
+  min-width: 3.5rem;
+
+  padding: 1rem 0.5rem;
+
+  text-align: center;
+
+  border-radius: 1.2rem;
+
+  background: rgba(248, 250, 252, 0.95);
+
+  border: 0.0625rem solid rgba(226, 232, 240, 0.8);
+}
+
+.nxgPriceTimeBox h2 {
+  margin: 0;
+
+  color: #0f172a;
+
+  font-size: 1.8rem;
+
+  font-weight: 800;
+}
+
+.nxgPriceTimeBox p {
+  margin: 0.45rem 0 0;
+
+  color: #64748b;
+
+  font-size: 0.68rem;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+.nxgPriceColon {
+  font-size: 2rem;
+
+  font-weight: 700;
+
+  color: #64748b;
+}
+
+/* ===========================================================
+   EXPIRED
+=========================================================== */
+
+.nxgPriceExpired {
+  margin-top: 1.6rem;
+
+  text-align: center;
+
+  color: #dc2626;
+
+  font-weight: 700;
+}
+
+/* ===========================================================
+   BUTTON
+=========================================================== */
+
+.nxgPriceButton {
+  margin-top: 2rem;
+
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 0.9rem;
+
+  border: none;
+
+  outline: none;
+
+  cursor: pointer;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 999rem;
+
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+  color: #fff;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+}
+
+.nxgPriceArrow {
+  width: 1.15rem;
+
+  height: 1.15rem;
+}
+
+/* =================================================================== */
+/* ===========================================================
+   PART 4
+   PREMIUM ANIMATIONS & MICRO INTERACTIONS
+===========================================================*/
+
+/* ==========================
+   Animated Gradient Border
+========================== */
+
+.nxgPriceBorder::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+
+  padding: 0.09rem;
+
+  background: linear-gradient(130deg, #2563eb, #7c3aed, #06b6d4, #2563eb);
+
+  background-size: 300% 300%;
+
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  animation: nxgPriceBorderMove 8s linear infinite;
+}
+
+/* ==========================
+   Shine
+========================== */
+
+.nxgPriceShine {
+  background: linear-gradient(
+    115deg,
+    transparent,
+    rgba(255, 255, 255, 0.75),
+    transparent
+  );
+
+  transform: skewX(-25deg);
+
+  animation: nxgPriceShineMove 5s ease-in-out infinite;
+}
+
+/* ==========================
+   Card Hover
+========================== */
+
+.nxgPriceCard {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.nxgPriceCard:hover {
+  transform: translateY(-0.8rem);
+
+  box-shadow:
+    0 2.8rem 5rem rgba(37, 99, 235, 0.15),
+    0 1rem 2rem rgba(15, 23, 42, 0.08);
+}
+
+/* ==========================
+   Background Glow
+========================== */
+
+.nxgPriceGlowOne {
+  animation: nxgGlowFloatOne 10s ease-in-out infinite;
+}
+
+.nxgPriceGlowTwo {
+  animation: nxgGlowFloatTwo 12s ease-in-out infinite;
+}
+
+/* ==========================
+   Badge
+========================== */
+
+.nxgPriceTopBadge {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nxgPriceCard:hover .nxgPriceTopBadge {
+  transform: rotate(-2deg) scale(1.03);
+
+  box-shadow: 0 0.7rem 1.5rem rgba(15, 23, 42, 0.15);
+}
+
+/* ==========================
+   Live Dot
+========================== */
+
+.nxgPriceLiveDot {
+  animation: nxgLivePulse 1.5s infinite;
+}
+
+/* ==========================
+   Discount Badge
+========================== */
+
+.nxgPriceDiscount {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nxgPriceCard:hover .nxgPriceDiscount {
+  transform: translateY(-0.2rem);
+
+  box-shadow: 0 0.9rem 2rem rgba(255, 85, 85, 0.25);
+}
+
+/* ==========================
+   Price
+========================== */
+
+.nxgPriceCurrentPrice {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+}
+
+/* ==========================
+   Countdown Boxes
+========================== */
+
+.nxgPriceTimeBox {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.nxgPriceCard:hover .nxgPriceTimeBox {
+  transform: translateY(-0.35rem);
+
+  box-shadow: 0 1rem 2rem rgba(37, 99, 235, 0.08);
+
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* ==========================
+   Colon Blink
+========================== */
+
+.nxgPriceColon {
+  animation: nxgColonBlink 1s infinite;
+}
+
+/* ==========================
+   Button
+========================== */
+
+.nxgPriceButton {
+  overflow: hidden;
+
+  position: relative;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.nxgPriceButton::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -130%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.55),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  transition: left 0.8s ease;
+}
+
+.nxgPriceButton:hover {
+  transform: translateY(-0.15rem);
+  color: white;
+  box-shadow: 0 1.3rem 2.5rem rgba(37, 99, 235, 0.25);
+}
+
+.nxgPriceButton:hover::before {
+  left: 150%;
+}
+
+.nxgPriceArrow {
+  transition: transform 0.35s ease;
+}
+
+.nxgPriceButton:hover .nxgPriceArrow {
+  transform: translateX(0.35rem);
+}
+
+/* ==========================
+   Savings Badge
+========================== */
+
+.nxgPriceSavings {
+  transition: transform 0.35s ease;
+}
+
+.nxgPriceCard:hover .nxgPriceSavings {
+  transform: scale(1.04);
+}
+
+/* ===========================================================
+   KEYFRAMES
+===========================================================*/
+
+@keyframes nxgPriceBorderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+@keyframes nxgPriceShineMove {
+  0% {
+    left: -130%;
+  }
+
+  45% {
+    left: 140%;
+  }
+
+  100% {
+    left: 140%;
+  }
+}
+
+@keyframes nxgGlowFloatOne {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(2rem, -2rem);
+  }
+}
+
+@keyframes nxgGlowFloatTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-2rem, 2rem);
+  }
+}
+
+@keyframes nxgLivePulse {
+  0% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.6);
+
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes nxgColonBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+}
+
+/* ========================================================================== */
+/* ===========================================================
+   PART 5
+   RESPONSIVE + ACCESSIBILITY + FINAL POLISH
+===========================================================*/
+
+/* ==========================
+   Large Tablets
+========================== */
+
+@media (max-width: 991.98px) {
+  .nxgPriceCard {
+    max-width: 26rem;
+
+    padding: 2rem;
+  }
+
+  .nxgPriceCurrentPrice {
+    font-size: 3.2rem;
+  }
+
+  .nxgPriceCountdown {
+    gap: 0.55rem;
+  }
+
+  .nxgPriceTimeBox {
+    min-width: 4.2rem;
+
+    padding: 0.9rem 0.45rem;
+  }
+
+  .nxgPriceTimeBox h2 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ==========================
+   Tablets
+========================== */
+
+@media (max-width: 767.98px) {
+  .nxgPriceCardWrapper {
+    padding: 3rem 1rem;
+  }
+
+  .nxgPriceCard {
+    max-width: 100%;
+
+    padding: 1.75rem;
+  }
+
+  .nxgPriceSaleWrapper {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.8rem;
+  }
+
+  .nxgPriceTitle {
+    font-size: 1.45rem;
+  }
+
+  .nxgPriceOldPrice {
+    font-size: 1.15rem;
+  }
+
+  .nxgPriceCurrentPrice {
+    font-size: 2.8rem;
+  }
+
+  .nxgPriceSavings {
+    font-size: 0.9rem;
+  }
+
+  .nxgPriceCountdown {
+    gap: 0.45rem;
+  }
+
+  .nxgPriceTimeBox {
+    min-width: 3.9rem;
+
+    padding: 0.8rem 0.35rem;
+  }
+
+  .nxgPriceTimeBox h2 {
+    font-size: 1.45rem;
+  }
+
+  .nxgPriceTimeBox p {
+    font-size: 0.68rem;
+  }
+
+  .nxgPriceColon {
+    font-size: 1.5rem;
+  }
+
+  .nxgPriceButton {
+    padding: 0.95rem 1.2rem;
+
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media (max-width: 575.98px) {
+  .nxgPriceCardWrapper {
+    padding: 2rem 0.75rem;
+  }
+
+  .nxgPriceCard {
+    border-radius: 1.6rem;
+
+    padding: 1.4rem;
+  }
+
+  .nxgPriceTopBadge {
+    font-size: 0.72rem;
+
+    padding: 0.55rem 0.9rem;
+
+    margin-bottom: 1.2rem;
+  }
+
+  .nxgPriceDiscount {
+    width: 100%;
+
+    justify-content: center;
+
+    font-size: 0.88rem;
+
+    margin-bottom: 1.4rem;
+  }
+
+  .nxgPriceTitle {
+    font-size: 1.3rem;
+
+    margin-bottom: 1rem;
+  }
+
+  .nxgPriceOldPrice {
+    font-size: 1rem;
+  }
+
+  .nxgPriceCurrentPrice {
+    font-size: 2.35rem;
+  }
+
+  .nxgPriceSavings {
+    width: 100%;
+
+    justify-content: center;
+
+    padding: 0.7rem 1rem;
+  }
+
+  .nxgPriceDivider {
+    margin: 1.5rem 0;
+  }
+
+  .nxgPriceOfferTitle {
+    font-size: 0.85rem;
+  }
+
+  .nxgPriceCountdown {
+    gap: 0.3rem;
+  }
+
+  .nxgPriceTimeBox {
+    min-width: 0;
+
+    flex: 1;
+
+    border-radius: 0.9rem;
+
+    padding: 0.65rem 0.2rem;
+  }
+
+  .nxgPriceTimeBox h2 {
+    font-size: 1.15rem;
+  }
+
+  .nxgPriceTimeBox p {
+    font-size: 0.58rem;
+
+    margin-top: 0.3rem;
+  }
+
+  .nxgPriceColon {
+    font-size: 1.1rem;
+  }
+
+  .nxgPriceButton {
+    margin-top: 1.5rem;
+
+    padding: 0.9rem 1rem;
+
+    font-size: 0.92rem;
+  }
+
+  .nxgPriceArrow {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width: 380px) {
+  .nxgPriceCurrentPrice {
+    font-size: 2rem;
+  }
+
+  .nxgPriceTimeBox h2 {
+    font-size: 1rem;
+  }
+
+  .nxgPriceTimeBox p {
+    font-size: 0.52rem;
+  }
+
+  .nxgPriceTopBadge {
+    font-size: 0.66rem;
+  }
+}
+
+/* ==========================
+   Keyboard Accessibility
+========================== */
+
+.nxgPriceButton:focus-visible {
+  outline: 0.18rem solid rgba(37, 99, 235, 0.35);
+
+  outline-offset: 0.2rem;
+}
+
+/* ==========================
+   Reduced Motion
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nxgPriceCard,
+  .nxgPriceBorder::before,
+  .nxgPriceShine,
+  .nxgPriceGlowOne,
+  .nxgPriceGlowTwo,
+  .nxgPriceLiveDot,
+  .nxgPriceColon,
+  .nxgPriceButton,
+  .nxgPriceArrow {
+    animation: none !important;
+
+    transition: none !important;
+  }
+
+  .nxgPriceCard:hover {
+    transform: none;
+  }
+
+  .nxgPriceTimeBox {
+    transform: none !important;
+  }
+}
