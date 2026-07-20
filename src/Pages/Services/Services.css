@@ -1262,9 +1262,6 @@ HEADING
   line-height: 2rem;
 }
 
-/*==================================================
-CARD
-==================================================*/
 .nxIndustries__card {
   position: relative;
 
@@ -1283,8 +1280,6 @@ CARD
   overflow: hidden;
 
   box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.05);
-
-  /* Better Transition */
   transition:
     transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
     box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1),
@@ -1296,40 +1291,6 @@ CARD
 .nxIndustries__card:hover {
   box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.12);
 }
-
-/*==================================================
-TOP LINE
-==================================================*/
-/*
-.nxIndustries__card::before {
-  content: "";
-
-  position: absolute;
-
-  left: 0;
-
-  top: 0;
-
-  width: 100%;
-
-  height: 0.28rem;
-
-  background: linear-gradient(90deg, #6d5bff, #00c2ff);
-
-  transform: scaleX(0);
-
-  transition: 0.45s;
-
-  transform-origin: left;
-}
-
-.nxIndustries__card:hover::before {
-  transform: scaleX(1);
-}
-
-/*==================================================
-GLOW
-==================================================*/
 
 .nxIndustries__card::after {
   content: "";
