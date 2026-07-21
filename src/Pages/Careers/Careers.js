@@ -4,7 +4,6 @@ import "./Careers.css";
 import {
   jobs,
   benefits,
-  // careerCards,
   cultureHighlights,
   departments,
   employeeStories,
@@ -64,27 +63,25 @@ const Careers = () => {
       <section className="careers-hero">
         <div className="container">
           <div className="careers-grid">
-            {/* ================= LEFT ================= */}
-
             <div className="careers-left">
-              <div className="career-badge">
+              <div className="career-badge" data-aos="fade-up">
                 <span className="badge-dot"></span>
                 We're Growing • Join Our Team
               </div>
 
-              <h2>
+              <h2 data-aos="fade-up">
                 Build The Future
                 <span>With NexGen</span>
               </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 We're looking for passionate designers, developers and creative
                 thinkers who want to create world-class digital experiences.
                 Work on exciting projects. Learn continuously. Grow your career
                 with us.
               </p>
 
-              <div className="career-buttons">
+              <div className="career-buttons" data-aos="fade-up">
                 <Link to="/contact" className="career-primary-btn">
                   Apply Now
                   <i className="fa-solid fa-arrow-right"></i>
@@ -96,7 +93,7 @@ const Careers = () => {
               </div>
 
               <div className="career-stats">
-                <div>
+                <div data-aos="zoom-in">
                   <h2>
                     {" "}
                     {counters.projectsCount < 10
@@ -108,13 +105,13 @@ const Careers = () => {
                   <span>Projects Completed</span>
                 </div>
 
-                <div>
+                <div data-aos="zoom-in">
                   <h2>98%</h2>
 
                   <span>Client Satisfaction</span>
                 </div>
 
-                <div>
+                <div data-aos="zoom-in">
                   <h2>0+</h2>
 
                   <span>Open Positions</span>
@@ -122,9 +119,7 @@ const Careers = () => {
               </div>
             </div>
 
-            {/* ================= RIGHT ================= */}
-
-            <div className="careers-right">
+            <div className="careers-right" data-aos="fade-left">
               <div className="gradient-circle one"></div>
 
               <div className="gradient-circle two"></div>
@@ -147,24 +142,6 @@ const Careers = () => {
                   you to visit this page again in the future as new
                   opportunities become available.
                 </p>
-                {/* <div className="career-list">
-                  {careerCards.map((job, index) => (
-                    <div className="career-job-card" key={index}>
-                      <div className="career-job-icon">
-                        <i className={job.icon}></i>
-                      </div>
-
-                      <div className="career-job-content">
-                        <h5>{job.title}</h5>
-
-                        <p>{job.status}</p>
-                      </div>
-
-                      <i className="fa-solid fa-arrow-right-long"></i>
-                    </div>
-                  ))}
-                </div> */}
-
                 <div className="career-footer-card">
                   <div>
                     <h3>Hiring This Month</h3>
@@ -178,25 +155,6 @@ const Careers = () => {
                 </div>
               </div>
             </div>
-            {/* <div className="careerNotice">
-              <div className="careerNotice__icon">
-                <i className="fa-solid fa-briefcase"></i>
-              </div>
-
-              <div className="careerNotice__content">
-                <span>Careers Update</span>
-
-                <h4>No Open Positions Available</h4>
-
-                <p>
-                  Thank you for your interest in joining{" "}
-                  <strong>NexGen Web Designs</strong>. We don't have any active
-                  openings at the moment, but we're continuously growing. Please
-                  check back later for future career opportunities—we'd love to
-                  hear from you when the right role becomes available.
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
 
@@ -206,32 +164,27 @@ const Careers = () => {
           <div></div>
         </div>
       </section>
-      {/*======================================================
-        WHY JOIN NEXGEN
-======================================================*/}
 
       <section className="career-values">
         <div className="container">
           <div className="career-values-grid">
-            {/* LEFT */}
-
             <div className="career-values-content">
-              <span>WHY JOIN US</span>
+              <span data-aos="fade-up">WHY JOIN US</span>
 
-              <h2>
+              <h2 data-aos="fade-up">
                 Build More Than Websites.
                 <br />
                 Build Your Career.
               </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 At NexGen Web Designs, every project is an opportunity to learn,
                 innovate and make an impact. We believe talented people deserve
                 an environment where creativity, technology and personal growth
                 come together.
               </p>
 
-              <div className="career-value-highlight">
+              <div className="career-value-highlight" data-aos="fade-up">
                 <div className="highlight-icon">
                   <i className="fa-solid fa-star"></i>
                 </div>
@@ -247,11 +200,14 @@ const Careers = () => {
               </div>
             </div>
 
-            {/* RIGHT */}
-
             <div className="career-values-cards">
               {whyJoinCards.map((item, index) => (
-                <div className="career-value-card" key={index}>
+                <div
+                  className="career-value-card"
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={`${index * 200}`}
+                >
                   <div className="career-value-icon">
                     <i className={item.icon}></i>
                   </div>
@@ -265,31 +221,26 @@ const Careers = () => {
           </div>
         </div>
       </section>
-      {/*======================================================
-                LIFE AT NEXGEN
-======================================================*/}
 
       <section className="career-culture">
         <div className="container">
           <div className="career-culture-grid">
-            {/* LEFT */}
-
             <div className="career-culture-content">
-              <span>LIFE AT NEXGEN</span>
+              <span data-aos="fade-up">LIFE AT NEXGEN</span>
 
-              <h2>
+              <h2 data-aos="fade-up">
                 We Don't Just Build Websites.
                 <br />
                 We Build Careers.
               </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 At NexGen Web Designs, we believe great digital experiences are
                 created by passionate people. Our workplace encourages
                 curiosity, collaboration, innovation and continuous improvement.
               </p>
 
-              <p>
+              <p data-aos="fade-up">
                 Whether you're designing beautiful interfaces, developing
                 scalable applications or helping clients grow online, every
                 contribution makes a real impact.
@@ -297,7 +248,12 @@ const Careers = () => {
 
               <div className="culture-highlight-list">
                 {cultureHighlights.map((item, index) => (
-                  <div className="culture-highlight-item" key={index}>
+                  <div
+                    className="culture-highlight-item"
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 200}
+                  >
                     <div className="culture-highlight-icon">
                       <i className={item.icon}></i>
                     </div>
@@ -311,32 +267,29 @@ const Careers = () => {
                 ))}
               </div>
             </div>
-
-            {/* RIGHT */}
-
             <div className="career-culture-gallery">
-              <div className="gallery-large">
+              <div className="gallery-large" data-aos="zoom-in">
                 <img
                   src={require("./../../Assets/colleagues-working-project-discussing-details.jpg")}
                   alt="Team Working"
                 />
               </div>
 
-              <div className="gallery-small gallery-top">
+              <div className="gallery-small gallery-top" data-aos="zoom-in">
                 <img
                   src={require("./../../Assets/three-dark-skinned-guy-chatting-laptop-sitting-sideways-desk-studio-black-background_613910-20785.jpg")}
                   alt="Meeting"
                 />
               </div>
 
-              <div className="gallery-small gallery-bottom">
+              <div className="gallery-small gallery-bottom" data-aos="zoom-in">
                 <img
                   src={require("./../../Assets/NexGen_Web_Designs_Finla_Light_Logo_With_Background.png")}
                   alt="Design"
                 />
               </div>
 
-              <div className="floating-achievement">
+              <div className="floating-achievement" data-aos="zoom-in">
                 <i className="fa-solid fa-award"></i>
 
                 <div>
@@ -346,7 +299,7 @@ const Careers = () => {
                 </div>
               </div>
 
-              <div className="floating-years">
+              <div className="floating-years" data-aos="zoom-in">
                 <h3>
                   {" "}
                   {counters.projectsCount < 10
@@ -361,18 +314,15 @@ const Careers = () => {
           </div>
         </div>
       </section>
-      {/*=========================================
-CAREER OPPORTUNITIES
-=========================================*/}
 
       <section className="career-jobs">
         <div className="container">
           <div className="careers-section-heading">
-            <span>OPEN POSITIONS</span>
+            <span data-aos="fade-up">OPEN POSITIONS</span>
 
-            <h2>Find Your Perfect Role</h2>
+            <h2 data-aos="fade-up">Find Your Perfect Role</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Explore opportunities where your creativity, technical skills and
               passion can make a real difference.
             </p>
@@ -388,6 +338,8 @@ CAREER OPPORTUNITIES
                     : "career-filter-btn"
                 }
                 onClick={() => setActiveDepartment(item)}
+                data-aos="zoom-in"
+                data-aos-delay={`${index * 200}`}
               >
                 {item}
               </button>
@@ -395,8 +347,13 @@ CAREER OPPORTUNITIES
           </div>
 
           <div className="career-job-grid">
-            {filteredJobs.map((job) => (
-              <div className="career-opening-card" key={job.id}>
+            {filteredJobs.map((job, index) => (
+              <div
+                className="career-opening-card"
+                key={job.id}
+                data-aos="fade-up"
+                data-aos-delay={`${index * 200}`}
+              >
                 {job.featured && <span className="featured-job">Featured</span>}
 
                 <div className="opening-icon">
@@ -442,18 +399,15 @@ CAREER OPPORTUNITIES
           </div>
         </div>
       </section>
-      {/*=========================================================
-                    HIRING PROCESS
-=========================================================*/}
 
       <section className="career-process">
         <div className="container">
           <div className="career-process-section-heading">
-            <span>HIRING PROCESS</span>
+            <span data-aos="fade-up">HIRING PROCESS</span>
 
-            <h2>Your Journey Starts Here</h2>
+            <h2 data-aos="fade-up">Your Journey Starts Here</h2>
 
-            <p>
+            <p data-aos="fade-up">
               We've designed a transparent hiring process that focuses on your
               skills, creativity and potential. Here's what you can expect after
               applying.
@@ -467,6 +421,7 @@ CAREER OPPORTUNITIES
               <div
                 className={`process-item ${index % 2 === 0 ? "left" : "right"}`}
                 key={index}
+                data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
               >
                 <div className="process-circle">{item.step}</div>
 
@@ -486,28 +441,25 @@ CAREER OPPORTUNITIES
           </div>
         </div>
       </section>
-      {/*====================================================
-                BENEFITS & PERKS
-====================================================*/}
 
       <section className="career-benefits">
         <div className="container">
           <div className="career-benefits-grid">
-            {/* LEFT */}
-
             <div className="career-benefits-content">
-              <span>BENEFITS & PERKS</span>
+              <span data-aos="fade-up">BENEFITS & PERKS</span>
 
-              <h2>Everything You Need To Build An Amazing Career.</h2>
+              <h2 data-aos="fade-up">
+                Everything You Need To Build An Amazing Career.
+              </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 At NexGen Web Designs, we believe that exceptional people
                 deserve an exceptional workplace. Our focus is on helping every
                 team member learn faster, innovate confidently and enjoy
                 meaningful work.
               </p>
 
-              <div className="benefit-feature-card">
+              <div className="benefit-feature-card" data-aos="fade-up">
                 <div className="benefit-feature-icon">
                   <i className="fa-solid fa-star"></i>
                 </div>
@@ -523,13 +475,13 @@ CAREER OPPORTUNITIES
               </div>
             </div>
 
-            {/* RIGHT */}
-
             <div className="career-benefits-cards">
               {benefits.map((item, index) => (
                 <div
                   className={`benefit-card benefit-${index + 1}`}
                   key={index}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 200}
                 >
                   <div className="benefit-icon">
                     <i className={item.icon}></i>
@@ -544,27 +496,22 @@ CAREER OPPORTUNITIES
           </div>
         </div>
       </section>
-      {/*=========================================================
-                EMPLOYEE STORIES
-=========================================================*/}
 
       <section className="career-testimonials">
         <div className="container">
           <div className="career-section-heading">
-            <span>EMPLOYEE STORIES</span>
+            <span data-aos="fade-up">EMPLOYEE STORIES</span>
 
-            <h2>Hear From Our Team</h2>
+            <h2 data-aos="fade-up">Hear From Our Team</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every great company is built by great people. Here's what our team
               members say about working at NexGen Web Designs.
             </p>
           </div>
 
           <div className="career-testimonial-grid">
-            {/* FEATURED */}
-
-            <div className="featured-story">
+            <div className="featured-story" data-aos="zoom-in">
               <img
                 src={employeeStories[0].image}
                 alt={employeeStories[0].name}
@@ -583,11 +530,14 @@ CAREER OPPORTUNITIES
               <span>{employeeStories[0].role}</span>
             </div>
 
-            {/* RIGHT */}
-
             <div className="story-side">
-              {employeeStories.slice(1).map((item) => (
-                <div className="story-card" key={item.id}>
+              {employeeStories.slice(1).map((item, index) => (
+                <div
+                  className="story-card"
+                  key={item.id}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                >
                   <div className="story-header">
                     <img src={item.image} alt={item.name} />
 
@@ -611,21 +561,18 @@ CAREER OPPORTUNITIES
           </div>
         </div>
       </section>
-      {/*====================================================
-            APPLY NOW
-====================================================*/}
 
       <section className="career-apply-section">
         <div className="container">
           <div className="career-apply-grid">
-            {/* LEFT */}
-
             <div className="career-apply-content">
-              <span>JOIN OUR TEAM</span>
+              <span data-aos="fade-up">JOIN OUR TEAM</span>
 
-              <h2>Ready To Build Something Amazing With Us?</h2>
+              <h2 data-aos="fade-up">
+                Ready To Build Something Amazing With Us?
+              </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 Whether you're an experienced professional, a creative designer,
                 or just starting your career, we'd love to hear from you. Become
                 part of a team that values innovation, collaboration and
@@ -633,25 +580,25 @@ CAREER OPPORTUNITIES
               </p>
 
               <div className="career-points">
-                <div>
+                <div data-aos="fade-up">
                   <i className="fa-solid fa-circle-check"></i>
 
                   <span>Real Client Projects</span>
                 </div>
 
-                <div>
+                <div data-aos="fade-up">
                   <i className="fa-solid fa-circle-check"></i>
 
                   <span>Career Growth</span>
                 </div>
 
-                <div>
+                <div data-aos="fade-up">
                   <i className="fa-solid fa-circle-check"></i>
 
                   <span>Flexible Work Culture</span>
                 </div>
 
-                <div>
+                <div data-aos="fade-up">
                   <i className="fa-solid fa-circle-check"></i>
 
                   <span>Supportive Team</span>
@@ -659,9 +606,7 @@ CAREER OPPORTUNITIES
               </div>
             </div>
 
-            {/* RIGHT */}
-
-            <div className="career-form-card">
+            <div className="career-form-card" data-aos="fade-up">
               <p className="text-danger mb-3">
                 Note: Present we are not accepting applications !
               </p>
@@ -747,13 +692,9 @@ CAREER OPPORTUNITIES
           </div>
         </div>
       </section>
-      {/*======================================================
-            TALENT COMMUNITY CTA
-======================================================*/}
-
       <section className="career-community">
         <div className="container">
-          <div className="career-community-card">
+          <div className="career-community-card" data-aos="fade-up">
             <div className="career-community-bg"></div>
 
             <span>STAY CONNECTED</span>

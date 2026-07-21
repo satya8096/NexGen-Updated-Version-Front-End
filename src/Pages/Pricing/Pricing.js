@@ -15,7 +15,6 @@ import PricingOfferCard from "../../Components/Prices cards/PricingOfferCard";
 
 const Pricing = () => {
   const [plans] = useState(fetchedPlans);
-  // const [error, setError] = useState("");
   const [openFaq, setOpenFaq] = useState(0);
 
   const [currency, setCurrency] = useState("INR");
@@ -23,11 +22,9 @@ const Pricing = () => {
 
   const { websiteData, loading } = useAppData();
   let counters = {};
-  // let projects = {};
   let pricings = {};
   if (!loading) {
     counters = websiteData.counters;
-    // projects = websiteData.projects;
     pricings = websiteData.pricings;
   }
 
@@ -47,10 +44,6 @@ const Pricing = () => {
     fetchRate();
   }, []);
 
-  /*==============================
-      PRICE FORMAT
-  ==============================*/
-
   const formatPrice = (price) => {
     if (price == null || isNaN(price)) return "";
 
@@ -60,10 +53,6 @@ const Pricing = () => {
 
     return `$${Math.round(Number(price) * exchangeRate).toLocaleString("en-US")}`;
   };
-
-  // const pageTitle = useMemo(() => {
-  //   return "Affordable Website Pricing";
-  // }, []);
 
   const getStartingPrice = (pkg) => {
     const today = new Date();
@@ -98,8 +87,6 @@ const Pricing = () => {
     const actualPrice = Number(pkg.actualPrice);
     const offerPrice = Number(pkg.offerPrice);
     const extraOfferPrice = Number(pkg.extraOfferPrice);
-
-    // Helper to calculate percentage
     const calculateDiscount = (original, discounted) =>
       Math.round(((original - discounted) / original) * 100);
 
@@ -114,10 +101,6 @@ const Pricing = () => {
       extraOfferPrice > 0 &&
       extraOfferPrice < actualPrice &&
       extraOfferPrice < offerPrice;
-
-    // ===============================
-    // Extra Offer (Highest Priority)
-    // ===============================
     if (hasExtraOffer) {
       return {
         type: "extraOffer",
@@ -128,14 +111,9 @@ const Pricing = () => {
 
         description: pkg.offerDescription,
         offerEndDate: pkg.offerEndDate,
-        // NEW
         discountPercentage: calculateDiscount(actualPrice, extraOfferPrice),
       };
     }
-
-    // ===============================
-    // Normal Offer
-    // ===============================
     if (hasOffer) {
       return {
         type: "offer",
@@ -144,15 +122,9 @@ const Pricing = () => {
         finalPrice: offerPrice,
 
         description: null,
-
-        // NEW
         discountPercentage: calculateDiscount(actualPrice, offerPrice),
       };
     }
-
-    // ===============================
-    // No Offer
-    // ===============================
     return {
       type: "normal",
 
@@ -237,364 +209,14 @@ const Pricing = () => {
   const countdownForStandard = useCountdown(standardPrices.offerEndDate);
   const countdownForPremium = useCountdown(premiumPrices.offerEndDate);
   const countdownForCustom = useCountdown(customPrices.offerEndDate);
-
-  // const basicPriceSkeleton = (basicPrices, countdownForBasic) => (
-  //   <div>
-  //     {basicPrices.type === "normal" && (
-  //       <>₹{formatPrice(basicPrices.finalPrice)}</>
-  //     )}
-
-  //     {basicPrices.type === "offer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(basicPrices.actualPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(basicPrices.finalPrice)}
-  //         </strong>
-  //       </>
-  //     )}
-
-  //     {basicPrices.type === "extraOffer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(basicPrices.actualPrice)}
-  //         </span>
-
-  //         <span className="oldPrice">
-  //           {formatPrice(basicPrices.offerPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(basicPrices.finalPrice)}
-  //         </strong>
-
-  //         <p className="offerText">{basicPrices.description}</p>
-  //       </>
-  //     )}
-  //     <td>
-  //       {basicPrices.discountPercentage > 0 && (
-  //         <span>{basicPrices.discountPercentage}% OFF</span>
-  //       )}
-  //       {basicPrices.type === "extraOffer" && !countdownForBasic.expired && (
-  //         <div className="offerCountdown">
-  //           <div className="offerCountdown__title">
-  //             <i className="fa-solid fa-bolt"></i>
-  //             Limited Time Offer Ends In
-  //           </div>
-
-  //           <div className="offerCountdown__timer">
-  //             <div className="offerCountdown__box">
-  //               <span>{String(countdownForBasic.days).padStart(2, "0")}</span>
-  //               <small>Days</small>
-  //             </div>
-
-  //             <div className="offerCountdown__separator">:</div>
-
-  //             <div className="offerCountdown__box">
-  //               <span>{String(countdownForBasic.hours).padStart(2, "0")}</span>
-  //               <small>Hours</small>
-  //             </div>
-
-  //             <div className="offerCountdown__separator">:</div>
-
-  //             <div className="offerCountdown__box">
-  //               <span>
-  //                 {String(countdownForBasic.minutes).padStart(2, "0")}
-  //               </span>
-  //               <small>Min</small>
-  //             </div>
-
-  //             <div className="offerCountdown__separator">:</div>
-
-  //             <div className="offerCountdown__box">
-  //               <span>
-  //                 {String(countdownForBasic.seconds).padStart(2, "0")}
-  //               </span>
-  //               <small>Sec</small>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       )}
-  //     </td>
-  //   </div>
-  // );
-
-  // const standardPriceSkeleton = (standardPrices, countdownForStandard) => (
-  //   <div>
-  //     {standardPrices.type === "normal" && (
-  //       <>{formatPrice(standardPrices.finalPrice)}</>
-  //     )}
-
-  //     {standardPrices.type === "offer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(standardPrices.actualPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(standardPrices.finalPrice)}
-  //         </strong>
-  //       </>
-  //     )}
-
-  //     {standardPrices.type === "extraOffer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(standardPrices.actualPrice)}
-  //         </span>
-
-  //         <span className="oldPrice">
-  //           {formatPrice(standardPrices.offerPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(standardPrices.finalPrice)}
-  //         </strong>
-
-  //         <p className="offerText">{standardPrices.description}</p>
-  //       </>
-  //     )}
-  //     <td>
-  //       {standardPrices.discountPercentage > 0 && (
-  //         <span>{standardPrices.discountPercentage}% OFF</span>
-  //       )}
-  //       {standardPrices.type === "extraOffer" &&
-  //         !countdownForStandard.expired && (
-  //           <div className="offerCountdown">
-  //             <div className="offerCountdown__title">
-  //               <i className="fa-solid fa-bolt"></i>
-  //               Limited Time Offer Ends In
-  //             </div>
-
-  //             <div className="offerCountdown__timer">
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForStandard.days).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Days</small>
-  //               </div>
-
-  //               <div className="offerCountdown__separator">:</div>
-
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForStandard.hours).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Hours</small>
-  //               </div>
-
-  //               <div className="offerCountdown__separator">:</div>
-
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForStandard.minutes).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Min</small>
-  //               </div>
-
-  //               <div className="offerCountdown__separator">:</div>
-
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForStandard.seconds).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Sec</small>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         )}
-  //     </td>
-  //   </div>
-  // );
-
-  // const premiumPriceSkeleton = (premiumPrices, countdownForPremium) => (
-  //   <div>
-  //     {premiumPrices.type === "normal" && (
-  //       <>{formatPrice(premiumPrices.finalPrice)}</>
-  //     )}
-
-  //     {premiumPrices.type === "offer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(premiumPrices.actualPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(premiumPrices.finalPrice)}
-  //         </strong>
-  //       </>
-  //     )}
-
-  //     {premiumPrices.type === "extraOffer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(premiumPrices.actualPrice)}
-  //         </span>
-
-  //         <span className="oldPrice">
-  //           {formatPrice(premiumPrices.offerPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(premiumPrices.finalPrice)}
-  //         </strong>
-
-  //         <p className="offerText">{premiumPrices.description}</p>
-  //       </>
-  //     )}
-  //     <td>
-  //       {premiumPrices.discountPercentage > 0 && (
-  //         <span>{premiumPrices.discountPercentage}% OFF</span>
-  //       )}
-  //       {premiumPrices.type === "extraOffer" &&
-  //         !countdownForPremium.expired && (
-  //           <div className="offerCountdown">
-  //             <div className="offerCountdown__title">
-  //               <i className="fa-solid fa-bolt"></i>
-  //               Limited Time Offer Ends In
-  //             </div>
-
-  //             <div className="offerCountdown__timer">
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForPremium.days).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Days</small>
-  //               </div>
-
-  //               <div className="offerCountdown__separator">:</div>
-
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForPremium.hours).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Hours</small>
-  //               </div>
-
-  //               <div className="offerCountdown__separator">:</div>
-
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForPremium.minutes).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Min</small>
-  //               </div>
-
-  //               <div className="offerCountdown__separator">:</div>
-
-  //               <div className="offerCountdown__box">
-  //                 <span>
-  //                   {String(countdownForPremium.seconds).padStart(2, "0")}
-  //                 </span>
-  //                 <small>Sec</small>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         )}
-  //     </td>
-  //   </div>
-  // );
-
-  // const customPriceSkeleton = (customPrices, countdownForCustom) => (
-  //   <div>
-  //     {customPrices.type === "normal" && (
-  //       <>{formatPrice(customPrices.finalPrice)}</>
-  //     )}
-
-  //     {customPrices.type === "offer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(customPrices.actualPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(customPrices.finalPrice)}
-  //         </strong>
-  //       </>
-  //     )}
-
-  //     {customPrices.type === "extraOffer" && (
-  //       <>
-  //         <span className="oldPrice">
-  //           {formatPrice(customPrices.actualPrice)}
-  //         </span>
-
-  //         <span className="oldPrice">
-  //           {formatPrice(customPrices.offerPrice)}
-  //         </span>
-
-  //         <strong className="currentPrice">
-  //           {formatPrice(customPrices.finalPrice)}
-  //         </strong>
-
-  //         <p className="offerText">{customPrices.description}</p>
-  //       </>
-  //     )}
-
-  //     <td>
-  //       {customPrices.discountPercentage > 0 && (
-  //         <span>{customPrices.discountPercentage}% OFF</span>
-  //       )}
-  //       {customPrices.type === "extraOffer" && !countdownForCustom.expired && (
-  //         <div className="offerCountdown">
-  //           <div className="offerCountdown__title">
-  //             <i className="fa-solid fa-bolt"></i>
-  //             Limited Time Offer Ends In
-  //           </div>
-
-  //           <div className="offerCountdown__timer">
-  //             <div className="offerCountdown__box">
-  //               <span>{String(countdownForCustom.days).padStart(2, "0")}</span>
-  //               <small>Days</small>
-  //             </div>
-
-  //             <div className="offerCountdown__separator">:</div>
-
-  //             <div className="offerCountdown__box">
-  //               <span>{String(countdownForCustom.hours).padStart(2, "0")}</span>
-  //               <small>Hours</small>
-  //             </div>
-
-  //             <div className="offerCountdown__separator">:</div>
-
-  //             <div className="offerCountdown__box">
-  //               <span>
-  //                 {String(countdownForCustom.minutes).padStart(2, "0")}
-  //               </span>
-  //               <small>Min</small>
-  //             </div>
-
-  //             <div className="offerCountdown__separator">:</div>
-
-  //             <div className="offerCountdown__box">
-  //               <span>
-  //                 {String(countdownForCustom.seconds).padStart(2, "0")}
-  //               </span>
-  //               <small>Sec</small>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       )}
-  //     </td>
-  //   </div>
-  // );
-
   return (
     <>
-      {/*=====================================
-                HERO
-      =====================================*/}
       {PricingPageSEO}
       <section className="pricingHero">
-        {/* Animated Background */}
 
         <div className="pricingBlur blurOne"></div>
         <div className="pricingBlur blurTwo"></div>
         <div className="pricingGrid"></div>
-
-        {/* Floating Shapes */}
 
         <span className="shape one"></span>
         <span className="shape two"></span>
@@ -602,36 +224,36 @@ const Pricing = () => {
 
         <div className="container">
           <div className="row gy-5">
-            {/* LEFT */}
+
 
             <div className="col-lg-7">
               <div className="heroContent">
-                <span className="heroBadge">WEBSITE PRICING</span>
+                <span className="heroBadge" data-aos="fade-up">
+                  WEBSITE PRICING
+                </span>
 
-                <h1>
-                  {/* {pageTitle} */}
+                <h1 data-aos="fade-up">
                   Affordable <br /> Website Pricing
-                  {/* <span> For Every Business</span> */}
                 </h1>
 
-                <p>
+                <p data-aos="fade-up">
                   Whether you're launching your first business, upgrading your
                   current website, or building an online store, NexGen Web
                   Designs has a package designed to match your goals and budget.
                 </p>
 
                 <div className="heroTrust">
-                  <div>
+                  <div data-aos="zoom-in" data-aos-delay="200">
                     <i className="fa-solid fa-circle-check"></i>
                     Responsive
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in" data-aos-delay="400">
                     <i className="fa-solid fa-circle-check"></i>
                     SEO Ready
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in" data-aos-delay="600">
                     <i className="fa-solid fa-circle-check"></i>
                     Fast Delivery
                   </div>
@@ -639,10 +261,8 @@ const Pricing = () => {
               </div>
             </div>
 
-            {/* RIGHT */}
-
             <div className="col-lg-5">
-              <div className="pricingHeroCard">
+              <div className="pricingHeroCard" data-aos="fade-left">
                 <h5>Select Currency</h5>
 
                 <div className="currencySwitch">
@@ -715,16 +335,16 @@ const Pricing = () => {
       <section className="pricingHeroSEO pt-5 text-center">
         <div className="container">
           <header className="pricingHeroSEOHeader">
-            <span className="pricingHeroSEOBadge">
+            <span className="pricingHeroSEOBadge" data-aos="fade-up">
               Transparent Pricing • No Hidden Charges
             </span>
 
-            <h2 className="pricingHeroSEOTitle">
+            <h2 className="pricingHeroSEOTitle" data-aos="fade-up">
               Affordable Website Design & Web Development Packages for Every
               Business
             </h2>
 
-            <p className="pricingHeroSEODescription">
+            <p className="pricingHeroSEODescription" data-aos="fade-up">
               Looking for affordable, professional website design and web
               development services? <strong>NexGen Web Designs</strong> offers
               flexible website pricing packages for startups, small businesses,
@@ -769,12 +389,8 @@ const Pricing = () => {
         />
       </div>
 
-      {/*=====================================
-            API STATES
-      =====================================*/}
-
       <section className="pricingLoader">
-        <section className="featureComparison">
+        <section className="featureComparison" data-aos="fade-up">
           <div className="container">
             <div className="sectionHeading">
               <span>COMPARE PLANS</span>
@@ -790,10 +406,6 @@ const Pricing = () => {
                 your business goals.
               </p>
             </div>
-
-            {/*============================
-            DESKTOP TABLE
-    ============================*/}
 
             <div className="comparisonTable">
               <table>
@@ -812,24 +424,6 @@ const Pricing = () => {
                 </thead>
 
                 <tbody>
-                  {/* <tr>
-                    <td>Price</td>
-                    <td>
-                      {basicPriceSkeleton(basicPrices, countdownForBasic)}
-                    </td>
-                    <td>
-                      {standardPriceSkeleton(
-                        standardPrices,
-                        countdownForStandard,
-                      )}
-                    </td>
-                    <td>
-                      {premiumPriceSkeleton(premiumPrices, countdownForPremium)}
-                    </td>
-                    <td>
-                      {customPriceSkeleton(customPrices, countdownForCustom)}
-                    </td>
-                  </tr> */}
                   <tr>
                     <td>Pages</td>
 
@@ -1118,22 +712,14 @@ const Pricing = () => {
               </table>
             </div>
 
-            {/*============================
-            MOBILE CARDS
-    ============================*/}
-
             <div className="mobileComparison">
               {plans.map((plan) => (
-                <div className="mobilePlanCard" key={plan.id}>
+                <div
+                  className="mobilePlanCard"
+                  key={plan.id}
+                  data-aos="fade-up"
+                >
                   <h3>{plan.packageName}</h3>
-                  {/* {plan.title === "Basic" &&
-                    basicPriceSkeleton(basicPrices, countdownForBasic)}
-                  {plan.title === "Standard" &&
-                    standardPriceSkeleton(standardPrices, countdownForStandard)}
-                  {plan.title === "Premium" &&
-                    premiumPriceSkeleton(premiumPrices, countdownForPremium)}
-                  {plan.title === "Custom" &&
-                    customPriceSkeleton(customPrices, countdownForCustom)} */}
 
                   <ul className="mt-3">
                     {plan.features.map((feature, index) => (
@@ -1157,23 +743,18 @@ const Pricing = () => {
             </div>
           </div>
         </section>
-
-        {/*====================================================
-            WEBSITE DEVELOPMENT PROCESS
-=====================================================*/}
-
         <section className="developmentProcess">
           <div className="container">
             <div className="sectionHeading">
-              <span>OUR PROCESS</span>
+              <span data-aos="fade-up">OUR PROCESS</span>
 
-              <h2>
+              <h2 data-aos="fade-up">
                 Your Website Journey
                 <br />
                 From Idea To Launch
               </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 We follow a transparent step-by-step workflow that keeps you
                 informed throughout the project until your website goes live.
               </p>
@@ -1187,6 +768,8 @@ const Pricing = () => {
                   className={`timelineItem ${
                     index % 2 === 0 ? "left" : "right"
                   }`}
+                  data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
+                  data-aos-delay={index * 200}
                   key={step.id}
                 >
                   <div className="timelineCard">
@@ -1209,11 +792,11 @@ const Pricing = () => {
         <section className="pricingFaq">
           <div className="container">
             <div className="sectionHeading">
-              <span>FAQ</span>
+              <span data-aos="fade-up">FAQ</span>
 
-              <h2>Frequently Asked Questions</h2>
+              <h2 data-aos="fade-up">Frequently Asked Questions</h2>
 
-              <p>
+              <p data-aos="fade-up">
                 Everything you need to know before starting your website
                 project.
               </p>
@@ -1224,6 +807,8 @@ const Pricing = () => {
                 <div
                   className={`faqCard ${openFaq === index ? "activeFaq" : ""}`}
                   key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
                 >
                   <button
                     className="faqQuestion"
@@ -1252,7 +837,7 @@ const Pricing = () => {
         </section>
 
         <section className="pricingCTA">
-          <div className="container">
+          <div className="container" data-aos="fade-up">
             <div className="ctaBox">
               <span>🚀 READY TO GROW YOUR BUSINESS?</span>
 

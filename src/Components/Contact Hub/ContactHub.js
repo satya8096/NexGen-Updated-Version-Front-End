@@ -90,9 +90,7 @@ export default function ContactHub() {
     <section className="contactHubSection">
       <div className="container">
         <div className="contactHub">
-          {/* LEFT */}
-
-          <div className="contactHubIntro">
+          <div className="contactHubIntro" data-aos="fade-up">
             <span>Contact NexGen</span>
 
             <h2>Let's Build Something Amazing Together.</h2>
@@ -123,11 +121,13 @@ export default function ContactHub() {
             </button>
           </div>
 
-          {/* RIGHT */}
-
           <div className="contactHubContent">
             {contactGroups.map((group, index) => (
-              <div className={`contactRow ${group.color}`} key={index}>
+              <div
+                className={`contactRow ${group.color}`}
+                key={index}
+                data-aos="fade-up"
+              >
                 <div className="contactRowHeader">
                   <div className="contactRowIcon">
                     <i className={group.icon}></i>

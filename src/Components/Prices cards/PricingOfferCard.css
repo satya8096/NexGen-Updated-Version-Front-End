@@ -1,8 +1,3 @@
-/* ===========================================================
-   NEXGEN PREMIUM PRICING CARD
-   PART 3 (BASE STYLES)
-=========================================================== */
-
 .nxgPriceGlowOne,
 .nxgPriceGlowTwo {
   position: absolute;
@@ -11,26 +6,6 @@
   pointer-events: none;
   z-index: -2;
 }
-/*
-.nxgPriceGlowOne {
-  width: 22rem;
-  height: 22rem;
-  top: -6rem;
-  left: -6rem;
-  background: rgba(37, 99, 235, 0.12);
-} */
-/*
-.nxgPriceGlowTwo {
-  width: 18rem;
-  height: 18rem;
-  right: -5rem;
-  bottom: -5rem;
-  background: rgba(124, 58, 237, 0.1);
-} */
-
-/* ===========================================================
-   CARD
-=========================================================== */
 
 .nxgPriceCard {
   position: relative;
@@ -41,19 +16,8 @@
   border-radius: 2rem;
 
   backdrop-filter: blur(1.5rem);
-
-  /* border: 0.0625rem solid rgba(255, 255, 255, 0.45); */
-
-  /* box-shadow:
-    0 2rem 5rem rgba(15, 23, 42, 0.1),
-    0 0.4rem 1rem rgba(15, 23, 42, 0.05); */
-
   overflow: hidden;
 }
-
-/* ===========================================================
-   BORDER
-=========================================================== */
 
 .nxgPriceBorder {
   position: absolute;
@@ -63,10 +27,6 @@
   pointer-events: none;
 }
 
-/* ===========================================================
-   SHINE
-=========================================================== */
-
 .nxgPriceShine {
   position: absolute;
   top: 0;
@@ -75,10 +35,6 @@
   height: 100%;
   pointer-events: none;
 }
-
-/* ===========================================================
-   BADGE
-=========================================================== */
 
 .nxgPriceTopBadge {
   display: inline-flex;
@@ -106,10 +62,6 @@
   border-radius: 50%;
   background: #22c55e;
 }
-
-/* ===========================================================
-   SALE
-=========================================================== */
 
 .nxgPriceSaleWrapper {
   display: flex;
@@ -154,10 +106,6 @@
   font-weight: 700;
 }
 
-/* ===========================================================
-   DISCOUNT
-=========================================================== */
-
 .nxgPriceDiscount {
   display: inline-flex;
   align-items: center;
@@ -178,10 +126,6 @@
   margin-bottom: 1.9rem;
 }
 
-/* ===========================================================
-   TITLE
-=========================================================== */
-
 .nxgPriceTitle {
   margin: 0;
 
@@ -196,10 +140,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* ===========================================================
-   OLD PRICE
-=========================================================== */
-
 .nxgPriceOldPrice {
   color: #94a3b8;
 
@@ -209,10 +149,6 @@
 
   font-weight: 600;
 }
-
-/* ===========================================================
-   CURRENT PRICE
-=========================================================== */
 
 .nxgPriceCurrentPrice {
   margin-top: 0.25rem;
@@ -225,10 +161,6 @@
 
   color: #2563eb;
 }
-
-/* ===========================================================
-   SAVINGS
-=========================================================== */
 
 .nxgPriceSavings {
   display: inline-flex;
@@ -247,11 +179,6 @@
 
   font-weight: 700;
 }
-
-/* ===========================================================
-   DIVIDER
-=========================================================== */
-
 .nxgPriceDivider {
   width: 100%;
   height: 0.0625rem;
@@ -260,10 +187,6 @@
 
   margin: 2rem 0;
 }
-
-/* ===========================================================
-   OFFER TITLE
-=========================================================== */
 
 .nxgPriceOfferTitle {
   text-align: center;
@@ -276,10 +199,6 @@
 
   margin-bottom: 1.4rem;
 }
-
-/* ===========================================================
-   COUNTDOWN
-=========================================================== */
 
 .nxgPriceCountdown {
   display: flex;
@@ -337,10 +256,6 @@
   color: #64748b;
 }
 
-/* ===========================================================
-   EXPIRED
-=========================================================== */
-
 .nxgPriceExpired {
   margin-top: 1.6rem;
 
@@ -350,10 +265,6 @@
 
   font-weight: 700;
 }
-
-/* ===========================================================
-   BUTTON
-=========================================================== */
 
 .nxgPriceButton {
   margin-top: 2rem;
@@ -393,16 +304,6 @@
   height: 1.15rem;
 }
 
-/* =================================================================== */
-/* ===========================================================
-   PART 4
-   PREMIUM ANIMATIONS & MICRO INTERACTIONS
-===========================================================*/
-
-/* ==========================
-   Animated Gradient Border
-========================== */
-
 .nxgPriceBorder::before {
   content: "";
   position: absolute;
@@ -427,10 +328,6 @@
   animation: nxgPriceBorderMove 8s linear infinite;
 }
 
-/* ==========================
-   Shine
-========================== */
-
 .nxgPriceShine {
   background: linear-gradient(
     115deg,
@@ -443,10 +340,6 @@
 
   animation: nxgPriceShineMove 5s ease-in-out infinite;
 }
-
-/* ==========================
-   Card Hover
-========================== */
 
 .nxgPriceCard {
   transition:
@@ -463,10 +356,6 @@
     0 1rem 2rem rgba(15, 23, 42, 0.08);
 }
 
-/* ==========================
-   Background Glow
-========================== */
-
 .nxgPriceGlowOne {
   animation: nxgGlowFloatOne 10s ease-in-out infinite;
 }
@@ -474,10 +363,6 @@
 .nxgPriceGlowTwo {
   animation: nxgGlowFloatTwo 12s ease-in-out infinite;
 }
-
-/* ==========================
-   Badge
-========================== */
 
 .nxgPriceTopBadge {
   transition:
@@ -491,17 +376,9 @@
   box-shadow: 0 0.7rem 1.5rem rgba(15, 23, 42, 0.15);
 }
 
-/* ==========================
-   Live Dot
-========================== */
-
 .nxgPriceLiveDot {
   animation: nxgLivePulse 1.5s infinite;
 }
-
-/* ==========================
-   Discount Badge
-========================== */
 
 .nxgPriceDiscount {
   transition:
@@ -515,10 +392,6 @@
   box-shadow: 0 0.9rem 2rem rgba(255, 85, 85, 0.25);
 }
 
-/* ==========================
-   Price
-========================== */
-
 .nxgPriceCurrentPrice {
   background: linear-gradient(135deg, #2563eb, #7c3aed);
 
@@ -527,10 +400,6 @@
 
   background-clip: text;
 }
-
-/* ==========================
-   Countdown Boxes
-========================== */
 
 .nxgPriceTimeBox {
   transition:
@@ -547,17 +416,9 @@
   border-color: rgba(37, 99, 235, 0.2);
 }
 
-/* ==========================
-   Colon Blink
-========================== */
-
 .nxgPriceColon {
   animation: nxgColonBlink 1s infinite;
 }
-
-/* ==========================
-   Button
-========================== */
 
 .nxgPriceButton {
   overflow: hidden;
@@ -610,10 +471,6 @@
   transform: translateX(0.35rem);
 }
 
-/* ==========================
-   Savings Badge
-========================== */
-
 .nxgPriceSavings {
   transition: transform 0.35s ease;
 }
@@ -621,10 +478,6 @@
 .nxgPriceCard:hover .nxgPriceSavings {
   transform: scale(1.04);
 }
-
-/* ===========================================================
-   KEYFRAMES
-===========================================================*/
 
 @keyframes nxgPriceBorderMove {
   0% {
@@ -703,16 +556,6 @@
   }
 }
 
-/* ========================================================================== */
-/* ===========================================================
-   PART 5
-   RESPONSIVE + ACCESSIBILITY + FINAL POLISH
-===========================================================*/
-
-/* ==========================
-   Large Tablets
-========================== */
-
 @media (max-width: 991.98px) {
   .nxgPriceCard {
     max-width: 26rem;
@@ -738,10 +581,6 @@
     font-size: 1.7rem;
   }
 }
-
-/* ==========================
-   Tablets
-========================== */
 
 @media (max-width: 767.98px) {
   .nxgPriceCardWrapper {
@@ -806,10 +645,6 @@
     font-size: 0.95rem;
   }
 }
-
-/* ==========================
-   Mobile
-========================== */
 
 @media (max-width: 575.98px) {
   .nxgPriceCardWrapper {
@@ -912,10 +747,6 @@
   }
 }
 
-/* ==========================
-   Small Phones
-========================== */
-
 @media (max-width: 380px) {
   .nxgPriceCurrentPrice {
     font-size: 2rem;
@@ -934,19 +765,11 @@
   }
 }
 
-/* ==========================
-   Keyboard Accessibility
-========================== */
-
 .nxgPriceButton:focus-visible {
   outline: 0.18rem solid rgba(37, 99, 235, 0.35);
 
   outline-offset: 0.2rem;
 }
-
-/* ==========================
-   Reduced Motion
-========================== */
 
 @media (prefers-reduced-motion: reduce) {
   .nxgPriceCard,

@@ -1,7 +1,3 @@
-/*=========================
- GOOGLE FONT
-=========================*/
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -19,10 +15,6 @@ li {
   list-style: none;
 }
 
-/*=========================
-NAVBAR
-=========================*/
-
 .navbar-area {
   position: fixed;
 
@@ -35,7 +27,6 @@ NAVBAR
   z-index: 9999;
 
   transition: 0.4s;
-  /* border: 2px solid black; */
 }
 
 .navbar-area.sticky {
@@ -46,9 +37,6 @@ NAVBAR
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 
   padding: 15px 0;
-
-  /* border: none; */
-  /* border-bottom: 2px solid black; */
 }
 
 .navbar-main {
@@ -69,9 +57,6 @@ NAVBAR
   transition: 0.4s;
   margin: 0;
 }
-/*=========================
-LOGO
-=========================*/
 
 .logo {
   display: flex;
@@ -91,10 +76,6 @@ LOGO
   width: 3rem;
   border-radius: 0.5rem;
 }
-
-/*=========================
-MENU
-=========================*/
 
 .nav-links {
   display: flex;
@@ -146,10 +127,6 @@ MENU
   width: 100%;
 }
 
-/*=========================
-BUTTON
-=========================*/
-
 .contact-btn {
   padding: 14px 35px;
 
@@ -171,10 +148,6 @@ BUTTON
 
   border-color: #6d5dfc;
 }
-
-/*=========================
-DROPDOWN
-=========================*/
 
 .dropdown {
   position: relative;
@@ -241,11 +214,6 @@ DROPDOWN
 
   color: #6d5dfc;
 }
-
-/*=========================
-MOBILE
-=========================*/
-
 .mobile-btn {
   display: none;
 

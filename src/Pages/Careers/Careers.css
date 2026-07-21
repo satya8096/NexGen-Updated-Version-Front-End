@@ -1,7 +1,3 @@
-/*==================================================
-CAREERS HERO
-==================================================*/
-
 .careers-hero {
   position: relative;
   overflow: hidden;
@@ -9,16 +5,10 @@ CAREERS HERO
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
 
-/*========================*/
-
 .careers-grid {
   display: flex;
   gap: 70px;
 }
-
-/*==================================================
-LEFT
-==================================================*/
 
 .career-badge {
   display: inline-flex;
@@ -92,10 +82,6 @@ LEFT
   margin-bottom: 45px;
 }
 
-/*==================================================
-BUTTONS
-==================================================*/
-
 .career-buttons {
   display: flex;
 
@@ -161,10 +147,6 @@ BUTTONS
   transform: translateY(-6px);
 }
 
-/*==================================================
-STATS
-==================================================*/
-
 .career-stats {
   display: grid;
 
@@ -209,10 +191,6 @@ STATS
   line-height: 1.8;
 }
 
-/*==================================================
-RIGHT
-==================================================*/
-
 .careers-right {
   position: relative;
 
@@ -237,7 +215,7 @@ RIGHT
   animation: floatBlob 8s ease-in-out infinite;
 }
 
-.one {
+.gradient-circle .one {
   width: 260px;
 
   height: 260px;
@@ -249,7 +227,7 @@ RIGHT
   left: 20px;
 }
 
-.two {
+.gradient-circle .two {
   width: 180px;
 
   height: 180px;
@@ -263,7 +241,7 @@ RIGHT
   animation-delay: 2s;
 }
 
-.three {
+.gradient-circle .three {
   width: 130px;
 
   height: 130px;
@@ -287,10 +265,6 @@ RIGHT
     transform: translateY(-30px);
   }
 }
-
-/*==================================================
-MAIN CARD
-==================================================*/
 
 .career-main-card {
   position: relative;
@@ -349,10 +323,6 @@ MAIN CARD
 
   font-size: 13px;
 }
-
-/*==================================================
-JOB CARDS
-==================================================*/
 
 .career-list {
   display: flex;
@@ -438,11 +408,6 @@ JOB CARDS
   transform: translateX(5px);
 }
 
-/* ==================================================================== */
-/*==================================================
-CAREER FOOTER CARD
-==================================================*/
-
 .career-footer-card {
   margin-top: 30px;
 
@@ -513,10 +478,6 @@ CAREER FOOTER CARD
   }
 }
 
-/*==================================================
-FLOATING DASHBOARD
-==================================================*/
-
 .career-main-card {
   animation: dashboardFloat 6s ease-in-out infinite;
 }
@@ -534,10 +495,6 @@ FLOATING DASHBOARD
     transform: translateY(0px);
   }
 }
-
-/*==================================================
-SCROLL INDICATOR
-==================================================*/
 
 .career-scroll {
   display: flex;
@@ -611,10 +568,6 @@ SCROLL INDICATOR
   }
 }
 
-/*==================================================
-BACKGROUND DECORATION
-==================================================*/
-
 .careers-hero::before {
   content: "";
 
@@ -651,10 +604,6 @@ BACKGROUND DECORATION
   bottom: -180px;
 }
 
-/*==================================================
-TABLET
-==================================================*/
-
 @media (max-width: 1200px) {
   .careers-grid {
     grid-template-columns: 1fr;
@@ -673,10 +622,6 @@ TABLET
   }
 }
 
-/*==================================================
-992
-==================================================*/
-
 @media (max-width: 992px) {
   .careers-hero {
     padding: 120px 0 90px;
@@ -692,10 +637,6 @@ TABLET
     font-size: 62px;
   }
 }
-
-/*==================================================
-768
-==================================================*/
 
 @media (max-width: 768px) {
   .careers-hero {
@@ -738,10 +679,6 @@ TABLET
     font-size: 16px;
   }
 }
-
-/*==================================================
-576
-==================================================*/
 
 @media (max-width: 576px) {
   .career-badge {
@@ -787,11 +724,6 @@ TABLET
     font-size: 28px;
   }
 }
-
-/* =============================================================== */
-/*==================================================
-WHY JOIN NEXGEN
-==================================================*/
 
 .career-values {
   padding: 2rem 0;
@@ -853,8 +785,6 @@ WHY JOIN NEXGEN
   align-items: center;
 }
 
-/*===========================*/
-
 .career-values-content span {
   display: inline-flex;
 
@@ -899,8 +829,6 @@ WHY JOIN NEXGEN
 
   margin-bottom: 45px;
 }
-
-/*===========================*/
 
 .career-value-highlight {
   display: flex;
@@ -960,10 +888,6 @@ WHY JOIN NEXGEN
   line-height: 1.8;
 }
 
-/*==================================================
-RIGHT GRID
-==================================================*/
-
 .career-values-cards {
   display: grid;
 
@@ -971,8 +895,6 @@ RIGHT GRID
 
   gap: 28px;
 }
-
-/*===========================*/
 
 .career-value-card {
   position: relative;
@@ -991,8 +913,6 @@ RIGHT GRID
 
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
 }
-
-/* Stagger */
 
 .career-value-card:nth-child(2) {
   margin-top: 60px;
@@ -1082,10 +1002,6 @@ RIGHT GRID
   line-height: 1.9;
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 1200px) {
   .career-values-grid {
     grid-template-columns: 1fr;
@@ -1139,11 +1055,6 @@ RESPONSIVE
     padding: 28px;
   }
 }
-
-/* ========================================================= */
-/*==================================================
-LIFE AT NEXGEN
-==================================================*/
 
 .career-culture {
   padding: 2rem 0;
@@ -1205,8 +1116,6 @@ LIFE AT NEXGEN
   align-items: center;
 }
 
-/*=====================================*/
-
 .career-culture-content span {
   display: inline-flex;
 
@@ -1251,8 +1160,6 @@ LIFE AT NEXGEN
 
   margin-bottom: 24px;
 }
-
-/*=====================================*/
 
 .culture-highlight-list {
   margin-top: 45px;
@@ -1321,10 +1228,6 @@ LIFE AT NEXGEN
 
   line-height: 1.8;
 }
-
-/*==================================================
-IMAGE COLLAGE
-==================================================*/
 
 .career-culture-gallery {
   position: relative;
@@ -1401,10 +1304,6 @@ IMAGE COLLAGE
 .gallery-small:hover img {
   transform: scale(1.08);
 }
-
-/*==================================================
-FLOATING BADGES
-==================================================*/
 
 .floating-achievement {
   position: absolute;
@@ -1525,10 +1424,6 @@ FLOATING BADGES
   }
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 1200px) {
   .career-culture-grid {
     grid-template-columns: 1fr;
@@ -1620,12 +1515,6 @@ RESPONSIVE
     height: 200px;
   }
 }
-
-/* ================================================================== */
-/*==================================================
-OPEN POSITIONS
-==================================================*/
-
 .career-jobs {
   padding: 2rem 0;
   background: #fff;
@@ -1659,8 +1548,6 @@ OPEN POSITIONS
   position: relative;
   z-index: 2;
 }
-
-/*==========================*/
 
 .career-filter {
   display: flex;
@@ -1712,10 +1599,6 @@ OPEN POSITIONS
   box-shadow: 0 15px 40px rgba(108, 99, 255, 0.2);
 }
 
-/*==================================================
-GRID
-==================================================*/
-
 .career-job-grid {
   display: grid;
 
@@ -1723,10 +1606,6 @@ GRID
 
   gap: 30px;
 }
-
-/*==================================================
-CARD
-==================================================*/
 
 .career-opening-card {
   position: relative;
@@ -1778,8 +1657,6 @@ CARD
   transform: scale(1.4);
 }
 
-/*==========================*/
-
 .featured-job {
   position: absolute;
 
@@ -1801,8 +1678,6 @@ CARD
 
   letter-spacing: 1px;
 }
-
-/*==========================*/
 
 .opening-icon {
   width: 78px;
@@ -1832,8 +1707,6 @@ CARD
   transform: rotate(-8deg) scale(1.08);
 }
 
-/*==========================*/
-
 .career-opening-card h3 {
   font-size: 25px;
 
@@ -1843,8 +1716,6 @@ CARD
 
   line-height: 1.4;
 }
-
-/*==========================*/
 
 .opening-meta {
   display: flex;
@@ -1878,8 +1749,6 @@ CARD
   color: #6c63ff;
 }
 
-/*==========================*/
-
 .opening-salary {
   display: inline-flex;
 
@@ -1897,8 +1766,6 @@ CARD
 
   margin-bottom: 30px;
 }
-
-/*==========================*/
 
 .career-apply-btn {
   display: flex;
@@ -1934,10 +1801,6 @@ CARD
 .career-apply-btn:hover i {
   transform: translateX(8px);
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 1200px) {
   .career-job-grid {
@@ -2003,11 +1866,6 @@ RESPONSIVE
   }
 }
 
-/* ================================================================== */
-/*==================================================
-HIRING PROCESS
-==================================================*/
-
 .career-process {
   padding: 2rem 0;
   background: #f8fafc;
@@ -2042,8 +1900,6 @@ HIRING PROCESS
   z-index: 2;
 }
 
-/*================================*/
-
 .career-process-wrapper {
   position: relative;
 
@@ -2070,8 +1926,6 @@ HIRING PROCESS
   background: linear-gradient(180deg, #6c63ff, #00d4ff);
 }
 
-/*================================*/
-
 .process-item {
   width: 50%;
 
@@ -2091,8 +1945,6 @@ HIRING PROCESS
 
   padding-left: 70px;
 }
-
-/*================================*/
 
 .process-circle {
   position: absolute;
@@ -2132,8 +1984,6 @@ HIRING PROCESS
   left: -35px;
 }
 
-/*================================*/
-
 .process-content {
   position: relative;
 
@@ -2157,8 +2007,6 @@ HIRING PROCESS
 
   box-shadow: 0 28px 70px rgba(108, 99, 255, 0.12);
 }
-
-/*================================*/
 
 .process-icon {
   width: 74px;
@@ -2220,8 +2068,6 @@ HIRING PROCESS
   color: #64748b;
 }
 
-/*================================*/
-
 .process-content::before {
   content: "";
 
@@ -2256,13 +2102,9 @@ HIRING PROCESS
   border-top: none;
 }
 
-/*================================*/
-
 .process-item:last-child {
   margin-bottom: 0;
 }
-
-/*================================*/
 
 .process-circle {
   animation: processPulse 2.5s infinite;
@@ -2282,8 +2124,6 @@ HIRING PROCESS
   }
 }
 
-/*================================*/
-
 .process-content:hover .process-icon {
   transform: rotate(-8deg) scale(1.08);
 }
@@ -2291,10 +2131,6 @@ HIRING PROCESS
 .process-icon {
   transition: 0.35s;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 992px) {
   .process-line {
@@ -2374,11 +2210,6 @@ RESPONSIVE
   }
 }
 
-/* ==================================================================== */
-/*==================================================
-HIRING PROCESS
-==================================================*/
-
 .career-process {
   padding: 140px 0;
   background: #f8fafc;
@@ -2413,8 +2244,6 @@ HIRING PROCESS
   z-index: 2;
 }
 
-/*================================*/
-
 .career-process-wrapper {
   position: relative;
 
@@ -2441,8 +2270,6 @@ HIRING PROCESS
   background: linear-gradient(180deg, #6c63ff, #00d4ff);
 }
 
-/*================================*/
-
 .process-item {
   width: 50%;
 
@@ -2462,8 +2289,6 @@ HIRING PROCESS
 
   padding-left: 70px;
 }
-
-/*================================*/
 
 .process-circle {
   position: absolute;
@@ -2503,8 +2328,6 @@ HIRING PROCESS
   left: -35px;
 }
 
-/*================================*/
-
 .process-content {
   position: relative;
 
@@ -2528,8 +2351,6 @@ HIRING PROCESS
 
   box-shadow: 0 28px 70px rgba(108, 99, 255, 0.12);
 }
-
-/*================================*/
 
 .process-icon {
   width: 74px;
@@ -2591,8 +2412,6 @@ HIRING PROCESS
   color: #64748b;
 }
 
-/*================================*/
-
 .process-content::before {
   content: "";
 
@@ -2627,13 +2446,9 @@ HIRING PROCESS
   border-top: none;
 }
 
-/*================================*/
-
 .process-item:last-child {
   margin-bottom: 0;
 }
-
-/*================================*/
 
 .process-circle {
   animation: processPulse 2.5s infinite;
@@ -2653,8 +2468,6 @@ HIRING PROCESS
   }
 }
 
-/*================================*/
-
 .process-content:hover .process-icon {
   transform: rotate(-8deg) scale(1.08);
 }
@@ -2662,10 +2475,6 @@ HIRING PROCESS
 .process-icon {
   transition: 0.35s;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 992px) {
   .process-line {
@@ -2745,11 +2554,6 @@ RESPONSIVE
   }
 }
 
-/* ===================================================================== */
-/*==================================================
-BENEFITS & PERKS
-==================================================*/
-
 .career-benefits {
   position: relative;
   overflow: hidden;
@@ -2784,8 +2588,6 @@ BENEFITS & PERKS
   z-index: 2;
 }
 
-/*=======================*/
-
 .career-benefits-grid {
   display: grid;
 
@@ -2795,8 +2597,6 @@ BENEFITS & PERKS
 
   align-items: center;
 }
-
-/*=======================*/
 
 .career-benefits-content span {
   display: inline-flex;
@@ -2841,8 +2641,6 @@ BENEFITS & PERKS
 
   margin-bottom: 45px;
 }
-
-/*=======================*/
 
 .benefit-feature-card {
   display: flex;
@@ -2904,10 +2702,6 @@ BENEFITS & PERKS
   line-height: 1.9;
 }
 
-/*==================================================
-RIGHT
-==================================================*/
-
 .career-benefits-cards {
   display: grid;
 
@@ -2916,15 +2710,11 @@ RIGHT
   gap: 28px;
 }
 
-/* Masonry Effect */
-
 .benefit-2,
 .benefit-4,
 .benefit-6 {
   margin-top: 60px;
 }
-
-/*=======================*/
 
 .benefit-card {
   position: relative;
@@ -2976,8 +2766,6 @@ RIGHT
   transform: scale(1.4);
 }
 
-/*=======================*/
-
 .benefit-icon {
   width: 74px;
 
@@ -3021,10 +2809,6 @@ RIGHT
 
   line-height: 1.9;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 1200px) {
   .career-benefits-grid {
@@ -3088,11 +2872,6 @@ RESPONSIVE
   }
 }
 
-/* ==================================================================== */
-/*==================================================
-EMPLOYEE STORIES
-==================================================*/
-
 .career-testimonials {
   position: relative;
   overflow: hidden;
@@ -3127,8 +2906,6 @@ EMPLOYEE STORIES
   z-index: 2;
 }
 
-/*================================*/
-
 .career-testimonial-grid {
   display: grid;
 
@@ -3138,10 +2915,6 @@ EMPLOYEE STORIES
 
   margin-top: 70px;
 }
-
-/*==================================================
-FEATURED STORY
-==================================================*/
 
 .featured-story {
   position: relative;
@@ -3255,10 +3028,6 @@ FEATURED STORY
   font-weight: 600;
 }
 
-/*==================================================
-RIGHT COLUMN
-==================================================*/
-
 .story-side {
   display: flex;
 
@@ -3333,10 +3102,6 @@ RIGHT COLUMN
   color: #64748b;
 }
 
-/*==================================================
-ANIMATIONS
-==================================================*/
-
 .quote-icon {
   animation: quoteFloat 5s ease-in-out infinite;
 }
@@ -3379,10 +3144,6 @@ ANIMATIONS
     transform: scale(1.2);
   }
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 1200px) {
   .career-testimonial-grid {
@@ -3438,11 +3199,6 @@ RESPONSIVE
   }
 }
 
-/* ============================================================== */
-/*==================================================
-FINAL APPLICATION CTA
-==================================================*/
-
 .career-apply-section {
   position: relative;
   overflow: hidden;
@@ -3477,10 +3233,6 @@ FINAL APPLICATION CTA
   z-index: 2;
 }
 
-/*==================================================
-GRID
-==================================================*/
-
 .career-apply-grid {
   display: grid;
 
@@ -3490,11 +3242,6 @@ GRID
 
   align-items: center;
 }
-
-/*==================================================
-LEFT
-==================================================*/
-
 .career-apply-content span {
   display: inline-flex;
 
@@ -3538,10 +3285,6 @@ LEFT
 
   margin-bottom: 45px;
 }
-
-/*==================================================
-POINTS
-==================================================*/
 
 .career-points {
   display: flex;
@@ -3599,10 +3342,6 @@ POINTS
   font-weight: 600;
 }
 
-/*==================================================
-FORM CARD
-==================================================*/
-
 .career-form-card {
   background: rgba(255, 255, 255, 0.92);
 
@@ -3624,10 +3363,6 @@ FORM CARD
 
   gap: 22px;
 }
-
-/*==================================================
-INPUTS
-==================================================*/
 
 .career-form-grid input,
 .career-form-grid select,
@@ -3653,9 +3388,6 @@ INPUTS
 
 .career-form-grid textarea {
   resize: none;
-
-  grid-column: 1/-1;
-
   min-height: 170px;
 }
 
@@ -3668,10 +3400,6 @@ INPUTS
 
   box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.08);
 }
-
-/*==================================================
-SUBMIT
-==================================================*/
 
 .career-submit-btn {
   margin-top: 30px;
@@ -3719,10 +3447,6 @@ SUBMIT
   transform: translateX(8px);
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 1200px) {
   .career-apply-grid {
     grid-template-columns: 1fr;
@@ -3764,11 +3488,6 @@ RESPONSIVE
     font-size: 16px;
   }
 }
-
-/* =================================================================== */
-/*==================================================
-TALENT COMMUNITY
-==================================================*/
 
 .career-community {
   padding: 2rem 0 2rem;
@@ -3926,11 +3645,6 @@ TALENT COMMUNITY
   }
 }
 
-/* ===================================================================== */
-/*==========================================
-CAREERS NOTICE
-==========================================*/
-
 .careerNotice {
   display: flex;
 
@@ -3971,8 +3685,6 @@ CAREERS NOTICE
   background: linear-gradient(to bottom, #6d5bff, #00c2ff);
 }
 
-/*==========================================*/
-
 .careerNotice__icon {
   width: 4.5rem;
 
@@ -3998,8 +3710,6 @@ CAREERS NOTICE
 
   animation: careerFloat 3s ease-in-out infinite;
 }
-
-/*==========================================*/
 
 .careerNotice__content span {
   display: inline-block;
@@ -4041,8 +3751,6 @@ CAREERS NOTICE
   margin: 0;
 }
 
-/*==========================================*/
-
 @keyframes careerFloat {
   0% {
     transform: translateY(0);
@@ -4056,11 +3764,6 @@ CAREERS NOTICE
     transform: translateY(0);
   }
 }
-
-/*==========================================
-RESPONSIVE
-==========================================*/
-
 @media (max-width: 768px) {
   .careerNotice {
     flex-direction: column;

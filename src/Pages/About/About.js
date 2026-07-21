@@ -44,13 +44,9 @@ const About = () => {
 
     const calculateExperience = () => {
       const today = new Date();
-
-      // Calculate total days
       const difference = today - foundationDate;
 
       const totalDays = Math.floor(difference / (1000 * 60 * 60 * 24));
-
-      // Calculate completed years
       let years = today.getFullYear() - foundationDate.getFullYear();
 
       const anniversary = new Date(
@@ -70,8 +66,6 @@ const About = () => {
     };
 
     calculateExperience();
-
-    // update every 24 hours
     const interval = setInterval(calculateExperience, 86400000);
 
     return () => clearInterval(interval);
@@ -79,7 +73,6 @@ const About = () => {
   return (
     <main className="aboutPage">
       {AboutPageSEOs}
-      {/* Background */}
       <div ref={mouseGlow} className="mouseGlow"></div>
 
       <div className="bgGrid"></div>
@@ -90,15 +83,9 @@ const About = () => {
 
       <div className="gradientOrb orbThree"></div>
 
-      {/* ===========================================
-                    HERO
-            ============================================ */}
-
       <section className="aboutHero">
         <div className="container">
           <div className="row align-items-center gy-5">
-            {/* LEFT */}
-
             <div className="col-lg-6">
               <div className="heroContent">
                 <span className="heroBadge" data-aos="fade-up">
@@ -130,8 +117,6 @@ const About = () => {
                     View Portfolio
                   </Link>
                 </div>
-
-                {/* Quick Stats */}
 
                 <div className="heroStats">
                   <div>
@@ -170,12 +155,8 @@ const About = () => {
               </div>
             </div>
 
-            {/* RIGHT */}
-
             <div className="col-lg-6" data-aos="fade-left">
               <div className="heroVisual">
-                {/* Rotating Stamp */}
-
                 <div className="agencyStamp">
                   <div className="stampOuter">
                     <span>NEXGEN</span>
@@ -195,9 +176,6 @@ const About = () => {
                     <i className="fa-solid fa-code"></i>
                   </div>
                 </div>
-
-                {/* Browser */}
-
                 <div className="browserCard">
                   <div className="browserHeader">
                     <span></span>
@@ -236,8 +214,6 @@ const About = () => {
                   </div>
                 </div>
 
-                {/* Floating Cards */}
-
                 <div className="floatingCard cardOne">
                   <i className="fa-solid fa-rocket"></i>
                   Launch Ready
@@ -258,22 +234,14 @@ const About = () => {
         </div>
       </section>
 
-      {/*====================================================
-                FOUNDER SECTION
-=====================================================*/}
-
       <section className="founderSection">
         <div className="container">
           <div className="row align-items-center founder-wrapper gy-5">
-            {/* LEFT */}
-
             <div className="col-lg-5" data-aos="fade-up" data-aos-delay="200">
               <div className="founderImageWrapper">
                 <div className="founderGlow"></div>
 
                 <div className="founderImage">
-                  {/* Replace with your image */}
-
                   <img
                     src={require("./../../Assets/Founder_Image_Full.jpeg")}
                     alt="Founder"
@@ -301,8 +269,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-
-            {/* RIGHT */}
 
             <div className="col-lg-7">
               <div className="founderContent">
@@ -385,8 +351,6 @@ const About = () => {
           <div className="storyTimeline">
             <div className="timelineLine"></div>
 
-            {/* Card 1 */}
-
             <div className="storyCard left">
               <div className="storyYear">2024</div>
 
@@ -402,8 +366,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-
-            {/* Card 2 */}
 
             <div className="storyCard right">
               <div className="storyYear">
@@ -424,9 +386,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-
-            {/* Card 3 */}
-
             <div className="storyCard left">
               <div className="storyYear">
                 {counters.projectsCount < 10
@@ -446,8 +405,6 @@ const About = () => {
                 </p>
               </div>
             </div>
-
-            {/* Card 4 */}
 
             <div className="storyCard right">
               <div className="storyYear">NEXT</div>
@@ -569,9 +526,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/*=========================================
-        COMPANY IMPACT
-==========================================*/}
 
       <section className="companyStats">
         <div className="container">
@@ -669,10 +623,6 @@ const About = () => {
         </div>
       </section>
 
-      {/*====================================================
-                    OUR PROCESS
-=====================================================*/}
-
       <section className="ourProcess">
         <div className="container">
           <div className="sectionHeading">
@@ -765,10 +715,6 @@ const About = () => {
         </div>
       </section>
 
-      {/*====================================================
-                WHY CHOOSE NEXGEN
-=====================================================*/}
-
       <section className="whyChoose">
         <div className="container">
           <div className="sectionHeading">
@@ -838,10 +784,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/*====================================================
-                FINAL CTA
-=====================================================*/}
 
       <section className="aboutCTA">
         <div className="ctaGlow ctaGlowOne"></div>

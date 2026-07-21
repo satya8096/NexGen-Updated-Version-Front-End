@@ -1,18 +1,9 @@
-/*==================================================
-NEXGEN CONTACT HUB
-Premium Agency Design
-==================================================*/
-
 .contactHubSection {
   position: relative;
   padding: 120px 0;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   overflow: hidden;
 }
-
-/*==========================
-Background Glow
-===========================*/
 
 .contactHubSection::before {
   content: "";
@@ -55,10 +46,6 @@ Background Glow
   z-index: 5;
 }
 
-/*==================================================
-Main Wrapper
-==================================================*/
-
 .contactHub {
   display: grid;
 
@@ -68,11 +55,6 @@ Main Wrapper
 
   align-items: start;
 }
-
-/*==================================================
-LEFT SIDE
-==================================================*/
-
 .contactHubIntro {
   position: sticky;
 
@@ -90,8 +72,6 @@ LEFT SIDE
 
   box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
 }
-
-/* Badge */
 
 .contactHubIntro span {
   display: inline-flex;
@@ -113,12 +93,8 @@ LEFT SIDE
   font-weight: 700;
 
   letter-spacing: 0.6px;
-  /* border: 1px solid rgba(0, 0, 0, 0.286); */
-
   margin-bottom: 25px;
 }
-
-/* Heading */
 
 .contactHubIntro h2 {
   font-size: 2rem;
@@ -132,8 +108,6 @@ LEFT SIDE
   margin-bottom: 24px;
 }
 
-/* Description */
-
 .contactHubIntro p {
   font-size: 17px;
 
@@ -144,14 +118,8 @@ LEFT SIDE
   margin-bottom: 40px;
 }
 
-/*==================================================
-Stats
-==================================================*/
-
 .contactStats {
   display: grid;
-
-  /* grid-template-columns: repeat(3, 1fr); */
 
   gap: 18px;
 
@@ -204,10 +172,6 @@ Stats
   font-weight: 500;
 }
 
-/*==================================================
-Meeting Button
-==================================================*/
-
 .meetingBtn {
   width: 100%;
 
@@ -254,10 +218,6 @@ Meeting Button
   transform: translateX(5px);
 }
 
-/*==================================================
-RIGHT SIDE WRAPPER
-==================================================*/
-
 .contactHubContent {
   display: flex;
 
@@ -265,11 +225,6 @@ RIGHT SIDE WRAPPER
 
   gap: 24px;
 }
-
-/* ==================================================================== */
-/*==================================================
-RIGHT SIDE CONTACT ROWS
-==================================================*/
 
 .contactRow {
   position: relative;
@@ -291,8 +246,6 @@ RIGHT SIDE CONTACT ROWS
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
 }
 
-/* Animated Top Border */
-
 .contactRow::before {
   content: "";
 
@@ -313,20 +266,12 @@ RIGHT SIDE CONTACT ROWS
   transition: 0.45s;
 }
 
-/* Blue */
-
 .contactRow.blue::before {
   background: linear-gradient(90deg, #2563eb, #60a5fa);
 }
-
-/* Green */
-
 .contactRow.green::before {
   background: linear-gradient(90deg, #16a34a, #4ade80);
 }
-
-/* Orange */
-
 .contactRow.orange::before {
   background: linear-gradient(90deg, #ea580c, #fb923c);
 }
@@ -340,10 +285,6 @@ RIGHT SIDE CONTACT ROWS
 
   box-shadow: 0 30px 70px rgba(15, 23, 42, 0.1);
 }
-
-/*==================================================
-ROW HEADER
-==================================================*/
 
 .contactRowHeader {
   display: flex;
@@ -375,10 +316,6 @@ ROW HEADER
   font-size: 15px;
 }
 
-/*==================================================
-ICON
-==================================================*/
-
 .contactRowIcon {
   width: 78px;
 
@@ -399,23 +336,16 @@ ICON
   transition: 0.4s;
 }
 
-/* Blue */
-
 .blue .contactRowIcon {
   background: #eef4ff;
 
   color: #2563eb;
 }
-
-/* Green */
-
 .green .contactRowIcon {
   background: #ecfdf5;
 
   color: #16a34a;
 }
-
-/* Orange */
 
 .orange .contactRowIcon {
   background: #fff7ed;
@@ -426,10 +356,6 @@ ICON
 .contactRow:hover .contactRowIcon {
   transform: rotate(-8deg) scale(1.08);
 }
-
-/*==================================================
-CONTACT LINKS
-==================================================*/
 
 .contactLinks {
   display: flex;
@@ -504,11 +430,6 @@ CONTACT LINKS
 
   transform: translateX(6px);
 }
-
-/*==================================================
-Different Hover Colors
-==================================================*/
-
 .green .contactLinks a:hover {
   border-color: #16a34a;
 }
@@ -524,15 +445,6 @@ Different Hover Colors
 .orange .contactLinks a:hover i {
   color: #ea580c;
 }
-
-/* ============================================================ */
-/*==================================================
-PREMIUM MICRO INTERACTIONS
-==================================================*/
-
-/*------------------------------
-Soft Gradient Overlay
-------------------------------*/
 
 .contactRow::after {
   content: "";
@@ -560,11 +472,6 @@ Soft Gradient Overlay
 .contactRow:hover::after {
   opacity: 1;
 }
-
-/*------------------------------
-Icon Pulse
-------------------------------*/
-
 .contactRowIcon {
   position: relative;
 }
@@ -603,10 +510,6 @@ Icon Pulse
   }
 }
 
-/*------------------------------
-Link Hover
-------------------------------*/
-
 .contactLinks a {
   position: relative;
 
@@ -642,10 +545,6 @@ Link Hover
   left: 160%;
 }
 
-/*------------------------------
-Label Animation
-------------------------------*/
-
 .contactLinks strong {
   transition: 0.35s;
 }
@@ -661,10 +560,6 @@ Label Animation
 .orange .contactLinks a:hover strong {
   color: #ea580c;
 }
-
-/*------------------------------
-Section Glow
-------------------------------*/
 
 .contactHub {
   position: relative;
@@ -714,10 +609,6 @@ Section Glow
   pointer-events: none;
 }
 
-/*------------------------------
-Meeting Button
-------------------------------*/
-
 .meetingBtn {
   position: relative;
 
@@ -753,20 +644,12 @@ Meeting Button
   left: 160%;
 }
 
-/*------------------------------
-Keyboard Focus
-------------------------------*/
-
 .contactLinks a:focus-visible,
 .meetingBtn:focus-visible {
   outline: none;
 
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
 }
-
-/*------------------------------
-Reduced Motion
-------------------------------*/
 
 @media (prefers-reduced-motion: reduce) {
   .contactRow,
@@ -777,11 +660,6 @@ Reduced Motion
     transition: none;
   }
 }
-
-/* ==================================================================== */
-/*==================================================
-LARGE DESKTOP
-==================================================*/
 
 @media (max-width: 1400px) {
   .contactHub {
@@ -798,10 +676,6 @@ LARGE DESKTOP
     font-size: 42px;
   }
 }
-
-/*==================================================
-LAPTOP
-==================================================*/
 
 @media (max-width: 1200px) {
   .contactHub {
@@ -822,10 +696,6 @@ LAPTOP
     grid-template-columns: 1fr;
   }
 }
-
-/*==================================================
-TABLET
-==================================================*/
 
 @media (max-width: 991px) {
   .contactHubSection {
@@ -858,10 +728,6 @@ TABLET
     gap: 20px;
   }
 }
-
-/*==================================================
-MOBILE
-==================================================*/
 
 @media (max-width: 768px) {
   .contactHubSection {
@@ -933,10 +799,6 @@ MOBILE
   }
 }
 
-/*==================================================
-SMALL MOBILE
-==================================================*/
-
 @media (max-width: 576px) {
   .contactHubSection {
     padding: 60px 0;
@@ -1002,10 +864,6 @@ SMALL MOBILE
     border-radius: 16px;
   }
 }
-
-/*==================================================
-EXTRA SMALL
-==================================================*/
 
 @media (max-width: 380px) {
   .contactHubIntro h2 {

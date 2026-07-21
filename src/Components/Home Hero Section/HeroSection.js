@@ -48,9 +48,6 @@ const Hero = () => {
       <div className="gradientOrb orbThree"></div>
       <div className="container">
         <div className="row">
-          {/* ======================================================
-LEFT CONTENT
-====================================================== */}
 
           <div className="col-lg-6">
             <div className="nxHeroContent" data-aos="fade-up">
@@ -131,10 +128,6 @@ LEFT CONTENT
             </div>
           </div>
 
-          {/* =====================================================
-RIGHT SIDE
-===================================================== */}
-
           <div className="col-lg-6">
             <div
               className="nxHeroVisual"
@@ -145,7 +138,6 @@ rotateY(${mouse.x * 8}deg)
 rotateX(${-mouse.y * 8}deg)`,
               }}
             >
-              {/* Background Glow */}
 
               <div className="nxGlowOne"></div>
 
@@ -173,15 +165,7 @@ rotateX(${-mouse.y * 8}deg)`,
                   <div className="nxGlassTitle">NexGen Web Designs</div>
                 </div>
 
-                {/* <div className="nxCodeArea">
-                  <div className="nxCodeLine w90"></div>
-                  <div className="nxCodeLine w75"></div>
-                  <div className="nxCodeLine w85"></div>
-                  <div className="nxCodeLine w65"></div>
-                  <div className="nxCodeLine w95"></div>
-                  <div className="nxCodeLine w55"></div>
-                  <div className="nxCodeLine w80"></div>
-                </div> */}
+
                 <img
                   src={require("./../../Assets/Home_Hero_Right_Side_Image_with_tech.png")}
                   alt="web designs in hyderabad"

@@ -1,11 +1,4 @@
-/*=====================================
- GOOGLE FONT
-======================================*/
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
-/*=====================================
- FOOTER
-======================================*/
 
 .footer {
   position: relative;
@@ -14,10 +7,6 @@
   color: #fff;
   padding: 90px 0 30px;
 }
-
-/*=====================================
- BACKGROUND SHAPES
-======================================*/
 
 .footer::before {
   content: "";
@@ -47,10 +36,6 @@
   position: relative;
   z-index: 2;
 }
-
-/*=====================================
- COMPANY
-======================================*/
 
 .footer-company {
   padding-right: 30px;
@@ -82,10 +67,6 @@
   margin-bottom: 35px;
 }
 
-/*=====================================
- SOCIAL
-======================================*/
-
 .footer-social {
   display: flex;
   gap: 15px;
@@ -111,10 +92,6 @@
   transform: translateY(-6px);
 }
 
-/*=====================================
- TITLES
-======================================*/
-
 .footer-links h4,
 .footer-contact h4 {
   position: relative;
@@ -135,10 +112,6 @@
   border-radius: 20px;
   background: #fff;
 }
-
-/*=====================================
- LINKS
-======================================*/
 
 .footer-links ul {
   padding: 0;
@@ -174,10 +147,6 @@
   opacity: 1;
 }
 
-/*=====================================
- CONTACT
-======================================*/
-
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -211,10 +180,6 @@
   line-height: 28px;
 }
 
-/*=====================================
- FOOTER BOTTOM
-======================================*/
-
 .footer-bottom {
   margin-top: 70px;
   padding-top: 25px;
@@ -246,10 +211,6 @@
 .bottom-links a:hover {
   color: #fff;
 }
-
-/*=====================================
- SCROLL TOP
-======================================*/
 
 .scroll-top {
   position: fixed;
@@ -286,10 +247,6 @@
 
   color: #fff;
 }
-
-/*=====================================
- RESPONSIVE
-======================================*/
 
 @media (max-width: 991px) {
   .footer {
@@ -379,11 +336,6 @@
   }
 }
 
-/* ======================================================================== */
-/*=====================================
-ANIMATED BACKGROUND
-======================================*/
-
 .footer {
   background-size: 300% 300%;
 
@@ -403,10 +355,6 @@ ANIMATED BACKGROUND
     background-position: 0% 50%;
   }
 }
-
-/*=====================================
-PARTICLES
-======================================*/
 
 .footer-particles {
   position: absolute;

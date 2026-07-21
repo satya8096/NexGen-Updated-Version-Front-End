@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./Privacy.css";
 
 import {
-  // emailAddress,
   emailAddress1,
   phoneNumber,
   whatsappLink1,
@@ -26,7 +25,6 @@ const navigation = [
 const PrivacyPolicy = () => {
   return (
     <main className="privacy-page">
-      {/* ================= HERO ================= */}
       {PrivacyPolicySEO}
       <section className="privacy-hero">
         <div className="privacy-grid"></div>
@@ -36,7 +34,7 @@ const PrivacyPolicy = () => {
 
         <div className="container">
           <div className="privacy-hero-content">
-            <div className="privacy-breadcrumb">
+            <div className="privacy-breadcrumb" data-aos="fade-up">
               <Link to="/">Home</Link>
 
               <span>/</span>
@@ -44,21 +42,21 @@ const PrivacyPolicy = () => {
               <span>Privacy Policy</span>
             </div>
 
-            <span className="privacy-tag">
+            <span className="privacy-tag" data-aos="fade-up">
               <i className="fa-solid fa-shield-halved"></i>
               Your Privacy Matters
             </span>
 
-            <h2>Privacy Policy</h2>
+            <h2 data-aos="fade-up">Privacy Policy</h2>
 
-            <p>
+            <p data-aos="fade-up">
               At <strong>NexGen Web Designs</strong>, we value your trust. This
               Privacy Policy explains how we collect, use, protect, and manage
               your personal information whenever you interact with our website
               or digital services.
             </p>
 
-            <div className="privacy-hero-footer">
+            <div className="privacy-hero-footer" data-aos="fade-up">
               <div className="privacy-date">
                 <i className="fa-regular fa-calendar"></i>
                 Last Updated
@@ -74,12 +72,14 @@ const PrivacyPolicy = () => {
         </div>
       </section>
 
-      {/* ================= SUMMARY ================= */}
-
       <section className="privacy-summary">
         <div className="container">
           <div className="privacy-summary-grid">
-            <div className="privacy-summary-card">
+            <div
+              className="privacy-summary-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <i className="fa-solid fa-user-shield"></i>
 
               <h3>Your Data</h3>
@@ -90,7 +90,11 @@ const PrivacyPolicy = () => {
               </p>
             </div>
 
-            <div className="privacy-summary-card">
+            <div
+              className="privacy-summary-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <i className="fa-solid fa-eye"></i>
 
               <h3>Transparency</h3>
@@ -101,7 +105,11 @@ const PrivacyPolicy = () => {
               </p>
             </div>
 
-            <div className="privacy-summary-card">
+            <div
+              className="privacy-summary-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <i className="fa-solid fa-shield-check"></i>
 
               <h3>Security</h3>
@@ -112,7 +120,11 @@ const PrivacyPolicy = () => {
               </p>
             </div>
 
-            <div className="privacy-summary-card">
+            <div
+              className="privacy-summary-card"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <i className="fa-solid fa-scale-balanced"></i>
 
               <h3>Your Rights</h3>
@@ -126,14 +138,10 @@ const PrivacyPolicy = () => {
         </div>
       </section>
 
-      {/* ================= CONTENT ================= */}
-
       <section className="privacy-content">
         <div className="container">
           <div className="privacy-layout">
-            {/* Sidebar */}
-
-            <aside className="privacy-sidebar">
+            <aside className="privacy-sidebar" data-aos="fade-right">
               <div className="privacy-sidebar-card">
                 <h4>
                   <i className="fa-solid fa-book-open me-3"></i>
@@ -150,33 +158,31 @@ const PrivacyPolicy = () => {
               </div>
             </aside>
 
-            {/* Main Content */}
-
             <div className="privacy-main">
-              {/* ========================================= */}
-              {/* INFORMATION WE COLLECT */}
-              {/* ========================================= */}
-
               <section id="information" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-database"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>01</span>
                     <h2>Information We Collect</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   When you interact with NexGen Web Designs, we may collect
                   information necessary to provide our services and improve your
                   experience.
                 </p>
 
                 <div className="privacy-list">
-                  <div className="privacy-item">
+                  <div
+                    className="privacy-item"
+                    data-aos="fade-left"
+                    data-aos-delay="100"
+                  >
                     <i className="fa-solid fa-user"></i>
                     <div>
                       <h4>Personal Information</h4>
@@ -187,7 +193,11 @@ const PrivacyPolicy = () => {
                     </div>
                   </div>
 
-                  <div className="privacy-item">
+                  <div
+                    className="privacy-item"
+                    data-aos="fade-left"
+                    data-aos-delay="200"
+                  >
                     <i className="fa-solid fa-globe"></i>
                     <div>
                       <h4>Website Usage</h4>
@@ -198,7 +208,11 @@ const PrivacyPolicy = () => {
                     </div>
                   </div>
 
-                  <div className="privacy-item">
+                  <div
+                    className="privacy-item"
+                    data-aos="fade-left"
+                    data-aos-delay="300"
+                  >
                     <i className="fa-solid fa-file"></i>
                     <div>
                       <h4>Project Information</h4>
@@ -211,64 +225,80 @@ const PrivacyPolicy = () => {
                 </div>
               </section>
 
-              {/* ========================================= */}
-              {/* HOW WE USE */}
-              {/* ========================================= */}
-
               <section id="usage" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-chart-line"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>02</span>
                     <h2>How We Use Your Information</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   Every piece of information collected is used only for
                   legitimate business purposes that help us deliver professional
                   digital services.
                 </p>
 
                 <div className="privacy-grid-two">
-                  <div className="privacy-small-card">
+                  <div
+                    className="privacy-small-card"
+                    data-aos="zoom-in"
+                    data-aos-delay="100"
+                  >
                     <i className="fa-solid fa-check"></i>
                     Deliver website development services
                   </div>
 
-                  <div className="privacy-small-card">
+                  <div
+                    className="privacy-small-card"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                  >
                     <i className="fa-solid fa-check"></i>
                     Respond to enquiries
                   </div>
 
-                  <div className="privacy-small-card">
+                  <div
+                    className="privacy-small-card"
+                    data-aos="zoom-in"
+                    data-aos-delay="300"
+                  >
                     <i className="fa-solid fa-check"></i>
                     Improve website performance
                   </div>
 
-                  <div className="privacy-small-card">
+                  <div
+                    className="privacy-small-card"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                  >
                     <i className="fa-solid fa-check"></i>
                     Customer support
                   </div>
 
-                  <div className="privacy-small-card">
+                  <div
+                    className="privacy-small-card"
+                    data-aos="zoom-in"
+                    data-aos-delay="500"
+                  >
                     <i className="fa-solid fa-check"></i>
                     Security monitoring
                   </div>
 
-                  <div className="privacy-small-card">
+                  <div
+                    className="privacy-small-card"
+                    data-aos="zoom-in"
+                    data-aos-delay="600"
+                  >
                     <i className="fa-solid fa-check"></i>
                     Service improvements
                   </div>
                 </div>
               </section>
-
-              {/* ========================================= */}
-              {/* COOKIES */}
-              {/* ========================================= */}
 
               <section id="cookies" className="privacy-card">
                 <div className="privacy-card-header">
@@ -276,18 +306,18 @@ const PrivacyPolicy = () => {
                     <i className="fa-solid fa-cookie-bite"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>03</span>
                     <h2>Cookies Policy</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   Cookies help improve browsing experience, remember preferences
                   and understand website performance.
                 </p>
 
-                <div className="privacy-note">
+                <div className="privacy-note" data-aos="fade-up">
                   <i className="fa-solid fa-circle-info"></i>
 
                   <p>
@@ -297,94 +327,77 @@ const PrivacyPolicy = () => {
                 </div>
               </section>
 
-              {/* ========================================= */}
-              {/* THIRD PARTY */}
-              {/* ========================================= */}
-
               <section id="thirdparty" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-share-nodes"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>04</span>
                     <h2>Third Party Services</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   Our website may integrate trusted third-party providers
                   including hosting companies, analytics platforms, payment
                   gateways and communication tools.
                 </p>
               </section>
-
-              {/* ========================================= */}
-              {/* SECURITY */}
-              {/* ========================================= */}
-
               <section id="security" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-lock"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>05</span>
                     <h2>Data Security</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   We implement reasonable technical and organizational
                   safeguards to help protect your information against
                   unauthorized access, misuse or disclosure.
                 </p>
 
                 <div className="security-banner">
-                  <div>
+                  <div data-aos="zoom-in">
                     <i className="fa-solid fa-shield-halved"></i>
                     Secure Hosting
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in">
                     <i className="fa-solid fa-key"></i>
                     Encrypted Access
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in">
                     <i className="fa-solid fa-user-lock"></i>
                     Restricted Access
                   </div>
                 </div>
               </section>
-
-              {/* ========================================= */}
-              {/* RIGHTS */}
-              {/* ========================================= */}
-
               <section id="rights" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-scale-balanced"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>06</span>
                     <h2>Your Rights</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   Depending on applicable laws, you may have the right to
                   request access to, correction of or deletion of your personal
                   information.
                 </p>
               </section>
-              {/* ========================================= */}
-              {/* DATA RETENTION */}
-              {/* ========================================= */}
 
               <section id="retention" className="privacy-card">
                 <div className="privacy-card-header">
@@ -392,19 +405,19 @@ const PrivacyPolicy = () => {
                     <i className="fa-solid fa-clock-rotate-left"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>07</span>
                     <h2>Data Retention</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   We retain personal information only for as long as necessary
                   to provide our services, comply with legal obligations,
                   resolve disputes, and maintain accurate business records.
                 </p>
 
-                <div className="privacy-highlight">
+                <div className="privacy-highlight" data-aos="fade-up">
                   <i className="fa-solid fa-circle-check"></i>
 
                   <div>
@@ -419,32 +432,24 @@ const PrivacyPolicy = () => {
                 </div>
               </section>
 
-              {/* ========================================= */}
-              {/* CHILDREN */}
-              {/* ========================================= */}
-
               <section id="children" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-child"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>08</span>
                     <h2>Children's Privacy</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   Our services are intended for businesses and individuals who
                   can legally enter into agreements. We do not knowingly collect
                   personal information from children.
                 </p>
               </section>
-
-              {/* ========================================= */}
-              {/* POLICY CHANGES */}
-              {/* ========================================= */}
 
               <section id="changes" className="privacy-card">
                 <div className="privacy-card-header">
@@ -452,44 +457,39 @@ const PrivacyPolicy = () => {
                     <i className="fa-solid fa-pen-to-square"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>09</span>
                     <h2>Changes To This Policy</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   This Privacy Policy may be updated occasionally to reflect
                   changes in legal requirements, technology, or our business
                   operations. Any updates will be published on this page with
                   the latest revision date.
                 </p>
               </section>
-
-              {/* ========================================= */}
-              {/* CONTACT */}
-              {/* ========================================= */}
-
               <section id="contact" className="privacy-card">
                 <div className="privacy-card-header">
                   <div className="privacy-icon">
                     <i className="fa-solid fa-envelope-open-text"></i>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <span>10</span>
 
                     <h2>Contact Information</h2>
                   </div>
                 </div>
 
-                <p>
+                <p data-aos="fade-up">
                   If you have any questions regarding this Privacy Policy or how
                   your information is handled, please feel free to contact us.
                 </p>
 
                 <div className="privacy-contact-grid">
-                  <div className="contact-box">
+                  <div className="contact-box" data-aos="fade-up">
                     <i className="fa-solid fa-building"></i>
 
                     <div>
@@ -499,7 +499,7 @@ const PrivacyPolicy = () => {
                     </div>
                   </div>
 
-                  <div className="contact-box">
+                  <div className="contact-box" data-aos="fade-up">
                     <i className="fa-solid fa-phone"></i>
 
                     <div>
@@ -509,7 +509,7 @@ const PrivacyPolicy = () => {
                     </div>
                   </div>
 
-                  <div className="contact-box">
+                  <div className="contact-box" data-aos="fade-up">
                     <i className="fa-solid fa-envelope"></i>
 
                     <div>
@@ -526,7 +526,7 @@ const PrivacyPolicy = () => {
       </section>
       <section className="privacy-promise">
         <div className="container">
-          <div className="privacy-promise-card">
+          <div className="privacy-promise-card" data-aos="fade-up">
             <span>
               <i className="fa-solid fa-shield-heart"></i>
               OUR PRIVACY PROMISE
@@ -544,7 +544,7 @@ const PrivacyPolicy = () => {
       </section>
       <section className="privacy-cta">
         <div className="container">
-          <div className="privacy-cta-card">
+          <div className="privacy-cta-card" data-aos="fade-up">
             <span>READY TO START?</span>
 
             <h2>Let's Build Something Amazing Together.</h2>

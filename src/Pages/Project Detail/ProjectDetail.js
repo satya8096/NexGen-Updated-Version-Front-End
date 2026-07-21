@@ -181,9 +181,6 @@ const sampleProjects = [
 
 const ProjectDetails = () => {
   const { id } = useParams();
-
-  // const navigate = useNavigate();
-
   const project = sampleProjects.find((item) => item.id === Number(id));
 
   useEffect(() => {
@@ -245,15 +242,9 @@ const ProjectDetails = () => {
 
   return (
     <>
-      {/* =======================================================
-            HERO
-      ======================================================= */}
-
       <section className="nxProjectHero">
         <div className="container">
           <div className="row gy-5">
-            {/* LEFT */}
-
             <div className="col-lg-6">
               <div className="nxProjectHero__content">
                 <div className="nxProjectHero__breadcrumb">
@@ -273,9 +264,6 @@ const ProjectDetails = () => {
                 <h1>{project.title}</h1>
 
                 <p>{project.longDescription}</p>
-
-                {/* INFO */}
-
                 <div className="nxProjectHero__meta">
                   <div>
                     <small>Client</small>
@@ -289,17 +277,11 @@ const ProjectDetails = () => {
                     <h5>{project.deliveryDate}</h5>
                   </div>
                 </div>
-
-                {/* TECH */}
-
                 <div className="nxProjectHero__tech">
                   {project.technologiesUsed.map((tech, index) => (
                     <span key={index}>{tech}</span>
                   ))}
                 </div>
-
-                {/* BUTTONS */}
-
                 <div className="nxProjectHero__buttons">
                   <a
                     href={project.liveLink}
@@ -318,8 +300,6 @@ const ProjectDetails = () => {
               </div>
             </div>
 
-            {/* RIGHT */}
-
             <div className="col-lg-6">
               <div className="nxProjectHero__preview">
                 <div className="nxProjectHero__device">
@@ -333,8 +313,6 @@ const ProjectDetails = () => {
 
                   <img src={project.image} alt={project.title} />
                 </div>
-
-                {/* Floating Cards */}
 
                 <div className="nxProjectHero__floating floatingOne">
                   <i className="fa-solid fa-circle-check"></i>
@@ -459,8 +437,6 @@ const ProjectDetails = () => {
           </div>
 
           <div className="row g-4">
-            {/* Goals */}
-
             <div className="col-lg-6">
               <div className="nxHighlightsCard">
                 <div className="nxHighlightsCard__header">
@@ -486,9 +462,6 @@ const ProjectDetails = () => {
                 </div>
               </div>
             </div>
-
-            {/* Features */}
-
             <div className="col-lg-6">
               <div className="nxHighlightsCard">
                 <div className="nxHighlightsCard__header">

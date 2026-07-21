@@ -1,8 +1,3 @@
-/* ======================================
-   NEXGEN HERO SECTION
-   FUTURISTIC AGENCY STYLE
-====================================== */
-
 .nx-hero {
   position: relative;
   min-height: 100vh;
@@ -22,13 +17,9 @@
       transparent 35%
     ),
     #050816;
-
-  /* color: #ffffff; */
   padding-top: 7rem;
   background: #f8fafc;
 }
-
-/* Background Grid */
 
 .nx-hero::before {
   content: "";
@@ -45,16 +36,12 @@
   mask-image: radial-gradient(circle, black, transparent 75%);
 }
 
-/* Extra Overlay */
-
 .nx-hero-overlay {
   position: absolute;
   inset: 0;
 
   background: linear-gradient(180deg, transparent, rgba(5, 8, 22, 0.8));
 }
-
-/* Main Wrapper */
 
 .nx-hero-wrapper {
   position: relative;
@@ -69,11 +56,6 @@
 
   gap: 60px;
 }
-
-/* ===============================
-        LEFT CONTENT
-================================ */
-
 .nx-hero-content {
   max-width: 650px;
 }
@@ -109,14 +91,11 @@
 }
 
 .nx-hero-content h1 {
-  /* font-size: clamp(2rem, 5vw, 2rem); */
   font-size: 2rem;
 
   line-height: 1.8;
 
   font-weight: 800;
-
-  /* letter-spacing: -2px; */
 }
 
 .nx-hero-content h1 span {
@@ -140,8 +119,6 @@
 
   max-width: 550px;
 }
-
-/* BUTTONS */
 
 .nx-hero-buttons {
   display: flex;
@@ -197,8 +174,6 @@
   color: #00d4ff;
 }
 
-/* TRUST STATS */
-
 .nx-hero-trust {
   display: flex;
 
@@ -220,10 +195,6 @@
 .nx-hero-trust small {
   color: #9da7bd;
 }
-
-/* ===============================
-        DIGITAL VISUAL
-================================ */
 
 .nx-digital-area {
   position: relative;
@@ -258,8 +229,6 @@
 
   filter: blur(20px);
 }
-
-/* Browser */
 
 .nx-browser-card {
   width: 360px;
@@ -339,8 +308,6 @@
   border-radius: 20px;
 }
 
-/* Floating Nodes */
-
 .nx-node {
   position: absolute;
 
@@ -353,8 +320,6 @@
   border: 1px solid rgba(26, 16, 16, 0.555);
 
   backdrop-filter: blur(15px);
-
-  /* color: #fff; */
 
   animation: nxFloat 5s infinite ease-in-out;
 }
@@ -378,8 +343,6 @@
   right: 80px;
   bottom: 80px;
 }
-
-/* Core */
 
 .nx-core {
   position: absolute;
@@ -407,8 +370,6 @@
   font-weight: 800;
 }
 
-/* Animation */
-
 @keyframes nxFloat {
   0%,
   100% {
@@ -419,10 +380,6 @@
     transform: translateY(-20px);
   }
 }
-
-/* ===============================
-        RESPONSIVE
-================================ */
 
 @media (max-width: 992px) {
   .nx-hero {
@@ -471,8 +428,6 @@
   }
 }
 
-/* ================================================================ */
-
 .nx-stats-section {
   padding: 100px 0;
 
@@ -482,8 +437,6 @@
 
   overflow: hidden;
 }
-
-/* subtle background */
 
 .nx-stats-section::before {
   content: "";
@@ -534,9 +487,6 @@
 
   font-size: 17px;
 }
-
-/* Cards */
-
 .nx-stats-grid {
   margin-top: 70px;
 
@@ -637,8 +587,6 @@
   }
 }
 
-/* =================================================================== */
-
 .nx-problem-section {
   padding: 100px 0;
 
@@ -701,8 +649,6 @@
 
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
 }
-
-/* Cards */
 
 .nx-problem-cards {
   display: grid;
@@ -785,8 +731,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* ================================================================== */
 
 .nx-solution-section {
   padding: 110px 0;
@@ -897,8 +841,6 @@
   color: #6c63ff;
 }
 
-/* Bottom Cards */
-
 .nx-transformation-list {
   margin-top: 70px;
 
@@ -975,8 +917,6 @@
     transform: rotate(90deg);
   }
 }
-
-/* ============================================================== */
 
 .nx-services-section {
   padding: 110px 0;
@@ -1123,8 +1063,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* ================================================================ */
 .nx-industries-section {
   padding: 110px 0;
 
@@ -1252,7 +1190,6 @@
   }
 }
 
-/* ================================================================== */
 .nx-why-section {
   padding: 2rem 0;
 
@@ -1354,8 +1291,6 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* ======================================================================== */
 .agency-banner-section {
   width: 100%;
 
@@ -1376,8 +1311,6 @@
   padding: 35px 0;
 
   transform: rotate(-5deg);
-
-  /* animation: bannerRotate 6s ease-in-out infinite alternate; */
 
   box-shadow: 0 25px 70px rgba(108, 99, 255, 0.25);
 }
@@ -1452,7 +1385,6 @@
   }
 }
 
-/* =============================================================== */
 .nx-testimonial-section {
   padding: 110px 0;
 
@@ -1588,7 +1520,6 @@
   }
 }
 
-/* ======================================================================= */
 .nx-cta-section {
   padding: 110px 0;
 

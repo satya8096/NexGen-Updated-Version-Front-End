@@ -3,69 +3,6 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import "./Testimonial.css";
 import { reviews } from "../../Data/Page Data/HomePageData";
 
-// const testimonials = [
-//   {
-//     id: 1,
-//     name: "Ravi Kumar",
-//     company: "RK Builders",
-//     designation: "Managing Director",
-//     image: require("../../Assets/Catering_Website.png"),
-//     review:
-//       "NexGen Web Designs transformed our business with a premium website. Customer enquiries increased within weeks and the support has been exceptional.",
-//     rating: 5,
-//   },
-//   {
-//     id: 2,
-//     name: "Anjali Reddy",
-//     company: "Bloom Beauty Studio",
-//     designation: "Founder",
-//     image: require("../../Assets/Catering_Website.png"),
-//     review:
-//       "Beautiful UI, fast loading pages and excellent communication. Our online bookings improved significantly after launching the new website.",
-//     rating: 5,
-//   },
-//   {
-//     id: 3,
-//     name: "Sandeep Rao",
-//     company: "Sky Interiors",
-//     designation: "CEO",
-//     image: require("../../Assets/Catering_Website.png"),
-//     review:
-//       "Professional from start to finish. Every detail was handled carefully and the final website exceeded our expectations.",
-//     rating: 5,
-//   },
-//   {
-//     id: 4,
-//     name: "Priya Sharma",
-//     company: "PS Fashion",
-//     designation: "Owner",
-//     image: require("../../Assets/Catering_Website.png"),
-//     review:
-//       "Modern design, SEO friendly structure and incredible responsiveness. Highly recommended for businesses wanting a professional online presence.",
-//     rating: 5,
-//   },
-//   {
-//     id: 5,
-//     name: "Mahesh Kumar",
-//     company: "MK Developers",
-//     designation: "Director",
-//     image: require("../../Assets/Catering_Website.png"),
-//     review:
-//       "Working with NexGen Web Designs was one of our best decisions. The project was delivered on time with amazing quality.",
-//     rating: 5,
-//   },
-//   {
-//     id: 6,
-//     name: "Keerthi Rani",
-//     company: "Royal Events",
-//     designation: "Founder",
-//     image: require("../../Assets/Catering_Website.png"),
-//     review:
-//       "Our new website reflects our brand perfectly. The animations, speed and user experience are outstanding.",
-//     rating: 5,
-//   },
-// ];
-
 export default function PremiumTestimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const speed = useRef(0.6);
@@ -74,15 +11,9 @@ export default function PremiumTestimonials() {
 
   const pauseRef = useRef(false);
 
-  // const cardWidth = 430;
-
-  // const totalCards = reviews.length;
-
   const sliderRef = useRef(null);
 
   const trackRef = useRef(null);
-
-  // const animationRef = useRef(null);
 
   const [pause, setPause] = useState(false);
 
@@ -134,7 +65,6 @@ export default function PremiumTestimonials() {
   const handleTouchEnd = () => {
     pauseRef.current = false;
   };
-  //   const [activeIndex, setActiveIndex] = useState(0);
 
   const loopTestimonials = useMemo(() => {
     return [...reviews, ...reviews];
@@ -143,36 +73,6 @@ export default function PremiumTestimonials() {
   useEffect(() => {
     pauseRef.current = pause;
   }, [pause]);
-
-  //   useEffect(() => {
-  //     const track = trackRef.current;
-
-  //     const slider = sliderRef.current;
-
-  //     if (!track || !slider) return;
-
-  //     let frame;
-
-  //     const animate = () => {
-  //       if (!pauseRef.current) {
-  //         position.current += speed.current;
-
-  //         if (position.current >= cardWidth * totalCards) {
-  //           position.current = 0;
-  //         }
-
-  //         track.style.transform = `translate3d(${-position.current}px,0,0)`;
-
-  //         updateActiveCard();
-  //       }
-
-  //       frame = requestAnimationFrame(animate);
-  //     };
-
-  //     animate();
-
-  //     return () => cancelAnimationFrame(frame);
-  //   }, []);
 
   useEffect(() => {
     const track = trackRef.current;
@@ -246,10 +146,10 @@ export default function PremiumTestimonials() {
 
   const updateActiveCard = () => {
     const slider = sliderRef.current;
+    const track = trackRef.current;
+    if (!slider || !track) return;
 
-    const items = trackRef.current.querySelectorAll(
-      ".premiumTestimonials__item",
-    );
+    const items = track.querySelectorAll(".premiumTestimonials__item");
 
     if (!items.length) return;
 
@@ -258,7 +158,6 @@ export default function PremiumTestimonials() {
     const center = sliderRect.left + sliderRect.width / 2;
 
     let closest = 0;
-
     let smallest = Infinity;
 
     items.forEach((item, index) => {
@@ -270,7 +169,6 @@ export default function PremiumTestimonials() {
 
       if (distance < smallest) {
         smallest = distance;
-
         closest = index;
       }
     });
@@ -286,18 +184,18 @@ export default function PremiumTestimonials() {
 
       <div className="container">
         <div className="premiumTestimonials__heading">
-          <span>
+          <span data-aos="fade-up">
             <i className="fa-solid fa-star"></i>
             CLIENT TESTIMONIALS
           </span>
 
-          <h2>
+          <h2 data-aos="fade-up">
             Real Businesses.
             <br />
             Real Success Stories.
           </h2>
 
-          <p>
+          <p data-aos="fade-up">
             Every website we build is designed to help businesses grow, improve
             trust and create long-term digital success.
           </p>
@@ -306,9 +204,6 @@ export default function PremiumTestimonials() {
         <div
           className="premiumTestimonials__slider"
           ref={sliderRef}
-          //   onMouseEnter={() => setPause(true)}
-          //   onMouseLeave={() => setPause(false)}
-          // ref={sliderRef}
           onMouseEnter={() => setPause(true)}
           onMouseLeave={() => setPause(false)}
           onMouseDown={handleMouseDown}
@@ -324,11 +219,6 @@ export default function PremiumTestimonials() {
             {loopTestimonials.map((item, index) => (
               <div
                 key={index}
-                // className={`premiumTestimonials__item ${
-                //   activeIndex === index
-                //     ? "premiumTestimonials__item--active"
-                //     : ""
-                // }`}
                 className={`premiumTestimonials__item
 ${activeIndex === index ? "premiumTestimonials__item--active" : ""}
 ${

@@ -1,13 +1,3 @@
-/*=========================================================
-NEXGEN WEB DESIGNS
-FLOATING ACTION DOCK
-PART 2
-=========================================================*/
-
-/*=====================================
-ROOT VARIABLES
-=====================================*/
-
 :root {
   --nx-primary: #1769ff;
 
@@ -19,10 +9,6 @@ ROOT VARIABLES
 
   --nx-shadow: 0 1.25rem 2.5rem rgba(23, 105, 255, 0.18);
 }
-
-/*=====================================
-DOCK
-=====================================*/
 
 .nxFloatDock {
   position: fixed;
@@ -41,10 +27,6 @@ DOCK
 
   z-index: 9999;
 }
-
-/*=====================================
-COMMON BUTTON
-=====================================*/
 
 .nxFloatButton {
   position: relative;
@@ -82,10 +64,6 @@ COMMON BUTTON
     visibility 0.35s ease;
 }
 
-/*=====================================
-ICON
-=====================================*/
-
 .nxFloatButton i {
   position: relative;
 
@@ -96,20 +74,11 @@ ICON
   font-size: 1.45rem;
 }
 
-/*=====================================
-WHATSAPP
-=====================================*/
-
 .nxWhatsappButton {
   opacity: 1;
 
   visibility: visible;
 }
-
-/*=====================================
-SCROLL BUTTON
-=====================================*/
-
 .nxScrollButton {
   opacity: 0;
 
@@ -118,10 +87,6 @@ SCROLL BUTTON
   transform: translateY(1rem) scale(0.85);
 }
 
-/*=====================================
-VISIBLE
-=====================================*/
-
 .nxScrollButton.show {
   opacity: 1;
 
@@ -129,10 +94,6 @@ VISIBLE
 
   transform: translateY(0) scale(1);
 }
-
-/*=====================================
-GLOW
-=====================================*/
 
 .nxFloatGlow {
   position: absolute;
@@ -152,10 +113,6 @@ GLOW
   z-index: 1;
 }
 
-/*=====================================
-BORDER
-=====================================*/
-
 .nxFloatBorder {
   position: absolute;
 
@@ -167,11 +124,6 @@ BORDER
 
   z-index: 2;
 }
-
-/*=====================================
-RIPPLE HOLDER
-=====================================*/
-
 .nxFloatRipple {
   position: absolute;
 
@@ -181,20 +133,11 @@ RIPPLE HOLDER
 
   z-index: 0;
 }
-
-/*=====================================
-FOCUS
-=====================================*/
-
 .nxFloatButton:focus-visible {
   outline: 0.18rem solid rgba(23, 105, 255, 0.35);
 
   outline-offset: 0.25rem;
 }
-
-/*=====================================
-TABLET
-=====================================*/
 
 @media (max-width: 992px) {
   .nxFloatDock {
@@ -203,10 +146,6 @@ TABLET
     bottom: 1.4rem;
   }
 }
-
-/*=====================================
-MOBILE
-=====================================*/
 
 @media (max-width: 768px) {
   .nxFloatDock {
@@ -229,11 +168,6 @@ MOBILE
     font-size: 1.25rem;
   }
 }
-
-/*=====================================
-SMALL MOBILE
-=====================================*/
-
 @media (max-width: 420px) {
   .nxFloatButton {
     width: 3.15rem;
@@ -247,19 +181,6 @@ SMALL MOBILE
     font-size: 1.1rem;
   }
 }
-
-/* ==================================================================== */
-/*=========================================================
-NEXGEN WEB DESIGNS
-FLOATING ACTION DOCK
-PART 3
-ANIMATIONS
-=========================================================*/
-
-/*=====================================
-FLOATING ANIMATION
-=====================================*/
-
 .nxWhatsappButton {
   animation: nxFloatWhatsapp 4.5s ease-in-out infinite;
 }
@@ -267,10 +188,6 @@ FLOATING ANIMATION
 .nxScrollButton.show {
   animation: nxFloatScroll 5s ease-in-out infinite;
 }
-
-/*=====================================
-HOVER
-=====================================*/
 
 .nxFloatButton:hover {
   transform: translateY(-0.45rem) scale(1.08);
@@ -280,10 +197,6 @@ HOVER
     0 0.75rem 1.25rem rgba(0, 184, 255, 0.18);
 }
 
-/*=====================================
-ICON
-=====================================*/
-
 .nxFloatButton i {
   transition: transform 0.35s ease;
 }
@@ -291,10 +204,6 @@ ICON
 .nxFloatButton:hover i {
   transform: scale(1.15) rotate(-8deg);
 }
-
-/*=====================================
-GLOW
-=====================================*/
 
 .nxFloatGlow {
   transition:
@@ -307,10 +216,6 @@ GLOW
 
   transform: scale(1.3);
 }
-
-/*=====================================
-SHINE
-=====================================*/
 
 .nxFloatButton::before {
   content: "";
@@ -339,10 +244,6 @@ SHINE
   animation: nxShine 0.9s ease;
 }
 
-/*=====================================
-WHATSAPP PULSE
-=====================================*/
-
 .nxWhatsappButton::after {
   content: "";
 
@@ -357,17 +258,9 @@ WHATSAPP PULSE
   animation: nxPulse 2.4s infinite;
 }
 
-/*=====================================
-ACTIVE
-=====================================*/
-
 .nxFloatButton:active {
   transform: scale(0.94);
 }
-
-/*=====================================
-KEYFRAMES
-=====================================*/
 
 @keyframes nxFloatWhatsapp {
   0% {
@@ -427,10 +320,6 @@ KEYFRAMES
   }
 }
 
-/*=====================================
-REDUCED MOTION
-=====================================*/
-
 @media (prefers-reduced-motion: reduce) {
   .nxWhatsappButton,
   .nxScrollButton.show,
@@ -445,24 +334,9 @@ REDUCED MOTION
   }
 }
 
-/* ====================================================================== */
-
-/*=========================================================
-PART 4
-MAGNETIC + RIPPLE
-=========================================================*/
-
-/*=====================================
-BUTTON
-=====================================*/
-
 .nxFloatButton {
   will-change: transform, box-shadow;
 }
-
-/*=====================================
-MAGNETIC
-=====================================*/
 
 .nxFloatButton {
   transition:
@@ -471,10 +345,6 @@ MAGNETIC
     opacity 0.35s ease,
     visibility 0.35s ease;
 }
-
-/*=====================================
-RIPPLE
-=====================================*/
 
 .nxFloatRipple {
   position: absolute;
@@ -485,10 +355,6 @@ RIPPLE
 
   border-radius: inherit;
 }
-
-/*=====================================
-RIPPLE WAVE
-=====================================*/
 
 .nxFloatRipple::before {
   content: "";
@@ -510,27 +376,15 @@ RIPPLE WAVE
   transform: translate(-50%, -50%);
 }
 
-/*=====================================
-CLICK
-=====================================*/
-
 .nxFloatButton:active .nxFloatRipple::before {
   animation: nxRipple 0.6s ease-out;
 }
-
-/*=====================================
-GLOW
-=====================================*/
 
 .nxFloatButton:hover {
   box-shadow:
     0 0 1.2rem rgba(23, 105, 255, 0.35),
     0 1.8rem 3rem rgba(23, 105, 255, 0.24);
 }
-
-/*=====================================
-BORDER
-=====================================*/
 
 .nxFloatBorder {
   transition: border-color 0.3s ease;
@@ -539,10 +393,6 @@ BORDER
 .nxFloatButton:hover .nxFloatBorder {
   border-color: rgba(255, 255, 255, 0.55);
 }
-
-/*=====================================
-KEYFRAMES
-=====================================*/
 
 @keyframes nxRipple {
   0% {
@@ -562,18 +412,6 @@ KEYFRAMES
   }
 }
 
-/* =================================================================== */
-/*=========================================================
-NEXGEN WEB DESIGNS
-FLOATING ACTION DOCK
-PART 5
-FINAL POLISH
-=========================================================*/
-
-/*=====================================
-GPU ACCELERATION
-=====================================*/
-
 .nxFloatDock {
   transform: translateZ(0);
 
@@ -588,30 +426,17 @@ GPU ACCELERATION
   backface-visibility: hidden;
 }
 
-/*=====================================
-PREMIUM BACKDROP
-=====================================*/
-
 .nxFloatButton {
   backdrop-filter: blur(18px);
 
   -webkit-backdrop-filter: blur(18px);
 }
-
-/*=====================================
-SOFT AMBIENT SHADOW
-=====================================*/
-
 .nxFloatButton {
   box-shadow:
     0 1rem 2rem rgba(23, 105, 255, 0.16),
     0 0.45rem 1rem rgba(23, 105, 255, 0.14),
     inset 0 1px rgba(255, 255, 255, 0.22);
 }
-
-/*=====================================
-HOVER SHADOW
-=====================================*/
 
 .nxFloatButton:hover {
   box-shadow:
@@ -620,27 +445,15 @@ HOVER SHADOW
     inset 0 1px rgba(255, 255, 255, 0.35);
 }
 
-/*=====================================
-ACTIVE
-=====================================*/
-
 .nxFloatButton:active {
   transition: transform 0.12s ease;
 }
-
-/*=====================================
-ICON
-=====================================*/
 
 .nxFloatButton i {
   text-rendering: optimizeLegibility;
 
   -webkit-font-smoothing: antialiased;
 }
-
-/*=====================================
-SAFE AREA SUPPORT
-=====================================*/
 
 @supports (padding: max(0px)) {
   .nxFloatDock {
@@ -650,10 +463,6 @@ SAFE AREA SUPPORT
   }
 }
 
-/*=====================================
-LARGE DESKTOP
-=====================================*/
-
 @media (min-width: 1600px) {
   .nxFloatDock {
     right: 2.8rem;
@@ -661,11 +470,6 @@ LARGE DESKTOP
     bottom: 2.8rem;
   }
 }
-
-/*=====================================
-TABLET
-=====================================*/
-
 @media (max-width: 992px) {
   .nxFloatDock {
     right: 1.5rem;
@@ -673,10 +477,6 @@ TABLET
     bottom: 1.5rem;
   }
 }
-
-/*=====================================
-MOBILE
-=====================================*/
 
 @media (max-width: 768px) {
   .nxFloatDock {
@@ -686,10 +486,6 @@ MOBILE
   }
 }
 
-/*=====================================
-VERY SMALL DEVICES
-=====================================*/
-
 @media (max-width: 360px) {
   .nxFloatButton {
     width: 3rem;
@@ -698,19 +494,11 @@ VERY SMALL DEVICES
   }
 }
 
-/*=====================================
-HIGH CONTRAST
-=====================================*/
-
 @media (prefers-contrast: more) {
   .nxFloatButton {
     border: 2px solid #ffffff;
   }
 }
-
-/*=====================================
-PRINT
-=====================================*/
 
 @media print {
   .nxFloatDock {

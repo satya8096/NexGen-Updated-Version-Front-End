@@ -3,25 +3,19 @@ import { Link } from "react-router-dom";
 
 import "./Portfolio.css";
 import { whatsappLink1 } from "../../Data/BrandData";
-// import axios from "axios";
 import { useAppData } from "../../Data/BackEnd Data/FetchBackEndData";
 import {
   sampleCategories,
-  // categories,
   sampleProjects,
   technologies,
-  // testimonials,
   whyChooseItems,
 } from "../../Data/Page Data/PortfolioPageData";
 import PremiumTestimonials from "../../Components/Testimonial Card/Testimonial";
 import { PortfolioPageSEO } from "../../Data/AllPageSEOs";
 
 const Portfolio = () => {
-  // const [error, setError] = useState("");
 
   const [search, setSearch] = useState("");
-
-  // const [activeCategory, setActiveCategory] = useState("All");
 
   const [sampleCategory, setSampleCategory] = useState("All");
 
@@ -32,11 +26,9 @@ const Portfolio = () => {
 
   const { websiteData, loading } = useAppData();
   let counters = {};
-  // let projects = [];
   let filteredProjects;
   if (!loading) {
     counters = websiteData.counters;
-    // projects = websiteData.projects;
     filteredProjects = websiteData.projects.filter((project) => {
       const matchesSearch = project.projectName
 
@@ -57,13 +49,8 @@ const Portfolio = () => {
 
   return (
     <>
-      {/*====================================================
-                    HERO SECTION
-      =====================================================*/}
       {PortfolioPageSEO}
       <section className="nxPortfolioHero">
-        {/* Background Elements */}
-
         <div className="nxPortfolioHero__grid"></div>
 
         <div className="nxPortfolioHero__blur nxPortfolioHero__blurOne"></div>
@@ -78,30 +65,26 @@ const Portfolio = () => {
 
         <div className="container">
           <div className="row align-items-center">
-            {/*==============================
-                    LEFT CONTENT
-            ==============================*/}
-
             <div className="col-lg-6">
               <div className="nxPortfolioHero__content">
-                <div className="nxPortfolioHero__badge">
+                <div className="nxPortfolioHero__badge" data-aos="fade-up">
                   <span></span>
                   Creative Portfolio
                 </div>
 
-                <h2>
+                <h2 data-aos="fade-up">
                   Websites That
                   <br />
                   <span>Grow Businesses.</span>
                 </h2>
 
-                <p>
+                <p data-aos="fade-up">
                   Every project tells a story. We don't just design beautiful
                   websites — we create digital experiences that increase trust,
                   generate leads and help businesses grow.
                 </p>
 
-                <div className="nxPortfolioHero__buttons">
+                <div className="nxPortfolioHero__buttons" data-aos="fade-up">
                   <Link to="/contact" className="nxPortfolioHero__primaryBtn">
                     Start Your Project
                     <i className="fa-solid fa-arrow-right"></i>
@@ -115,13 +98,9 @@ const Portfolio = () => {
                   </a>
                 </div>
 
-                {/*==========================
-                        STATS
-                ==========================*/}
-
                 <div className="nxPortfolioHero__stats">
                   <div>
-                    <h2>
+                    <h2 data-aos="zoom-in">
                       {" "}
                       {counters.projectsCount < 10
                         ? `0${counters.projectsCount}`
@@ -132,14 +111,14 @@ const Portfolio = () => {
                     <p>Projects Designed</p>
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in">
                     <h2>98%</h2>
 
                     <p>Happy Clients</p>
                   </div>
 
                   <div>
-                    <h2>
+                    <h2 data-aos="zoom-in">
                       {" "}
                       {counters.clientsCount < 10
                         ? `0${counters.clientsCount}`
@@ -153,17 +132,10 @@ const Portfolio = () => {
               </div>
             </div>
 
-            {/*==============================
-                    RIGHT SIDE
-            ==============================*/}
-
             <div className="col-lg-6">
               <div className="nxPortfolioHero__visual">
-                {/*============================
-                        MAIN BROWSER
-                ============================*/}
 
-                <div className="nxPortfolioHero__browser">
+                <div className="nxPortfolioHero__browser" data-aos="zoom-in">
                   <div className="nxPortfolioHero__browserTop">
                     <div className="browserDots">
                       <span></span>
@@ -186,11 +158,11 @@ const Portfolio = () => {
                   </div>
                 </div>
 
-                {/*============================
-                        FLOAT CARD 1
-                ============================*/}
-
-                <div className="nxPortfolioHero__floatingCard floatingOne">
+                <div
+                  className="nxPortfolioHero__floatingCard floatingOne"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
                   <div className="floatingIcon">
                     <i className="fa-solid fa-chart-line"></i>
                   </div>
@@ -200,11 +172,11 @@ const Portfolio = () => {
                   <p>Better Visibility</p>
                 </div>
 
-                {/*============================
-                        FLOAT CARD 2
-                ============================*/}
-
-                <div className="nxPortfolioHero__floatingCard floatingTwo">
+                <div
+                  className="nxPortfolioHero__floatingCard floatingTwo"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
                   <div className="floatingIcon">
                     <i className="fa-solid fa-mobile-screen-button"></i>
                   </div>
@@ -214,11 +186,11 @@ const Portfolio = () => {
                   <p>Mobile First</p>
                 </div>
 
-                {/*============================
-                        FLOAT CARD 3
-                ============================*/}
-
-                <div className="nxPortfolioHero__floatingCard floatingThree">
+                <div
+                  className="nxPortfolioHero__floatingCard floatingThree"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
                   <div className="floatingIcon">
                     <i className="fa-solid fa-bolt"></i>
                   </div>
@@ -228,7 +200,7 @@ const Portfolio = () => {
                   <p>Optimized Speed</p>
                 </div>
 
-                <div className="nxPortfolioHero__stamp">
+                <div className="nxPortfolioHero__stamp" data-aos="fade-up">
                   <div className="agencyStamp">
                     <div className="stampOuter">
                       <span>CREATIVE</span>
@@ -263,15 +235,15 @@ const Portfolio = () => {
       <section className="nxPortfolioSpotlight">
         <div className="container">
           <div className="nxPortfolioSpotlight__heading">
-            <span>FEATURED PROJECT</span>
+            <span data-aos="fade-up">FEATURED PROJECT</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               A Website That
               <br />
               Speaks For Our Work
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every successful business deserves an exceptional online presence.
               Here's one of our featured projects built with modern
               technologies, premium UI and performance-first development.
@@ -279,75 +251,91 @@ const Portfolio = () => {
           </div>
 
           <div className="row align-items-center gy-5">
-            {/*=========================
-            LEFT SIDE
-      =========================*/}
-
             <div className="col-lg-7">
               <div className="nxPortfolioSpotlight__preview">
                 <img
                   src={require("./../../Assets/joypictures.png")}
                   alt="Featured Project"
+                  data-aos="fade-right"
                 />
 
-                <div className="nxPortfolioSpotlight__badge">
+                <div
+                  className="nxPortfolioSpotlight__badge"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
                   <i className="fa-solid fa-award"></i>
                   Featured Project
                 </div>
 
-                <div className="nxPortfolioSpotlight__floating">
+                <div
+                  className="nxPortfolioSpotlight__floating"
+                  data-aos-delay="200"
+                  data-aos="zoom-in"
+                >
                   <i className="fa-solid fa-circle-check"></i>
                   Fully Responsive
                 </div>
               </div>
             </div>
 
-            {/*=========================
-            RIGHT SIDE
-      =========================*/}
-
             <div className="col-lg-5">
               <div className="nxPortfolioSpotlight__content">
-                <span className="nxPortfolioSpotlight__category">
+                <span
+                  className="nxPortfolioSpotlight__category"
+                  data-aos="fade-up"
+                >
                   Photography Website
                 </span>
 
-                <h3>Joypictures Studio</h3>
+                <h3 data-aos="fade-up">Joypictures Studio</h3>
 
-                <p>
+                <p data-aos="fade-up">
                   A premium church website designed with React, Bootstrap and
                   modern UI principles. Optimized for performance, SEO and all
                   screen sizes.
                 </p>
 
                 <div className="nxPortfolioSpotlight__tech">
-                  <span>React JS</span>
+                  <span data-aos="zoom-in" data-aos-delay="200">
+                    React JS
+                  </span>
 
-                  <span>Bootstrap</span>
+                  <span data-aos="zoom-in" data-aos-delay="400">
+                    Bootstrap
+                  </span>
 
-                  <span>Responsive</span>
+                  <span data-aos="zoom-in" data-aos-delay="600">
+                    Responsive
+                  </span>
 
-                  <span>SEO</span>
+                  <span data-aos="zoom-in" data-aos-delay="800">
+                    SEO
+                  </span>
 
-                  <span>WhatsApp</span>
+                  <span data-aos="zoom-in" data-aos-delay="1000">
+                    WhatsApp
+                  </span>
 
-                  <span>Hosting</span>
+                  <span data-aos="zoom-in" data-aos-delay="1200">
+                    Hosting
+                  </span>
                 </div>
 
                 <div className="nxPortfolioSpotlight__stats">
-                  <div>
+                  <div data-aos="fade-up">
                     <h4>98</h4>
 
                     <small>Performance</small>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <h4>100%</h4>
 
                     <small>Responsive</small>
                   </div>
 
-                  <div>
+                  <div data-aos="fade-up">
                     <h4>SEO</h4>
 
                     <small>Optimized</small>
@@ -378,24 +366,22 @@ const Portfolio = () => {
       <section className="nxPortfolioLive" id="liveProjects">
         <div className="container">
           <div className="nxPortfolioLive__heading">
-            <span>LIVE PROJECTS</span>
+            <span data-aos="fade-up">LIVE PROJECTS</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               Websites We've
               <br />
               Successfully Delivered
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Explore our latest live projects developed for businesses across
               multiple industries.
             </p>
           </div>
 
           <div className="nxPortfolioLive__topBar">
-            {/* Search */}
-
-            <div className="nxPortfolioLive__search">
+            <div className="nxPortfolioLive__search" data-aos="fade-up">
               <i className="fa-solid fa-magnifying-glass"></i>
 
               <input
@@ -405,53 +391,28 @@ const Portfolio = () => {
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
-
-            {/* Filter */}
-
-            {/* <div className="nxPortfolioLive__filters">
-              {categories.map((item) => (
-                <button
-                  key={item}
-                  className={activeCategory === item ? "activeFilter" : ""}
-                  onClick={() => setActiveCategory(item)}
-                >
-                  {item}
-                </button>
-              ))}
-            </div> */}
           </div>
 
-          {/*==============================
-            PROJECT COUNT
-    ==============================*/}
-
-          <div className="nxPortfolioLive__count">
+          <div className="nxPortfolioLive__count" data-aos="fade">
             Showing
             <strong>{!loading && filteredProjects.length}</strong>
             Projects
           </div>
 
-          {/*==============================
-            LOADING
-    ==============================*/}
-
           {loading && (
             <div className="nxPortfolioLive__loading">Loading Projects...</div>
           )}
 
-          {/*==============================
-            ERROR
-    ==============================*/}
-
-          {/* {error && <div className="nxPortfolioLive__error">{error}</div>} */}
-
           <div className="row g-4">
             {!loading &&
-              filteredProjects.map((project) => (
-                <div className="col-lg-4 col-md-6" key={project._id}>
+              filteredProjects.map((project, index) => (
+                <div
+                  className="col-lg-4 col-md-6"
+                  key={project._id}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 200}
+                >
                   <div className="nxPortfolioLive__card">
-                    {/* IMAGE */}
-
                     <div className="nxPortfolioLive__image">
                       <img
                         src={
@@ -474,24 +435,12 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    {/* BODY */}
-
                     <div className="nxPortfolioLive__body">
                       <span>{project.category}</span>
 
                       <h3>{project.projectName}</h3>
 
                       <p>{project.projectDescription}</p>
-
-                      {/* TECHNOLOGY */}
-
-                      {/* <div className="nxPortfolioLive__technology">
-                        {project.technology.map((tech, index) => (
-                          <small key={index}>{tech}</small>
-                        ))}
-                      </div> */}
-
-                      {/* FOOTER */}
 
                       <div className="nxPortfolioLive__footer">
                         <a
@@ -516,39 +465,29 @@ const Portfolio = () => {
           )}
         </div>
       </section>
-      {/*====================================================
-                DEVELOPMENT PROCESS
-=====================================================*/}
 
       <section className="nxPortfolioProcess">
         <div className="container">
-          {/*==========================
-            Heading
-    ==========================*/}
-
           <div className="nxPortfolioProcess__heading">
-            <span>OUR PROCESS</span>
+            <span data-aos="fade-up">OUR PROCESS</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               From Idea To
               <br />
               Successful Website
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every project follows a proven workflow that ensures beautiful
               design, fast performance and a successful launch.
             </p>
           </div>
-
-          {/*==========================
-            Timeline
-    ==========================*/}
-
           <div className="nxPortfolioProcess__wrapper">
-            {/* STEP 1 */}
-
-            <div className="nxPortfolioProcess__card">
+            <div
+              className="nxPortfolioProcess__card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="nxPortfolioProcess__number">01</div>
 
               <div className="nxPortfolioProcess__icon">
@@ -563,9 +502,11 @@ const Portfolio = () => {
               </p>
             </div>
 
-            {/* STEP 2 */}
-
-            <div className="nxPortfolioProcess__card">
+            <div
+              className="nxPortfolioProcess__card"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div className="nxPortfolioProcess__number">02</div>
 
               <div className="nxPortfolioProcess__icon">
@@ -579,10 +520,11 @@ const Portfolio = () => {
                 focused on conversion.
               </p>
             </div>
-
-            {/* STEP 3 */}
-
-            <div className="nxPortfolioProcess__card">
+            <div
+              className="nxPortfolioProcess__card"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <div className="nxPortfolioProcess__number">03</div>
 
               <div className="nxPortfolioProcess__icon">
@@ -597,9 +539,11 @@ const Portfolio = () => {
               </p>
             </div>
 
-            {/* STEP 4 */}
-
-            <div className="nxPortfolioProcess__card">
+            <div
+              className="nxPortfolioProcess__card"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
               <div className="nxPortfolioProcess__number">04</div>
 
               <div className="nxPortfolioProcess__icon">
@@ -616,62 +560,52 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-                SAMPLE WEBSITE CONCEPTS
-=====================================================*/}
 
       <section className="nxPortfolioConcepts">
         <div className="container">
-          {/*==============================
-            SECTION HEADING
-    ==============================*/}
-
           <div className="nxPortfolioConcepts__heading">
-            <span>DESIGN CONCEPTS</span>
+            <span data-aos="fade-up">DESIGN CONCEPTS</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               Creative Website
               <br />
               Design Collection
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               These are premium UI concepts created by our designers. Every
               design can be customized for your business.
             </p>
           </div>
 
-          {/*==============================
-            CATEGORY FILTERS
-    ==============================*/}
-
           <div className="nxPortfolioConcepts__filters">
-            {sampleCategories.map((item) => (
+            {sampleCategories.map((item, index) => (
               <button
                 key={item}
                 className={sampleCategory === item ? "activeConcept" : ""}
                 onClick={() => setSampleCategory(item)}
+                data-aos="zoom-in"
+                data-aos-delay={index * 200}
               >
                 {item}
               </button>
             ))}
           </div>
 
-          {/*==============================
-            GRID
-    ==============================*/}
-          <div className="nxPortfolioLive__count">
+          <div className="nxPortfolioLive__count" data-aos="fade">
             Showing
             <strong>{filteredSamples.length}</strong>
             Sample Projects
           </div>
 
           <div className="row g-4">
-            {filteredSamples.map((project) => (
+            {filteredSamples.map((project, index) => (
               <div className="col-lg-4 col-md-6" key={project.id}>
-                <div className="nxPortfolioConcepts__card">
-                  {/* IMAGE */}
-
+                <div
+                  className="nxPortfolioConcepts__card"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <div className="nxPortfolioConcepts__image">
                     <img src={project.image} alt={project.title} />
 
@@ -680,8 +614,6 @@ const Portfolio = () => {
                     </div>
                   </div>
 
-                  {/* BODY */}
-
                   <div className="nxPortfolioConcepts__body">
                     <span>{project.category}</span>
 
@@ -689,19 +621,14 @@ const Portfolio = () => {
 
                     <p>{project.description}</p>
 
-                    {/* Technology */}
-
                     <div className="nxPortfolioConcepts__tech">
                       {project.technologiesUsed.map((item, index) => (
                         <small key={index}>{item}</small>
                       ))}
                     </div>
-
-                    {/* Footer */}
                   </div>
                   <div className="nxPortfolioConcepts__footer">
                     <Link to={"/contact"}>Request Similar Design</Link>
-                    {/* <Link to={"/portfolio"}>Read More</Link> */}
                   </div>
                 </div>
               </div>
@@ -715,40 +642,24 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/*====================================================
-                TECHNOLOGY STACK
-=====================================================*/}
-
       <section className="nxPortfolioTech">
         <div className="container">
-          {/*==============================
-                HEADING
-        ==============================*/}
-
           <div className="nxPortfolioTech__heading">
-            <span>OUR TECH STACK</span>
+            <span data-aos="fade-up">OUR TECH STACK</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               Modern Technologies
               <br />
               That Power Every Project
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               We build fast, scalable, secure and SEO-friendly websites using
               the latest web technologies.
             </p>
           </div>
 
-          {/*==============================
-                CONTENT
-        ==============================*/}
-
           <div className="nxPortfolioTech__wrapper">
-            {/*==========================
-                    CENTER
-            ==========================*/}
-
             <div className="nxPortfolioTech__center">
               <div className="nxPortfolioTech__core">
                 <img
@@ -767,10 +678,6 @@ const Portfolio = () => {
                 </p>
               </div>
             </div>
-
-            {/*==========================
-                    TECHNOLOGIES
-            ==========================*/}
 
             <div className="nxPortfolioTech__items">
               {technologies.map((item) => (
@@ -798,39 +705,32 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-                WHY CHOOSE NEXGEN
-=====================================================*/}
 
       <section className="nxPortfolioWhy">
         <div className="container">
-          {/*=========================
-                Heading
-        =========================*/}
-
           <div className="nxPortfolioWhy__heading">
-            <span>WHY CHOOSE US</span>
+            <span data-aos="fade-up">WHY CHOOSE US</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               More Than A Website
               <br />
               We Build Your Online Growth
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every website we create is designed to attract customers, improve
               trust, increase conversions and help your business grow faster.
             </p>
           </div>
 
-          {/*=========================
-                Features
-        =========================*/}
-
           <div className="row g-4">
-            {whyChooseItems.map((item) => (
+            {whyChooseItems.map((item, index) => (
               <div className="col-xl-4 col-md-6" key={item.id}>
-                <div className="nxPortfolioWhy__card">
+                <div
+                  className="nxPortfolioWhy__card"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <div className="nxPortfolioWhy__icon">
                     <i className={item.icon}></i>
                   </div>
@@ -851,16 +751,12 @@ const Portfolio = () => {
 
       <PremiumTestimonials />
 
-      <section className="nxPortfolioCTA">
+      <section className="nxPortfolioCTA" data-aos="fade-up">
         <div className="container">
           <div className="nxPortfolioCTA__wrapper">
-            {/* Floating Decorations */}
-
             <span className="nxPortfolioCTA__shape shapeOne"></span>
             <span className="nxPortfolioCTA__shape shapeTwo"></span>
             <span className="nxPortfolioCTA__shape shapeThree"></span>
-
-            {/* Content */}
 
             <div className="nxPortfolioCTA__content">
               <div className="nxPortfolioCTA__badge">
@@ -879,8 +775,6 @@ const Portfolio = () => {
                 building your brand online, NexGen Web Designs is ready to
                 create a website that delivers results.
               </p>
-
-              {/* Trust */}
 
               <div className="nxPortfolioCTA__trust">
                 <div>
@@ -903,8 +797,6 @@ const Portfolio = () => {
                   Secure Hosting
                 </div>
               </div>
-
-              {/* Buttons */}
 
               <div className="nxPortfolioCTA__buttons">
                 <Link to="/contact" className="nxPortfolioCTA__primary">

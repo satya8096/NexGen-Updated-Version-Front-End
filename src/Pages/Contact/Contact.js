@@ -1,16 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Contact.css";
-// import { sendProjectInquiry } from "../../Components/Email Template Service/EmailService";
-import {
-  // emailAddress,
-  // emailAddress1,
-  phoneNumber,
-  // whatsappNumber1,
-  // whatsappNumber,
-  // serverUrl,
-  whatsappLink1,
-} from "../../Data/BrandData";
-// import axios from "axios";
+import { phoneNumber, whatsappLink1 } from "../../Data/BrandData";
 import { useAppData } from "../../Data/BackEnd Data/FetchBackEndData";
 import { Link } from "react-router-dom";
 import {
@@ -30,17 +20,13 @@ import { ContactPageSEO } from "../../Data/AllPageSEOs";
 export default function Contact() {
   const [wordIndex, setWordIndex] = useState(0);
   const heroRef = useRef(null);
-  // const [submittedData, setSubmittedData] = useState(null);
-  // const whatsappNumber = "918331889448";
   const dashboardRef = useRef(null);
 
   const { websiteData, loading } = useAppData();
   let counters = {};
-  // let projects = [];
   let pricings = [];
   if (!loading) {
     counters = websiteData.counters;
-    // projects = websiteData.projects;
     pricings = websiteData.pricings;
   }
 
@@ -48,8 +34,6 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
 
   const [formLoading, setFormLoading] = useState(false);
-
-  // const [success, setSuccess] = useState(false);
 
   const nameRef = useRef(null);
 
@@ -309,31 +293,19 @@ Please follow up with this client promptly.
   //   };
   return (
     <>
-      {/*=================================
-            HERO
-      =================================*/}
       {ContactPageSEO}
       <section className="contactHero" ref={heroRef}>
-        {/* Animated Background */}
-
         <div className="heroBg bgOne"></div>
         <div className="heroBg bgTwo"></div>
         <div className="heroBg bgThree"></div>
-
-        {/* Glow */}
-
         <div className="heroGlow glowOne"></div>
         <div className="heroGlow glowTwo"></div>
-
-        {/* Grid */}
 
         <div className="heroGrid"></div>
         <div className="mouseGlow" ref={glowRef}></div>
 
         <div className="container">
           <div className="row align-items-center min-vh-100">
-            {/* LEFT */}
-
             <div className="col-lg-7">
               <div className="contactHeroContent">
                 <span className="contactBadge">
@@ -370,8 +342,6 @@ Please follow up with this client promptly.
                   </Link>
                 </div>
 
-                {/* Small Stats */}
-
                 <div className="heroStats">
                   <div>
                     <h3>
@@ -398,8 +368,6 @@ Please follow up with this client promptly.
                 </div>
               </div>
             </div>
-
-            {/* RIGHT */}
 
             <div className="col-lg-5">
               <div className="contactDashboard" ref={dashboardRef}>
@@ -454,9 +422,6 @@ Please follow up with this client promptly.
             </div>
           </div>
         </div>
-
-        {/* Scroll */}
-
         <div className="scrollDown">
           <span>Scroll</span>
 
@@ -468,9 +433,7 @@ Please follow up with this client promptly.
 
       <section className="findus-section">
         <div className="container">
-          {/* Heading */}
-
-          <div className="findus-section-title">
+          <div className="findus-section-title" data-aos="fade-up">
             <span>Visit Our Offices</span>
 
             <h2>Find NexGen Web Designs Near You</h2>
@@ -481,14 +444,10 @@ Please follow up with this client promptly.
             </p>
           </div>
 
-          {/* Cards */}
-
           <div className="row g-5">
             {branches.map((branch) => (
-              <div className="col-lg-6" key={branch.id}>
+              <div className="col-lg-6" key={branch.id} data-aos="fade-up">
                 <div className="branch-card">
-                  {/* Header */}
-
                   <div className="branch-header">
                     <div
                       className="branch-icon"
@@ -505,8 +464,6 @@ Please follow up with this client promptly.
                       <span>NexGen Web Designs</span>
                     </div>
                   </div>
-
-                  {/* Details */}
 
                   <div className="branch-details">
                     <div>
@@ -533,9 +490,6 @@ Please follow up with this client promptly.
                       <span>{branch.timing}</span>
                     </div>
                   </div>
-
-                  {/* Buttons */}
-
                   <div className="branch-buttons">
                     <a
                       href={branch.directions}
@@ -552,8 +506,6 @@ Please follow up with this client promptly.
                     </a>
                   </div>
 
-                  {/* Google Map */}
-
                   <div className="map-wrapper">
                     <iframe
                       src={branch.map}
@@ -568,14 +520,10 @@ Please follow up with this client promptly.
           </div>
         </div>
       </section>
-
-      {/* Contact Form */}
       <section className="projectInquiry ">
         <div className="container">
           <div className="">
-            {/* LEFT */}
-
-            <div>
+            <div data-aos="fade-up">
               <div className="inquiryContent">
                 <span>Start Your Project</span>
 
@@ -617,10 +565,7 @@ Please follow up with this client promptly.
                 </div>
               </div>
             </div>
-
-            {/* RIGHT */}
-
-            <div className="inquiryFormContainer">
+            <div className="inquiryFormContainer" data-aos="fade-up">
               <form
                 className="projectForm"
                 onSubmit={handleSubmit}
@@ -755,8 +700,6 @@ Please follow up with this client promptly.
                   </div>
                 </div>
 
-                {/* WEBSITE TYPE */}
-
                 <h5 className="sectionTitle">Website Type</h5>
 
                 <div className="websiteCards">
@@ -783,9 +726,6 @@ Please follow up with this client promptly.
                 {errors.websiteType && (
                   <p className="error">{errors.websiteType}</p>
                 )}
-
-                {/* BUDGET */}
-
                 <div className="budgetBox">
                   <label>Estimated Budget</label>
 
@@ -803,9 +743,6 @@ Please follow up with this client promptly.
                   />
                   {errors.budget && <p className="error">{errors.budget}</p>}
                 </div>
-
-                {/* TIMELINE */}
-
                 <h5 className="sectionTitle">Project Timeline</h5>
 
                 <div
@@ -905,7 +842,10 @@ messageError
 
       <section className="whyChooseSection">
         <div className="container">
-          <div className="contact-why-chooseus-section-heading">
+          <div
+            className="contact-why-chooseus-section-heading"
+            data-aos="fade-up"
+          >
             <span>Why Choose Us</span>
 
             <h2>
@@ -921,8 +861,6 @@ messageError
           </div>
 
           <div className="whyChooseWrapper">
-            {/* CENTER */}
-
             <div className="centerCircle">
               <div className="centerGlow"></div>
 
@@ -934,9 +872,6 @@ messageError
                 Web Designs
               </h4>
             </div>
-
-            {/* ITEMS */}
-
             {contactWhyChooseItems.map((item, index) => (
               <div className={`featureCard card${index + 1}`} key={index}>
                 <div className="featureIcon">
@@ -954,7 +889,10 @@ messageError
 
       <section className="process-section">
         <div className="container">
-          <div className="process-heading contact-why-chooseus-section-heading">
+          <div
+            className="process-heading contact-why-chooseus-section-heading"
+            data-aos="fade-up"
+          >
             <span>Our Process</span>
 
             <h2>
@@ -971,7 +909,11 @@ messageError
 
           <div className="process-timeline">
             {conatactTimeLineItems.map((step) => (
-              <div className="process-step" key={step.number}>
+              <div
+                className="process-step"
+                key={step.number}
+                data-aos="fade-up"
+              >
                 <div className="process-step-left">
                   <div className="process-circle">{step.number}</div>
 

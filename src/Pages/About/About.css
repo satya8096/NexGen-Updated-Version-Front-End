@@ -1,17 +1,9 @@
-/*==================================================
-ABOUT PAGE
-==================================================*/
-
 .aboutPage {
   position: relative;
   overflow: hidden;
   background: #f8fafc;
   min-height: 100vh;
 }
-
-/*==================================================
-BACKGROUND
-==================================================*/
 
 .bgGrid {
   position: absolute;
@@ -54,11 +46,6 @@ BACKGROUND
   bottom: -160px;
   left: 35%;
 }
-
-/*==================================================
-HERO
-==================================================*/
-
 .aboutHero {
   position: relative;
   z-index: 2;
@@ -116,11 +103,6 @@ HERO
   max-width: 560px;
   margin-bottom: 45px;
 }
-
-/*==================================================
-BUTTONS
-==================================================*/
-
 .heroButtons {
   display: flex;
   gap: 18px;
@@ -163,11 +145,6 @@ BUTTONS
   transform: translateY(-6px);
   color: #6d5bff;
 }
-
-/*==================================================
-STATS
-==================================================*/
-
 .heroStats {
   display: flex;
   gap: 55px;
@@ -186,10 +163,6 @@ STATS
   font-weight: 500;
 }
 
-/*==================================================
-RIGHT SIDE
-==================================================*/
-
 .heroVisual {
   margin-top: 1rem;
   position: relative;
@@ -198,10 +171,6 @@ RIGHT SIDE
   justify-content: center;
   align-items: center;
 }
-
-/*==================================================
-BROWSER CARD
-==================================================*/
 
 .browserCard {
   width: 100%;
@@ -272,10 +241,6 @@ BROWSER CARD
   margin-bottom: 35px;
 }
 
-/*==================================================
-FEATURES
-==================================================*/
-
 .browserFeatures {
   display: flex;
   justify-content: center;
@@ -304,10 +269,6 @@ FEATURES
 .browserFeatures i {
   color: #6d5bff;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 991px) {
   .aboutHero {
@@ -389,12 +350,6 @@ RESPONSIVE
     justify-content: center;
   }
 }
-
-/* ======================================================================= */
-/*==================================================
-ROTATING AGENCY STAMP
-==================================================*/
-
 .agencyStamp {
   position: absolute;
 
@@ -496,8 +451,6 @@ ROTATING AGENCY STAMP
     transform: rotate(360deg);
   }
 }
-
-/* ================================================================== */
 .stampOuter span {
   position: absolute;
 
@@ -532,10 +485,6 @@ ROTATING AGENCY STAMP
 .stampOuter span:nth-child(4) {
   transform: translate(-50%, -50%) rotate(270deg) translateY(-95px);
 }
-
-/*==================================================
-FLOATING CARDS
-==================================================*/
 
 .floatingCard {
   position: absolute;
@@ -617,21 +566,9 @@ FLOATING CARDS
   animation: floatCardThree 5.5s ease-in-out infinite;
 }
 
-/*==================================================
-BROWSER FLOAT
-==================================================*/
-
 .browserCard {
   animation: browserFloat 6s ease-in-out infinite;
 }
-
-/*==================================================
-ENTRANCE ANIMATIONS
-==================================================*/
-
-/* .heroBadge {
-  animation: fadeUp 0.8s ease forwards;
-} */
 
 .heroContent h1 {
   animation: fadeUp 0.9s ease forwards;
@@ -654,10 +591,6 @@ ENTRANCE ANIMATIONS
     browserFloat 6s ease-in-out infinite,
     fadeRight 1s ease;
 }
-
-/*==================================================
-BUTTON SHINE
-==================================================*/
 
 .primaryBtn {
   position: relative;
@@ -691,11 +624,6 @@ BUTTON SHINE
 .primaryBtn:hover::before {
   animation: buttonShine 0.8s linear;
 }
-
-/*==================================================
-FEATURE CHIP HOVER
-==================================================*/
-
 .browserFeatures div {
   position: relative;
 
@@ -719,10 +647,6 @@ FEATURE CHIP HOVER
 .browserFeatures div:hover::after {
   opacity: 1;
 }
-
-/*==================================================
-KEYFRAMES
-==================================================*/
 
 @keyframes browserFloat {
   0% {
@@ -814,10 +738,6 @@ KEYFRAMES
   }
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 991px) {
   .agencyStamp {
     position: relative;
@@ -857,16 +777,6 @@ RESPONSIVE
   }
 }
 
-/* ======================================================================= */
-/*==================================================
-PART 2B-2A
-PREMIUM BACKGROUND ANIMATIONS
-==================================================*/
-
-/*==========================================
-ANIMATED GRID
-==========================================*/
-
 .bgGrid {
   animation: gridMove 18s linear infinite;
 }
@@ -884,10 +794,6 @@ ANIMATED GRID
       60px 60px;
   }
 }
-
-/*==========================================
-FLOATING ORBS
-==========================================*/
 
 .gradientOrb {
   animation: orbFloat 14s ease-in-out infinite;
@@ -929,10 +835,6 @@ FLOATING ORBS
   }
 }
 
-/*==========================================
-BACKGROUND SHIMMER
-==========================================*/
-
 .aboutPage::before {
   content: "";
 
@@ -968,10 +870,6 @@ BACKGROUND SHIMMER
   }
 }
 
-/*==========================================
-SOFT RADIAL LIGHT
-==========================================*/
-
 .aboutPage::after {
   content: "";
 
@@ -1001,10 +899,6 @@ SOFT RADIAL LIGHT
   pointer-events: none;
 }
 
-/*==========================================
-HERO CONTENT PARALLAX FEEL
-==========================================*/
-
 .heroContent {
   transform: translateZ(0);
 
@@ -1016,10 +910,6 @@ HERO CONTENT PARALLAX FEEL
 
   will-change: transform;
 }
-
-/*==========================================
-BROWSER GLOW
-==========================================*/
 
 .browserCard {
   position: relative;
@@ -1046,10 +936,6 @@ BROWSER GLOW
   filter: blur(12px);
 }
 
-/*==========================================
-BROWSER SHADOW PULSE
-==========================================*/
-
 .browserCard {
   animation:
     browserFloat 6s ease-in-out infinite,
@@ -1070,10 +956,6 @@ BROWSER SHADOW PULSE
   }
 }
 
-/*==========================================
-FLOATING BADGE
-==========================================*/
-
 .heroBadge {
   animation: badgeFloat 4s ease-in-out infinite;
 }
@@ -1092,10 +974,6 @@ FLOATING BADGE
   }
 }
 
-/*==========================================
-SMOOTH IMAGE RENDERING
-==========================================*/
-
 .browserCard,
 .floatingCard,
 .agencyStamp {
@@ -1103,11 +981,6 @@ SMOOTH IMAGE RENDERING
 
   transform-style: preserve-3d;
 }
-
-/* ======================================================================== */
-/*==================================================
-MOUSE SPOTLIGHT
-==================================================*/
 
 .aboutPage {
   cursor: default;
@@ -1132,10 +1005,6 @@ MOUSE SPOTLIGHT
     left 0.08s linear,
     top 0.08s linear;
 }
-
-/*==================================================
-PREMIUM BUTTON EFFECTS
-==================================================*/
 
 .primaryBtn,
 .secondaryBtn {
@@ -1178,10 +1047,6 @@ PREMIUM BUTTON EFFECTS
   transform: translateX(6px);
 }
 
-/*==================================================
-BROWSER HOVER
-==================================================*/
-
 .browserCard {
   transition:
     transform 0.45s,
@@ -1191,11 +1056,6 @@ BROWSER HOVER
 .heroVisual:hover .browserCard {
   transform: perspective(1200px) rotateY(-6deg) rotateX(4deg) translateY(-12px);
 }
-
-/*==================================================
-STAMP GLOW
-==================================================*/
-
 .stampCenter {
   position: relative;
   overflow: hidden;
@@ -1230,10 +1090,6 @@ STAMP GLOW
   }
 }
 
-/*==================================================
-FEATURE CHIP
-==================================================*/
-
 .browserFeatures div {
   transform: translateY(0);
 }
@@ -1243,10 +1099,6 @@ FEATURE CHIP
 
   box-shadow: 0 15px 30px rgba(109, 91, 255, 0.12);
 }
-
-/*==================================================
-STATS HOVER
-==================================================*/
 
 .heroStats div {
   transition: 0.35s;
@@ -1263,10 +1115,6 @@ STATS HOVER
 .heroStats div:hover h3 {
   color: #6d5bff;
 }
-
-/*==================================================
-TEXT ANIMATION
-==================================================*/
 
 .heroContent h1 span {
   display: inline-block;
@@ -1308,10 +1156,6 @@ TEXT ANIMATION
   }
 }
 
-/*==================================================
-SCROLL INDICATOR
-==================================================*/
-
 .aboutHero::after {
   content: "";
 
@@ -1352,10 +1196,6 @@ SCROLL INDICATOR
   }
 }
 
-/*==================================================
-ACCESSIBILITY
-==================================================*/
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -1365,10 +1205,6 @@ ACCESSIBILITY
     scroll-behavior: auto !important;
   }
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 991px) {
   .heroVisual:hover .browserCard {
@@ -1397,12 +1233,6 @@ RESPONSIVE
     margin-bottom: 20px;
   }
 }
-
-/* ========================================================================= */
-
-/*==================================================
-OUR STORY
-==================================================*/
 
 .ourStory {
   position: relative;
@@ -1604,32 +1434,6 @@ OUR STORY
 .storyCard.right .storyYear {
   left: -45px;
 }
-/*
-.storyWatermark {
-  position: absolute;
-
-  left: 50%;
-
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  font-size: 180px;
-
-  font-weight: 900;
-
-  color: rgba(15, 23, 42, 0.03);
-
-  white-space: nowrap;
-
-  pointer-events: none;
-
-  user-select: none;
-} */
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 991px) {
   .storyTimeline {
@@ -1697,11 +1501,6 @@ RESPONSIVE
   }
 }
 
-/* ========================================================================== */
-/*==================================================
-FOUNDER SECTION
-==================================================*/
-
 .founderSection {
   padding: 2rem 0 4rem 0;
 
@@ -1758,8 +1557,6 @@ FOUNDER SECTION
 
 .founderImage img {
   width: 100%;
-
-  /* height: 100%; */
 
   object-fit: cover;
 }
@@ -1968,11 +1765,6 @@ FOUNDER SECTION
     transform: rotate(360deg);
   }
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 991px) {
   .founderSection {
     padding: 90px 0;
@@ -2024,11 +1816,6 @@ RESPONSIVE
     margin: 0 auto 30px;
   }
 }
-
-/* ======================================================================== */
-/*==================================================
-CORE VALUES
-==================================================*/
 
 .coreValues {
   padding: 1rem 0;
@@ -2149,10 +1936,6 @@ CORE VALUES
   margin: 0;
 }
 
-/*==========================================
-RESPONSIVE
-==========================================*/
-
 @media (max-width: 991px) {
   .valuesGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -2182,12 +1965,6 @@ RESPONSIVE
     height: 90px;
   }
 }
-
-/* ================================================================= */
-
-/*==========================================
-COMPANY STATS
-==========================================*/
 
 .companyStats {
   padding: 3rem 0;
@@ -2340,10 +2117,6 @@ COMPANY STATS
   color: #334155;
 }
 
-/*==========================================
-RESPONSIVE
-==========================================*/
-
 @media (max-width: 992px) {
   .statsGrid {
     grid-template-columns: 1fr 1fr;
@@ -2377,11 +2150,6 @@ RESPONSIVE
     padding: 30px;
   }
 }
-
-/* =================================================================== */
-/*==================================================
-OUR PROCESS
-==================================================*/
 
 .ourProcess {
   padding: 3rem 0;
@@ -2526,11 +2294,6 @@ OUR PROCESS
 
   right: auto;
 }
-
-/*==========================
-Responsive
-==========================*/
-
 @media (max-width: 991px) {
   .processLine {
     left: 35px;
@@ -2573,20 +2336,13 @@ Responsive
   }
 }
 
-/* ======================================================================== */
-/*==================================================
-WHY CHOOSE NEXGEN
-==================================================*/
-
 .whyChoose {
   padding: 2rem 0;
 
   position: relative;
 
   overflow: hidden;
-} /*=========================================================
-        HERO CHOOSE SECTION
-=========================================================*/
+}
 
 .heroChooseWrapper {
   position: relative;
@@ -2648,10 +2404,6 @@ DEVICE
   font-weight: 500;
 }
 
-/*========================
-CARDS
-========================*/
-
 .heroChooseCard {
   position: absolute;
   width: 190px;
@@ -2689,10 +2441,6 @@ CARDS
   line-height: 1.5;
 }
 
-/*========================
-CARD POSITIONS
-========================*/
-
 .heroChooseCard1 {
   top: 20px;
   left: 90px;
@@ -2723,10 +2471,6 @@ CARD POSITIONS
   right: 90px;
 }
 
-/*========================
-FLOAT ANIMATION
-========================*/
-
 @keyframes heroChooseFloat {
   0% {
     transform: translateY(0px);
@@ -2740,10 +2484,6 @@ FLOAT ANIMATION
     transform: translateY(0px);
   }
 }
-
-/*========================
-CARD FLOATING
-========================*/
 
 .heroChooseCard1 {
   animation: heroCardFloat1 5s ease-in-out infinite;
@@ -2802,10 +2542,6 @@ CARD FLOATING
   }
 }
 
-/*========================
-TABLET
-========================*/
-
 @media (max-width: 992px) {
   .heroChooseWrapper {
     height: auto;
@@ -2839,10 +2575,6 @@ TABLET
   }
 }
 
-/*========================
-MOBILE
-========================*/
-
 @media (max-width: 576px) {
   .heroChooseScreen {
     padding: 55px 25px;
@@ -2864,10 +2596,6 @@ MOBILE
     font-size: 26px;
   }
 }
-/* ====================================================================== */
-/*==================================================
-FINAL CTA
-==================================================*/
 
 .aboutCTA {
   position: relative;
@@ -2894,8 +2622,6 @@ FINAL CTA
 
   box-shadow: 0 40px 90px rgba(109, 91, 255, 0.25);
 }
-
-/* Background Pattern */
 
 .ctaBox_about::before {
   content: "";
@@ -3060,8 +2786,6 @@ FINAL CTA
   color: #fff;
 }
 
-/* Floating Glows */
-
 .ctaGlow {
   position: absolute;
 
@@ -3109,10 +2833,6 @@ FINAL CTA
     transform: translateY(0);
   }
 }
-
-/*==========================================
-Responsive
-==========================================*/
 
 @media (max-width: 992px) {
   .ctaBox_about {
@@ -3164,27 +2884,3 @@ Responsive
     gap: 18px;
   }
 }
-
-/*
-@media (max-width: 768px){
-  .stampOuter{
-    text-align: center;
-  }
-
-    .stampOuter span:nth-child(1){
-        transform: translate(-0%, -50%) rotate(0deg) translateY(-12px);
-    }
-
-    .stampOuter span:nth-child(2){
-        transform: translate(-0%, -50%) rotate(90deg) translateY(-12px);
-    }
-
-    .stampOuter span:nth-child(3){
-        transform: translate(-0%, -50%) rotate(180deg) translateY(-12px);
-    }
-
-    .stampOuter span:nth-child(4){
-        transform: translate(-0%, -50%) rotate(270deg) translateY(-2px);
-    }
-
-} */

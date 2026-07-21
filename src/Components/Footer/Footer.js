@@ -6,7 +6,6 @@ import Logo from "../../Assets/NexGen_Web_Designs_Finla_Light_Logo_With_Backgrou
 import { emailAddress, emailAddress1, phoneNumber } from "../../Data/BrandData";
 
 export default function Footer() {
-  // const [showButton, setShowButton] = useState(false);
   const services = [
     "Website Design",
     "Website Development",
@@ -74,10 +73,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="row gy-5">
-          {/* ==========================
-                        COMPANY
-                    ========================== */}
-
           <div className="col-lg-4 col-md-6">
             <div className="footer-company">
               <Link to="/" className="footer-logo">
@@ -101,11 +96,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-
-          {/* ==========================
-                        SERVICES
-                    ========================== */}
-
           <div className="col-lg-2 col-md-6">
             <div className="footer-links">
               <h4>Services</h4>
@@ -120,10 +110,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* ==========================
-                        QUICK LINKS
-                    ========================== */}
-
           <div className="col-lg-2 col-md-6">
             <div className="footer-links">
               <h4>Quick Links</h4>
@@ -137,10 +123,6 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-
-          {/* ==========================
-                        CONTACT
-                    ========================== */}
 
           <div className="col-lg-4 col-md-6">
             <div className="footer-contact">
@@ -188,11 +170,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
-        {/* ==========================
-                    FOOTER BOTTOM
-                ========================== */}
-
         <div className="footer-bottom">
           <p>
             © 2024 - {new Date().getFullYear()} NexGen Web Designs. All Rights
@@ -206,10 +183,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      {/* ==========================
-                BACK TO TOP
-            ========================== */}
 
       <button
         className="scroll-top"

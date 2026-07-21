@@ -30,7 +30,6 @@ const navigation = [
 const TermsConditions = () => {
   return (
     <main className="terms-page">
-      {/* HERO */}
       {TermsAndConditionsSEO}
       <section className="terms-hero">
         <div className="terms-grid"></div>
@@ -40,7 +39,7 @@ const TermsConditions = () => {
 
         <div className="container">
           <div className="terms-hero-content">
-            <div className="terms-breadcrumb">
+            <div className="terms-breadcrumb" data-aos="fade-up">
               <Link to="/">Home</Link>
 
               <span>/</span>
@@ -48,21 +47,21 @@ const TermsConditions = () => {
               <p>Terms & Conditions</p>
             </div>
 
-            <span className="terms-badge">
+            <span className="terms-badge" data-aos="fade-up">
               <i className="fa-solid fa-file-contract"></i>
               Legal Information
             </span>
 
-            <h1>Terms & Conditions</h1>
+            <h1 data-aos="fade-up">Terms & Conditions</h1>
 
-            <p>
+            <p data-aos="fade-up">
               These Terms & Conditions govern your use of the NexGen Web Designs
               website and our professional web design and development services.
               By accessing our website or engaging our services, you agree to
               these terms.
             </p>
 
-            <div className="terms-meta">
+            <div className="terms-meta" data-aos="fade-up">
               <div className="meta-box">
                 <i className="fa-regular fa-calendar"></i>
                 Last Updated
@@ -77,13 +76,14 @@ const TermsConditions = () => {
           </div>
         </div>
       </section>
-
-      {/* SUMMARY */}
-
       <section className="terms-summary">
         <div className="container">
           <div className="terms-summary-grid">
-            <div className="summary-card">
+            <div
+              className="summary-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <i className="fa-solid fa-handshake"></i>
 
               <h3>Fair Agreement</h3>
@@ -93,7 +93,11 @@ const TermsConditions = () => {
               </p>
             </div>
 
-            <div className="summary-card">
+            <div
+              className="summary-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <i className="fa-solid fa-credit-card"></i>
 
               <h3>Transparent Payments</h3>
@@ -104,7 +108,11 @@ const TermsConditions = () => {
               </p>
             </div>
 
-            <div className="summary-card">
+            <div
+              className="summary-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <i className="fa-solid fa-shield"></i>
 
               <h3>Professional Standards</h3>
@@ -114,7 +122,11 @@ const TermsConditions = () => {
               </p>
             </div>
 
-            <div className="summary-card">
+            <div
+              className="summary-card"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <i className="fa-solid fa-users"></i>
 
               <h3>Mutual Responsibilities</h3>
@@ -128,14 +140,10 @@ const TermsConditions = () => {
         </div>
       </section>
 
-      {/* CONTENT */}
-
       <section className="terms-content">
         <div className="container">
           <div className="terms-layout">
-            {/* Sidebar */}
-
-            <aside className="terms-sidebar">
+            <aside className="terms-sidebar" data-aos="fade-right">
               <div className="terms-sidebar-card">
                 <h4>
                   <i className="fa-solid fa-book-open me-3"></i>
@@ -151,13 +159,12 @@ const TermsConditions = () => {
                 </ul>
               </div>
             </aside>
-
-            {/* Main */}
-
             <div className="terms-main">
-              {/* Acceptance */}
-
-              <section id="acceptance" className="terms-card">
+              <section
+                id="acceptance"
+                className="terms-card"
+                data-aos="fade-up"
+              >
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-circle-check"></i>
@@ -179,9 +186,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* Services */}
-
-              <section id="services" className="terms-card">
+              <section id="services" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-laptop-code"></i>
@@ -203,9 +208,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* Client */}
-
-              <section id="client" className="terms-card">
+              <section id="client" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-user-group"></i>
@@ -226,9 +229,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* Pricing */}
-
-              <section id="pricing" className="terms-card">
+              <section id="pricing" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-file-invoice-dollar"></i>
@@ -249,9 +250,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* Payments */}
-
-              <section id="payments" className="terms-card">
+              <section id="payments" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-wallet"></i>
@@ -272,11 +271,12 @@ const TermsConditions = () => {
                   unless otherwise agreed in writing.
                 </p>
               </section>
-              {/* ===================================== */}
-              {/* PAYMENT DEFAULT & LATE PAYMENTS */}
-              {/* ===================================== */}
 
-              <section id="latepayments" className="terms-card">
+              <section
+                id="latepayments"
+                className="terms-card"
+                data-aos="fade-up"
+              >
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-money-check-dollar"></i>
@@ -297,11 +297,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* ===================================== */}
-              {/* REFUNDS */}
-              {/* ===================================== */}
-
-              <section id="refund" className="terms-card">
+              <section id="refund" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-receipt"></i>
@@ -323,7 +319,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              <section id="timeline" className="terms-card">
+              <section id="timeline" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-shield"></i>
@@ -353,7 +349,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              <section id="ownership" className="terms-card">
+              <section id="ownership" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-shield"></i>
@@ -386,7 +382,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              <section id="hosting" className="terms-card">
+              <section id="hosting" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-shield"></i>
@@ -419,7 +415,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              <section id="liability" className="terms-card">
+              <section id="liability" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-shield"></i>
@@ -441,11 +437,11 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* ===================================== */}
-              {/* CONFIDENTIALITY */}
-              {/* ===================================== */}
-
-              <section id="confidensiality" className="terms-card">
+              <section
+                id="confidensiality"
+                className="terms-card"
+                data-aos="fade-up"
+              >
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-user-secret"></i>
@@ -465,11 +461,11 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* ===================================== */}
-              {/* FORCE MAJEURE */}
-              {/* ===================================== */}
-
-              <section id="forcemajeure" className="terms-card">
+              <section
+                id="forcemajeure"
+                className="terms-card"
+                data-aos="fade-up"
+              >
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-cloud"></i>
@@ -489,11 +485,11 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* ===================================== */}
-              {/* TERMINATION */}
-              {/* ===================================== */}
-
-              <section id="termination" className="terms-card">
+              <section
+                id="termination"
+                className="terms-card"
+                data-aos="fade-up"
+              >
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-ban"></i>
@@ -513,11 +509,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* ===================================== */}
-              {/* GOVERNING LAW */}
-              {/* ===================================== */}
-
-              <section id="law" className="terms-card">
+              <section id="law" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-scale-balanced"></i>
@@ -537,11 +529,7 @@ const TermsConditions = () => {
                 </p>
               </section>
 
-              {/* ===================================== */}
-              {/* CONTACT */}
-              {/* ===================================== */}
-
-              <section id="contact" className="terms-card">
+              <section id="contact" className="terms-card" data-aos="fade-up">
                 <div className="terms-header">
                   <div className="terms-icon">
                     <i className="fa-solid fa-envelope-open-text"></i>
@@ -594,56 +582,35 @@ const TermsConditions = () => {
           </div>
         </div>
       </section>
-      {/* <section className="terms-info-grid">
-        <div className="terms-info-card">
-          <div className="terms-agreement-card">
-            <span>
-              <i className="fa-solid fa-file-signature"></i>
-              LEGAL AGREEMENT
-            </span>
 
-            <h2>
-              Clear Terms. Transparent Communication. Successful Projects.
-            </h2>
-
-            <p>
-              We believe successful partnerships are built on trust,
-              transparency and clearly defined expectations. These Terms &
-              Conditions help protect both our clients and NexGen Web Designs
-              throughout every project.
-            </p>
-          </div>
-        </div>
-      </section> */}
-      <section className="terms-final-cta">
+      <section className="terms-final-cta text-center">
         <div className="container">
           <div className="terms-final-card">
             <span className="terms-final-tag">LET'S BUILD TOGETHER</span>
 
-            <h3 style={{ lineHeight: "1.8", fontWeight: "600" }}>
-              Ready To Start Your Website Project?
-            </h3>
+            <h2>Ready To Start Your Website Project?</h2>
 
             <p>
               Have questions before getting started? Contact NexGen Web Designs
               and let's discuss your business goals.
             </p>
 
-            <div className="terms-final-buttons">
-              <Link to="/contact" className="terms-final-primary">
+            <div className="terms-final-buttons ">
+              <Link
+                to="/contact"
+                className="terms-final-primary btn btn-outline-dark m-2"
+              >
                 Contact Us
-                <i className="fa-solid fa-arrow-right"></i>
+                <i className="fa-solid fa-arrow-right ms-3"></i>
               </Link>
 
-              <a
-                href={whatsappLink1}
-                target="_blank"
-                rel="noreferrer"
-                className="terms-final-secondary"
+              <Link
+                to={whatsappLink1}
+                className="terms-final-secondary btn btn-outline-primary m-2"
               >
-                <i className="fa-brands fa-whatsapp"></i>
+                <i className="fa-brands fa-whatsapp me-3"></i>
                 WhatsApp
-              </a>
+              </Link>
             </div>
           </div>
         </div>

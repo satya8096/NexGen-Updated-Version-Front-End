@@ -11,11 +11,9 @@ const PricingOfferCard = ({
   pricingBadge,
 }) => {
   return (
-    <section className="nxgPriceCardWrapp">
+    <section className="nxgPriceCardWrapp" data-aos="fade-up">
       <div className="nxgPriceGlowOne"></div>
       <div className="nxgPriceGlowTwo"></div>
-
-      {/* ================================================================== */}
       <div className="nxgPriceCard">
         <span className="nxgPriceBorder"></span>
 
@@ -92,11 +90,7 @@ const PricingOfferCard = ({
           )}
         </div>
 
-        {/* Divider */}
-
         <div className="nxgPriceDivider"></div>
-
-        {/* Countdown */}
 
         <div className="nxgPriceOfferTitle">Limited Time Offer Ends In</div>
 
@@ -134,13 +128,9 @@ const PricingOfferCard = ({
           </div>
         )}
 
-        {/* Expired */}
-
         {pricesData.type !== "extraOffer" && (
           <div className="nxgPriceExpired">Offer Expired</div>
         )}
-
-        {/* Button */}
 
         <Link to={`tel:${phoneNumber}`} className="nxgPriceButton">
           <div>Choose Plan</div>

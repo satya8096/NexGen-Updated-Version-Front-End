@@ -16,7 +16,6 @@ import {
 } from "../../Data/Page Data/HomePageData";
 
 const Home = () => {
-  // const heroRef = useRef(null);
 
   const { websiteData, loading } = useAppData();
   let counters = {};

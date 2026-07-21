@@ -16,7 +16,6 @@ import {
 import { submitWeb3Form } from "../../Components/WebFormFunction/WebFormFunction";
 import { toast } from "react-toastify";
 import { askWhatsappConfirmation } from "../../Components/Whatsapp Confirmation/WhatsappConfirmation";
-// import SupportForm from "../../Components/Support Form/SupportForm";
 import { SupportSEO } from "../../Data/AllPageSEOs";
 
 const Support = () => {
@@ -43,7 +42,6 @@ const Support = () => {
     EmailFrom: "Support Page Form",
   });
   const [errors, setErrors] = useState({});
-  // const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -193,7 +191,6 @@ const Support = () => {
   };
   return (
     <main className="support-page">
-      {/* ================= HERO ================= */}
       {SupportSEO}
       <section className="support-hero">
         <div className="support-grid"></div>
@@ -203,41 +200,24 @@ const Support = () => {
 
         <div className="container">
           <div className="support-wrapper">
-            {/* LEFT */}
-
             <div className="support-left">
-              <div className="support-live">
+              <div className="support-live" data-aos="fade-up">
                 <span className="live-dot"></span>
                 Support Team Online
               </div>
 
-              <h1>
+              <h1 data-aos="fade-up">
                 We're Here To Help Your Business
                 <span>Grow Faster.</span>
               </h1>
 
-              <p>
+              <p data-aos="fade-up">
                 Whether you need a new website, technical support, website
                 maintenance, hosting assistance or simply have a question, our
                 team is ready to help you.
               </p>
 
-              {/* Search */}
-
-              {/* <div className="support-search">
-                <i className="fa-solid fa-magnifying-glass"></i>
-
-                <input
-                  type="text"
-                  placeholder="Search support articles or ask a question..."
-                />
-
-                <button>Search</button>
-              </div> */}
-
-              {/* Buttons */}
-
-              <div className="support-buttons">
+              <div className="support-buttons" data-aos="fade-up">
                 <Link to="/contact" className="support-primary">
                   Contact Support
                   <i className="fa-solid fa-arrow-right"></i>
@@ -254,10 +234,7 @@ const Support = () => {
                 </a>
               </div>
             </div>
-
-            {/* RIGHT */}
-
-            <div className="support-right">
+            <div className="support-right" data-aos="fade-left">
               <div className="support-dashboard">
                 <div className="dashboard-top">
                   <span>
@@ -267,8 +244,6 @@ const Support = () => {
 
                   <div className="status-online">Online</div>
                 </div>
-
-                {/* Floating cards */}
 
                 <div className="support-card-list">
                   {supportCards.map((item, index) => (
@@ -293,8 +268,6 @@ const Support = () => {
                     </div>
                   ))}
                 </div>
-
-                {/* Bottom Stats */}
 
                 <div className="support-stats">
                   <div>
@@ -321,16 +294,14 @@ const Support = () => {
         </div>
       </section>
 
-      {/* ================= QUICK ACTIONS ================= */}
-
       <section className="support-actions">
         <div className="container">
           <div className="support-section-heading">
-            <span>SUPPORT OPTIONS</span>
+            <span data-aos="fade-up">SUPPORT OPTIONS</span>
 
-            <h2>Choose The Fastest Way To Reach Us</h2>
+            <h2 data-aos="fade-up">Choose The Fastest Way To Reach Us</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Select your preferred support channel. Our team is committed to
               providing prompt, professional and reliable assistance.
             </p>
@@ -338,7 +309,12 @@ const Support = () => {
 
           <div className="actions-grid">
             {quickActions.map((item, index) => (
-              <div className="action-card" key={index}>
+              <div
+                className="action-card"
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="action-icon">
                   <i className={item.icon}></i>
                 </div>
@@ -357,15 +333,14 @@ const Support = () => {
         </div>
       </section>
 
-      {/* <SupportForm /> */}
       <section className="support-services">
         <div className="container">
           <div className="support-section-heading">
-            <span>SUPPORT CATEGORIES</span>
+            <span data-aos="fade-up">SUPPORT CATEGORIES</span>
 
-            <h2>What Can We Help You With?</h2>
+            <h2 data-aos="fade-up">What Can We Help You With?</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Select the category that best matches your requirement. Our
               experts will connect you with the right solution quickly.
             </p>
@@ -373,7 +348,12 @@ const Support = () => {
 
           <div className="support-services-grid">
             {supportServices.map((service, index) => (
-              <div className="support-service-card" key={index}>
+              <div
+                className="support-service-card"
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <span className="service-badge">{service.badge}</span>
 
                 <div className="service-icon">
@@ -393,27 +373,21 @@ const Support = () => {
           </div>
         </div>
       </section>
-      {/* ==========================================================
-      CONTACT SUPPORT FORM
-========================================================== */}
-
       <section className="support-contact">
         <div className="container">
           <div className="support-section-heading">
-            <span>CONTACT OUR TEAM</span>
+            <span data-aos="fade-up">CONTACT OUR TEAM</span>
 
-            <h2>Tell Us About Your Project</h2>
+            <h2 data-aos="fade-up">Tell Us About Your Project</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Fill out the form below and our team will review your request
               before contacting you with the best solution for your business.
             </p>
           </div>
 
           <div className="support-form-wrapper">
-            {/* LEFT INFO */}
-
-            <div className="support-form-info">
+            <div className="support-form-info" data-aos="fade-up">
               <div className="support-info-box">
                 <div className="info-icon">
                   <i className="fa-solid fa-headset"></i>
@@ -455,9 +429,7 @@ const Support = () => {
               </div>
             </div>
 
-            {/* FORM */}
-
-            <div className="support-form-card">
+            <div className="support-form-card" data-aos="fade-up">
               <form onSubmit={handleSubmit}>
                 <div className="support-grid-2">
                   <div className="support-field">
@@ -735,11 +707,11 @@ const Support = () => {
       <section className="support-process">
         <div className="container">
           <div className="support-section-heading">
-            <span>HOW IT WORKS</span>
+            <span data-aos="fade-up">HOW IT WORKS</span>
 
-            <h2>Our Support Process</h2>
+            <h2 data-aos="fade-up">Our Support Process</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every support request follows a structured workflow, ensuring
               faster communication, clear expectations, and professional project
               management.
@@ -748,7 +720,12 @@ const Support = () => {
 
           <div className="support-process-grid">
             {supportProcess.map((item, index) => (
-              <div className="process-card" key={index}>
+              <div
+                className="process-card"
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="process-number">{item.number}</div>
 
                 <div className="process-icon">
@@ -763,24 +740,21 @@ const Support = () => {
           </div>
         </div>
       </section>
-      {/* =====================================================
-      KNOWLEDGE CENTER
-===================================================== */}
 
       <section className="knowledge-center">
         <div className="container">
           <div className="support-section-heading">
-            <span>KNOWLEDGE CENTER</span>
+            <span data-aos="fade-up">KNOWLEDGE CENTER</span>
 
-            <h2>Find Answers Instantly</h2>
+            <h2 data-aos="fade-up">Find Answers Instantly</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Browse our most common questions and support categories before
               contacting our team.
             </p>
           </div>
 
-          <div className="knowledge-search">
+          <div className="knowledge-search" data-aos="fade-up">
             <i className="fa-solid fa-magnifying-glass"></i>
 
             <input type="text" placeholder="Search help articles..." />
@@ -788,7 +762,12 @@ const Support = () => {
 
           <div className="knowledge-category-grid">
             {faqCategories.map((item, index) => (
-              <div className="knowledge-category-card" key={index}>
+              <div
+                className="knowledge-category-card"
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div
                   className="knowledge-icon"
                   style={{
@@ -807,7 +786,12 @@ const Support = () => {
 
           <div className="faq-list">
             {faqs.map((faq, index) => (
-              <details key={index} className="faq-item">
+              <details
+                key={index}
+                className="faq-item"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <summary>
                   {faq.question}
 
@@ -820,20 +804,19 @@ const Support = () => {
           </div>
         </div>
       </section>
-
-      {/* ======================================================
-    SUPPORT PROMISE
-====================================================== */}
-
       <section className="support-promise">
         <div className="container">
           <div className="support-promise-wrapper">
             <div className="support-promise-left">
-              <span className="promise-tag">WHY CHOOSE NEXGEN</span>
+              <span className="promise-tag" data-aos="fade-up">
+                WHY CHOOSE NEXGEN
+              </span>
 
-              <h2>More Than Support. A Long-Term Technology Partner.</h2>
+              <h2 data-aos="fade-up">
+                More Than Support. A Long-Term Technology Partner.
+              </h2>
 
-              <p>
+              <p data-aos="fade-up">
                 At NexGen Web Designs, we don't just solve technical problems.
                 We help businesses build, improve and grow their online presence
                 through reliable support, modern technology and clear
@@ -841,7 +824,7 @@ const Support = () => {
               </p>
 
               <div className="promise-stats">
-                <div>
+                <div data-aos="zoom-in">
                   <h3>
                     {counters.projectsCount < 10
                       ? `0${counters.projectsCount}`
@@ -852,13 +835,13 @@ const Support = () => {
                   <span>Projects Delivered</span>
                 </div>
 
-                <div>
+                <div data-aos="zoom-in">
                   <h3>98%</h3>
 
                   <span>Client Satisfaction</span>
                 </div>
 
-                <div>
+                <div data-aos="zoom-in">
                   <h3>24 hrs</h3>
 
                   <span>Average First Response</span>
@@ -868,7 +851,12 @@ const Support = () => {
 
             <div className="support-promise-right">
               {supportPromises.map((item, index) => (
-                <div className="promise-card" key={index}>
+                <div
+                  className="promise-card"
+                  key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <div className="promise-icon">
                     <i className={item.icon}></i>
                   </div>
@@ -884,20 +872,13 @@ const Support = () => {
           </div>
         </div>
       </section>
-      {/* ======================================================
-        FINAL SUPPORT CTA
-====================================================== */}
 
-      <section className="support-final-cta">
+      <section className="support-final-cta" data-aos="fade-up">
         <div className="container">
           <div className="support-final-card">
-            {/* Background */}
-
             <div className="support-circle circle-one"></div>
             <div className="support-circle circle-two"></div>
             <div className="support-circle circle-three"></div>
-
-            {/* Content */}
 
             <div className="support-final-content">
               <span>

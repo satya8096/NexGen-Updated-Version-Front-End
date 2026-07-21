@@ -1,7 +1,3 @@
-/*==================================================
-SERVICES HERO
-==================================================*/
-
 .nxServicesHero {
   position: relative;
 
@@ -12,10 +8,6 @@ SERVICES HERO
   background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
 }
 
-/*==================================================
-BACKGROUND
-==================================================*/
-
 .nxServicesHero__bg {
   position: absolute;
 
@@ -25,10 +17,6 @@ BACKGROUND
 
   pointer-events: none;
 }
-
-/*==================================================
-GRID
-==================================================*/
 
 .nxServicesHero__grid {
   position: absolute;
@@ -47,10 +35,6 @@ GRID
 
   mask-image: radial-gradient(circle, #000 40%, transparent 95%);
 }
-
-/*==================================================
-BLOBS
-==================================================*/
 
 .nxServicesHero__blob {
   position: absolute;
@@ -99,10 +83,6 @@ BLOBS
   }
 }
 
-/*==================================================
-RINGS
-==================================================*/
-
 .nxServicesHero__ring {
   position: absolute;
 
@@ -145,19 +125,11 @@ RINGS
   }
 }
 
-/*==================================================
-CONTENT
-==================================================*/
-
 .nxServicesHero__content {
   position: relative;
 
   z-index: 5;
 }
-
-/*==================================================
-BADGE
-==================================================*/
 
 .nxServicesHero__badge {
   display: inline-flex;
@@ -186,10 +158,6 @@ BADGE
   font-size: 1rem;
 }
 
-/*==================================================
-TITLE
-==================================================*/
-
 .nxServicesHero__content h1 {
   font-size: 2rem;
 
@@ -212,11 +180,6 @@ TITLE
 
   -webkit-text-fill-color: transparent;
 }
-
-/*==================================================
-TEXT
-==================================================*/
-
 .nxServicesHero__content p {
   max-width: 38rem;
 
@@ -228,10 +191,6 @@ TEXT
 
   margin-bottom: 2.8rem;
 }
-
-/*==================================================
-BUTTONS
-==================================================*/
 
 .nxServicesHero__buttons {
   display: flex;
@@ -298,10 +257,6 @@ BUTTONS
   transform: translateY(-0.35rem);
 }
 
-/*==================================================
-STATS
-==================================================*/
-
 .nxServicesHero__stats {
   display: flex;
 
@@ -330,10 +285,6 @@ STATS
   font-size: 0.95rem;
 }
 
-/*==================================================
-RIGHT VISUAL
-==================================================*/
-
 .nxServicesHero__visual {
   position: relative;
 
@@ -345,10 +296,6 @@ RIGHT VISUAL
 
   min-height: 42rem;
 }
-
-/*==================================================
-BROWSER
-==================================================*/
 
 .nxServicesHero__browser {
   position: relative;
@@ -382,10 +329,6 @@ BROWSER
     transform: translateY(-0.8rem);
   }
 }
-
-/*==================================================
-TOP BAR
-==================================================*/
 
 .nxServicesHero__browserTop {
   display: flex;
@@ -421,19 +364,11 @@ TOP BAR
   background: #28c840;
 }
 
-/*==================================================
-BODY
-==================================================*/
-
 .nxServicesHero__browserBody {
   display: flex;
 
   min-height: 24rem;
 }
-
-/*==================================================
-SIDEBAR
-==================================================*/
 
 .nxServicesHero__sidebar {
   width: 5rem;
@@ -471,17 +406,11 @@ SIDEBAR
   width: 60%;
 }
 
-/*==================================================
-PAGE
-==================================================*/
-
 .nxServicesHero__page {
   flex: 1;
 
   padding: 1.5rem;
 }
-
-/* Banner */
 
 .nxServicesHero__banner {
   width: 100%;
@@ -494,8 +423,6 @@ PAGE
 
   margin-bottom: 1.5rem;
 }
-
-/* Cards */
 
 .nxServicesHero__cards {
   display: grid;
@@ -514,9 +441,6 @@ PAGE
 
   background: #eef2f7;
 }
-
-/* Lines */
-
 .nxServicesHero__lines span {
   display: block;
 
@@ -542,10 +466,6 @@ PAGE
 .nxServicesHero__lines span:nth-child(4) {
   width: 60%;
 }
-
-/*==================================================
-FLOATING CARDS
-==================================================*/
 
 .nxServicesHero__floatingCard {
   position: absolute;
@@ -624,10 +544,6 @@ FLOATING CARDS
   }
 }
 
-/*==================================================
-POSITIONS
-==================================================*/
-
 .speedCard {
   left: -3rem;
 
@@ -658,10 +574,6 @@ POSITIONS
   animation-delay: 3s;
 }
 
-/*==================================================
-HOVER
-==================================================*/
-
 .nxServicesHero__browser:hover {
   transform: translateY(-0.4rem);
 
@@ -673,10 +585,6 @@ HOVER
 
   transition: 0.35s;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 62rem) {
   .nxServicesHero {
@@ -774,20 +682,10 @@ RESPONSIVE
   }
 }
 
-/*==================================================
-PERFORMANCE
-==================================================*/
-
 .nxServicesHero__browser,
 .nxServicesHero__floatingCard {
   will-change: transform;
 }
-
-/* ================================================================== */
-/*==================================================
-OUR SERVICES
-==================================================*/
-
 .nxServicesGrid {
   position: relative;
 
@@ -797,10 +695,6 @@ OUR SERVICES
 
   overflow: hidden;
 }
-
-/*==================================================
-SECTION HEADING
-==================================================*/
 
 .nxServicesGrid__heading {
   text-align: center;
@@ -849,10 +743,6 @@ SECTION HEADING
 
   line-height: 2rem;
 }
-
-/*==================================================
-CARD
-==================================================*/
 
 .nxServicesGrid__card {
   position: relative;
@@ -906,10 +796,6 @@ CARD
   transform: scaleX(1);
 }
 
-/*==================================================
-BADGE
-==================================================*/
-
 .nxServicesGrid__badge {
   display: inline-flex;
 
@@ -931,11 +817,6 @@ BADGE
 
   margin-bottom: 2rem;
 }
-
-/*==================================================
-ICON
-==================================================*/
-
 .nxServicesGrid__icon {
   width: 5.5rem;
 
@@ -964,10 +845,6 @@ ICON
   transform: rotate(-10deg) scale(1.08);
 }
 
-/*==================================================
-TITLE
-==================================================*/
-
 .nxServicesGrid__card h3 {
   font-size: 1.3rem;
 
@@ -978,10 +855,6 @@ TITLE
   margin-bottom: 1rem;
 }
 
-/*==================================================
-DESCRIPTION
-==================================================*/
-
 .nxServicesGrid__card p {
   font-size: 1rem;
 
@@ -991,10 +864,6 @@ DESCRIPTION
 
   margin-bottom: 2rem;
 }
-
-/*==================================================
-TECH TAGS
-==================================================*/
 
 .nxServicesGrid__tech {
   display: flex;
@@ -1028,17 +897,9 @@ TECH TAGS
   color: #6d5bff;
 }
 
-/*==================================================
-FOOTER
-==================================================*/
-
 .nxServicesGrid__footer {
   margin-top: auto;
 }
-
-/*==================================================
-BUTTON
-==================================================*/
 
 .nxServicesGrid__button {
   display: inline-flex;
@@ -1068,10 +929,6 @@ BUTTON
   transform: translateX(0.4rem);
 }
 
-/*==================================================
-BACKGROUND EFFECT
-==================================================*/
-
 .nxServicesGrid__card::after {
   content: "";
 
@@ -1097,10 +954,6 @@ BACKGROUND EFFECT
 .nxServicesGrid__card:hover::after {
   opacity: 1;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 62rem) {
   .nxServicesGrid {
@@ -1300,16 +1153,6 @@ RESPONSIVE
 .nxIndustries__card:hover::after {
   opacity: 1;
 }
-*/
-
-/*==================================================
-ICON
-==================================================*/
-
-/*==================================================
-TITLE
-==================================================*/
-
 .nxIndustries__card h4 {
   font-size: 1.45rem;
 
@@ -1325,10 +1168,6 @@ TITLE
   border-radius: 2rem;
 }
 
-/*==================================================
-TEXT
-==================================================*/
-
 .nxIndustries__card p {
   color: #64748b;
 
@@ -1338,11 +1177,6 @@ TEXT
 
   font-size: 0.98rem;
 }
-
-/*==================================================
-FLOATING
-==================================================*/
-
 .nxIndustries__card:nth-child(odd) {
   animation: nxIndustryFloatOne 6s ease-in-out infinite;
 }
@@ -1373,15 +1207,9 @@ FLOATING
   }
 }
 
-/* Prevent hover conflict */
-
 .nxIndustries__card:hover {
   animation: none;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 62rem) {
   .nxIndustries {
@@ -1424,20 +1252,10 @@ RESPONSIVE
     font-size: 1.7rem;
   }
 }
-
-/*==================================================
-PERFORMANCE
-==================================================*/
-
 .nxIndustries__card,
 .nxIndustries__icon {
   will-change: transform;
 }
-
-/* ==================================================================== */
-/*==================================================
-DEVELOPMENT PROCESS
-==================================================*/
 
 .nxProcess {
   position: relative;
@@ -1448,10 +1266,6 @@ DEVELOPMENT PROCESS
 
   overflow: hidden;
 }
-
-/*==================================================
-HEADING
-==================================================*/
 
 .nxProcess__heading {
   text-align: center;
@@ -1501,10 +1315,6 @@ HEADING
   line-height: 2rem;
 }
 
-/*==================================================
-TIMELINE
-==================================================*/
-
 .nxProcess__timeline {
   position: relative;
 
@@ -1533,10 +1343,6 @@ TIMELINE
   z-index: 0;
 }
 
-/*==================================================
-ITEM
-==================================================*/
-
 .nxProcess__item {
   position: relative;
 
@@ -1548,11 +1354,6 @@ ITEM
 .nxProcess__line {
   display: none;
 }
-
-/*==================================================
-STEP
-==================================================*/
-
 .nxProcess__step {
   width: 2.6rem;
 
@@ -1580,10 +1381,6 @@ STEP
 
   box-shadow: 0 0.8rem 2rem rgba(109, 91, 255, 0.1);
 }
-
-/*==================================================
-ICON
-==================================================*/
 
 .nxProcess__icon {
   width: 5rem;
@@ -1615,10 +1412,6 @@ ICON
   transform: translateY(-0.4rem) rotate(-8deg);
 }
 
-/*==================================================
-CARD TEXT
-==================================================*/
-
 .nxProcess__item h4 {
   font-size: 1.3rem;
 
@@ -1640,10 +1433,6 @@ CARD TEXT
 
   max-width: 13rem;
 }
-
-/*==================================================
-HOVER
-==================================================*/
 
 .nxProcess__item::after {
   content: "";
@@ -1670,11 +1459,6 @@ HOVER
 .nxProcess__item:hover::after {
   opacity: 1;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 75rem) {
   .nxProcess__timeline {
     grid-template-columns: repeat(4, 1fr);
@@ -1744,20 +1528,10 @@ RESPONSIVE
     font-size: 1.6rem;
   }
 }
-
-/*==================================================
-PERFORMANCE
-==================================================*/
-
 .nxProcess__item,
 .nxProcess__icon {
   will-change: transform;
 }
-
-/* ======================================================================= */
-/*==================================================
-WHY CHOOSE NEXGEN
-==================================================*/
 
 .nxWhy {
   position: relative;
@@ -1804,10 +1578,6 @@ WHY CHOOSE NEXGEN
 
   bottom: -8rem;
 }
-
-/*==================================================
-HEADING
-==================================================*/
 
 .nxWhy__heading {
   position: relative;
@@ -1860,10 +1630,6 @@ HEADING
 
   line-height: 2rem;
 }
-
-/*==================================================
-COMPARISON
-==================================================*/
 
 .nxWhy__comparison {
   position: relative;
@@ -1963,10 +1729,6 @@ COMPARISON
   color: #16a34a;
 }
 
-/*==================================================
-VS
-==================================================*/
-
 .nxWhy__vs {
   width: 4.8rem;
 
@@ -2003,10 +1765,6 @@ VS
     transform: scale(1.08);
   }
 }
-
-/*==================================================
-FEATURE
-==================================================*/
 
 .nxWhy__feature {
   height: 100%;
@@ -2078,10 +1836,6 @@ FEATURE
   font-size: 0.96rem;
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 75rem) {
   .nxWhy__comparison {
     grid-template-columns: 1fr;
@@ -2135,20 +1889,11 @@ RESPONSIVE
   }
 }
 
-/*==================================================
-PERFORMANCE
-==================================================*/
-
 .nxWhy__feature,
 .nxWhy__icon,
 .nxWhy__column {
   will-change: transform;
 }
-
-/* =============================================================== */
-/*==================================================
-BEFORE VS AFTER
-==================================================*/
 
 .nxTransformation {
   position: relative;
@@ -2159,10 +1904,6 @@ BEFORE VS AFTER
 
   overflow: hidden;
 }
-
-/*==================================================
-BACKGROUND
-==================================================*/
 
 .nxTransformation::before {
   content: "";
@@ -2200,10 +1941,6 @@ BACKGROUND
   bottom: -15rem;
 }
 
-/*==================================================
-CARD
-==================================================*/
-
 .nxTransformation__card {
   position: relative;
 
@@ -2228,10 +1965,6 @@ CARD
   transform: translateY(-0.8rem);
 }
 
-/*==================================================
-TOP BORDER
-==================================================*/
-
 .beforeCard {
   border-top: 0.35rem solid #ef4444;
 }
@@ -2239,10 +1972,6 @@ TOP BORDER
 .afterCard {
   border-top: 0.35rem solid #10b981;
 }
-
-/*==================================================
-LABEL
-==================================================*/
 
 .nxTransformation__label {
   display: inline-flex;
@@ -2271,10 +2000,6 @@ LABEL
 
   color: #16a34a;
 }
-
-/*==================================================
-ICON
-==================================================*/
 
 .nxTransformation__icon {
   width: 6rem;
@@ -2309,10 +2034,6 @@ ICON
 
   transition: 0.4s;
 }
-
-/*==================================================
-LIST
-==================================================*/
 
 .nxTransformation__card ul {
   margin: 0;
@@ -2380,10 +2101,6 @@ LIST
   color: #16a34a;
 }
 
-/*==================================================
-VS CIRCLE
-==================================================*/
-
 .nxTransformation .row {
   position: relative;
 }
@@ -2437,10 +2154,6 @@ VS CIRCLE
   }
 }
 
-/*==================================================
-RESPONSIVE
-==================================================*/
-
 @media (max-width: 62rem) {
   .nxTransformation {
     padding: 6rem 0;
@@ -2487,19 +2200,10 @@ RESPONSIVE
   }
 }
 
-/*==================================================
-PERFORMANCE
-==================================================*/
-
 .nxTransformation__card,
 .nxTransformation__icon {
   will-change: transform;
 }
-
-/* ================================================================== */
-/*==================================================
-FEATURE GRID
-==================================================*/
 
 .nxFeatureGrid {
   position: relative;
@@ -2510,10 +2214,6 @@ FEATURE GRID
 
   overflow: hidden;
 }
-
-/*==================================================
-BACKGROUND BLOBS
-==================================================*/
 
 .nxFeatureGrid::before {
   content: "";
@@ -2550,9 +2250,6 @@ BACKGROUND BLOBS
 
   bottom: -12rem;
 }
-/*==================================================
-CARD
-==================================================*/
 
 .nxFeatureGrid__card {
   position: relative;
@@ -2577,11 +2274,6 @@ CARD
 .nxFeatureGrid__card:hover {
   box-shadow: 0 2rem 4rem rgba(109, 91, 255, 0.14);
 }
-
-/*==================================================
-TOP BORDER
-==================================================*/
-
 .nxFeatureGrid__card::before {
   content: "";
 
@@ -2607,11 +2299,6 @@ TOP BORDER
 .nxFeatureGrid__card:hover::before {
   transform: scaleX(1);
 }
-
-/*==================================================
-GLOW
-==================================================*/
-
 .nxFeatureGrid__card::after {
   content: "";
 
@@ -2637,10 +2324,6 @@ GLOW
 .nxFeatureGrid__card:hover::after {
   opacity: 1;
 }
-
-/*==================================================
-ICON
-==================================================*/
 
 .nxFeatureGrid__icon {
   width: 5.5rem;
@@ -2672,10 +2355,6 @@ ICON
   transform: rotate(-10deg) scale(1.08);
 }
 
-/*==================================================
-TEXT
-==================================================*/
-
 .nxFeatureGrid__card h4 {
   font-size: 1.4rem;
 
@@ -2695,10 +2374,6 @@ TEXT
 
   font-size: 0.98rem;
 }
-
-/*==================================================
-FLOATING
-==================================================*/
 
 .nxFeatureGrid__card:nth-child(odd) {
   animation: nxFeatureFloatOne 6s ease-in-out infinite;
@@ -2733,10 +2408,6 @@ FLOATING
 .nxFeatureGrid__card:hover {
   animation: none;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 62rem) {
   .nxFeatureGrid {
@@ -2780,19 +2451,10 @@ RESPONSIVE
   }
 }
 
-/*==================================================
-PERFORMANCE
-==================================================*/
-
 .nxFeatureGrid__card,
 .nxFeatureGrid__icon {
   will-change: transform;
 }
-
-/* ===================================================================== */
-/*==================================================
-PREMIUM CTA
-==================================================*/
 
 .nxPremiumCta {
   position: relative;
@@ -2803,10 +2465,6 @@ PREMIUM CTA
 
   background: linear-gradient(135deg, #6d5bff, #5a49f5, #00c2ff);
 }
-
-/*==================================================
-WRAPPER
-==================================================*/
 
 .nxPremiumCta__wrapper {
   position: relative;
@@ -2827,10 +2485,6 @@ WRAPPER
 
   z-index: 2;
 }
-
-/*==================================================
-LIGHT EFFECT
-==================================================*/
 
 .nxPremiumCta__wrapper::before {
   content: "";
@@ -2866,10 +2520,6 @@ LIGHT EFFECT
     left: 140%;
   }
 }
-
-/*==================================================
-FLOATING SHAPES
-==================================================*/
 
 .nxPremiumCta__shape {
   position: absolute;
@@ -2932,10 +2582,6 @@ FLOATING SHAPES
   }
 }
 
-/*==================================================
-CONTENT
-==================================================*/
-
 .nxPremiumCta__content {
   position: relative;
 
@@ -2993,11 +2639,6 @@ CONTENT
 
   margin-bottom: 2.5rem;
 }
-
-/*==================================================
-BENEFITS
-==================================================*/
-
 .nxPremiumCta__benefits {
   display: grid;
 
@@ -3025,10 +2666,6 @@ BENEFITS
 
   font-size: 1.1rem;
 }
-
-/*==================================================
-BUTTONS
-==================================================*/
 
 .nxPremiumCta__buttons {
   display: flex;
@@ -3089,10 +2726,6 @@ BUTTONS
   transform: translateY(-0.3rem);
 }
 
-/*==================================================
-DASHBOARD
-==================================================*/
-
 .nxPremiumCta__dashboard {
   display: grid;
 
@@ -3140,10 +2773,6 @@ DASHBOARD
 
   line-height: 1.6rem;
 }
-
-/*==================================================
-RESPONSIVE
-==================================================*/
 
 @media (max-width: 62rem) {
   .nxPremiumCta {
@@ -3199,10 +2828,6 @@ RESPONSIVE
     width: 100%;
   }
 }
-
-/*==================================================
-PERFORMANCE
-==================================================*/
 
 .nxPremiumCta__card,
 .nxPremiumCta__primary,

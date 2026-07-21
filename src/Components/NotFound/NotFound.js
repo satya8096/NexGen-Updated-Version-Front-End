@@ -2,34 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./NotFound.css";
 import { ErrorPageSEO } from "../../Data/AllPageSEOs";
-
-// const popularPages = [
-//   {
-//     id: 1,
-//     title: "Home",
-//     icon: "fa-solid fa-house",
-//     path: "/",
-//   },
-//   {
-//     id: 2,
-//     title: "Services",
-//     icon: "fa-solid fa-layer-group",
-//     path: "/services",
-//   },
-//   {
-//     id: 3,
-//     title: "Portfolio",
-//     icon: "fa-solid fa-briefcase",
-//     path: "/portfolio",
-//   },
-//   {
-//     id: 4,
-//     title: "Contact",
-//     icon: "fa-solid fa-envelope",
-//     path: "/contact",
-//   },
-// ];
-
 const NotFound = () => {
   const [search, setSearch] = useState("");
 
@@ -64,7 +36,6 @@ const NotFound = () => {
 
   return (
     <main className="notFoundPage">
-      {/* Background */}
       {ErrorPageSEO}
       <div className="bgGrid"></div>
 
@@ -73,14 +44,9 @@ const NotFound = () => {
       <div className="gradientOrb orbTwo"></div>
 
       <div className="gradientOrb orbThree"></div>
-
-      {/* Hero */}
-
       <section className="notFoundHero">
         <div className="container">
           <div className="row align-items-center gy-5">
-            {/* LEFT */}
-
             <div className="col-lg-6">
               <div className="heroContent">
                 <span className="errorBadge">Error 404</span>
@@ -109,9 +75,6 @@ const NotFound = () => {
                     Contact Us
                   </Link>
                 </div>
-
-                {/* Search */}
-
                 <form className="searchBox" onSubmit={handleSearch}>
                   <input
                     type="text"
@@ -126,8 +89,6 @@ const NotFound = () => {
                 </form>
               </div>
             </div>
-
-            {/* RIGHT */}
 
             <div className="col-lg-6">
               <div className="browserMockup">
@@ -155,50 +116,6 @@ const NotFound = () => {
               </div>
             </div>
           </div>
-
-          {/* Popular Pages */}
-
-          {/* <div className="popularPages">
-            <h4>Popular Pages</h4>
-
-            <div className="popularGrid">
-              {popularPages.map((page) => (
-                <Link key={page.id} to={page.path} className="popularCard">
-                  <i className={page.icon}></i>
-
-                  <span>{page.title}</span>
-                </Link>
-              ))}
-            </div>
-          </div> */}
-
-          {/* Statistics */}
-
-          {/* <div className="statsRow">
-            <div className="statCard">
-              <h3>150+</h3>
-
-              <p>Projects Delivered</p>
-            </div>
-
-            <div className="statCard">
-              <h3>98%</h3>
-
-              <p>Client Satisfaction</p>
-            </div>
-
-            <div className="statCard">
-              <h3>24/7</h3>
-
-              <p>Support Available</p>
-            </div>
-
-            <div className="statCard">
-              <h3>5★</h3>
-
-              <p>Customer Reviews</p>
-            </div>
-          </div> */}
         </div>
       </section>
     </main>

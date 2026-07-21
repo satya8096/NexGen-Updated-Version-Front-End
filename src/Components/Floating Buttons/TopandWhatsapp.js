@@ -3,15 +3,7 @@ import "./TopandWhatsapp.css";
 import { phoneNumber } from "../../Data/BrandData";
 
 const FloatingActions = () => {
-  /*=====================================
-        STATE
-    =====================================*/
-
   const [showTopButton, setShowTopButton] = useState(false);
-
-  /*=====================================
-        SCROLL DETECTION
-    =====================================*/
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,10 +19,6 @@ const FloatingActions = () => {
     };
   }, []);
 
-  /*=====================================
-        SCROLL TO TOP
-    =====================================*/
-
   const handleScrollTop = () => {
     window.scrollTo({
       top: 0,
@@ -38,11 +26,6 @@ const FloatingActions = () => {
       behavior: "smooth",
     });
   };
-
-  /*=====================================
-        WHATSAPP
-    =====================================*/
-
   const handleWhatsApp = () => {
     const message = encodeURIComponent(
       "Hello NexGen Web Designs 👋%0A%0AI would like to build a professional website for my business.",
@@ -56,11 +39,6 @@ const FloatingActions = () => {
       "noopener,noreferrer",
     );
   };
-
-  /*=====================================
-MAGNETIC EFFECT
-=====================================*/
-
   const handleMouseMove = (event) => {
     const button = event.currentTarget;
 
@@ -80,16 +58,9 @@ MAGNETIC EFFECT
   const handleMouseLeave = (event) => {
     event.currentTarget.style.transform = "";
   };
-  /*=====================================
-        JSX
-    =====================================*/
 
   return (
     <aside className="nxFloatDock">
-      {/*==============================
-                WHATSAPP
-            ==============================*/}
-
       <button
         type="button"
         className="nxFloatButton nxWhatsappButton"
@@ -106,10 +77,6 @@ MAGNETIC EFFECT
 
         <i className="fa-brands fa-whatsapp"></i>
       </button>
-
-      {/*==============================
-                SCROLL TOP
-            ==============================*/}
 
       <button
         type="button"

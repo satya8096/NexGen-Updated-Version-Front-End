@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { useAppData } from "../../Data/BackEnd Data/FetchBackEndData";
 import "./Services.css";
 import { whatsappLink1 } from "../../Data/BrandData";
-// import axios from "axios";
 import {
   featuresGridData,
   industriesData,
@@ -37,32 +36,26 @@ const Services = () => {
 
         <div className="container">
           <div className="row align-items-center">
-            {/*==================================
-                    LEFT CONTENT
-            ===================================*/}
-
             <div className="col-lg-6">
               <div className="nxServicesHero__content">
-                <div className="nxServicesHero__badge">
+                <div className="nxServicesHero__badge" data-aos="fade-up">
                   <i className="fa-solid fa-sparkles"></i>
                   Premium Website Development Services
                 </div>
 
-                <h1>
+                <h1 data-aos="fade-up">
                   We Build
                   <span>High-Converting</span>
                   Websites That Grow Your Business.
                 </h1>
 
-                <p>
+                <p data-aos="fade-up">
                   From business websites to e-commerce platforms, NexGen Web
                   Designs creates modern, responsive and SEO-friendly websites
                   that impress visitors and convert them into customers.
                 </p>
 
-                {/* CTA */}
-
-                <div className="nxServicesHero__buttons">
+                <div className="nxServicesHero__buttons" data-aos="fade-up">
                   <Link to="/contact" className="nxServicesHero__primaryBtn">
                     Start Your Project
                     <i className="fa-solid fa-arrow-right"></i>
@@ -75,10 +68,8 @@ const Services = () => {
                     View Portfolio
                   </Link>
                 </div>
-                {/* Stats */}
-
                 <div className="nxServicesHero__stats">
-                  <div>
+                  <div data-aos="zoom-in" data-aos-delay="200">
                     <h3>
                       {" "}
                       {counters.projectsCount < 10
@@ -90,13 +81,13 @@ const Services = () => {
                     <span>Websites Delivered</span>
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in" data-aos-delay="300">
                     <h3>98%</h3>
 
                     <span>Happy Clients</span>
                   </div>
 
-                  <div>
+                  <div data-aos="zoom-in" data-aos-delay="400">
                     <h3>24/7</h3>
 
                     <span>Support</span>
@@ -104,16 +95,13 @@ const Services = () => {
                 </div>
               </div>
             </div>
-
-            {/*==================================
-                    RIGHT SIDE
-            ===================================*/}
-
             <div className="col-lg-6">
               <div className="nxServicesHero__visual">
-                {/* Main Browser */}
-
-                <div className="nxServicesHero__browser">
+                <div
+                  className="nxServicesHero__browser"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
                   <div className="nxServicesHero__browserTop">
                     <span></span>
 
@@ -157,9 +145,11 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* Floating Card */}
-
-                <div className="nxServicesHero__floatingCard speedCard">
+                <div
+                  className="nxServicesHero__floatingCard speedCard"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+                >
                   <i className="fa-solid fa-gauge-high"></i>
 
                   <div>
@@ -169,9 +159,11 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* Floating Card */}
-
-                <div className="nxServicesHero__floatingCard seoCard">
+                <div
+                  className="nxServicesHero__floatingCard seoCard"
+                  data-aos="zoom-in"
+                  data-aos-delay="400"
+                >
                   <i className="fa-solid fa-chart-line"></i>
 
                   <div>
@@ -181,9 +173,11 @@ const Services = () => {
                   </div>
                 </div>
 
-                {/* Floating Card */}
-
-                <div className="nxServicesHero__floatingCard mobileCard">
+                <div
+                  className="nxServicesHero__floatingCard mobileCard"
+                  data-aos="zoom-in"
+                  data-aos-delay="600"
+                >
                   <i className="fa-solid fa-mobile-screen-button"></i>
 
                   <div>
@@ -192,10 +186,11 @@ const Services = () => {
                     <strong>All Devices</strong>
                   </div>
                 </div>
-
-                {/* Floating Card */}
-
-                <div className="nxServicesHero__floatingCard securityCard">
+                <div
+                  className="nxServicesHero__floatingCard securityCard"
+                  data-aos="zoom-in"
+                  data-aos-delay="800"
+                >
                   <i className="fa-brands fa-expeditedssl"></i>
 
                   <div>
@@ -209,37 +204,33 @@ const Services = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-                OUR DIGITAL SERVICES
-=====================================================*/}
-
       <section className="nxServicesGrid">
         <div className="container">
           <div className="nxServicesGrid__heading">
-            <span>WHAT WE OFFER</span>
+            <span data-aos="fade-up">WHAT WE OFFER</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               Complete Digital Solutions
               <br />
               For Every Business
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every website we build is carefully crafted to deliver outstanding
               performance, beautiful design, and measurable business growth.
             </p>
           </div>
 
           <div className="row g-4" id="web-design-services">
-            {servicesData.map((service) => (
-              <div className="col-lg-4 col-md-6" key={service.id}>
+            {servicesData.map((service, index) => (
+              <div
+                className="col-lg-4 col-md-6"
+                key={service.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="nxServicesGrid__card">
-                  {/* Badge */}
-
                   <div className="nxServicesGrid__badge">{service.badge}</div>
-
-                  {/* Icon */}
-
                   <div
                     className="nxServicesGrid__icon"
                     style={{
@@ -249,23 +240,15 @@ const Services = () => {
                     <i className={service.icon}></i>
                   </div>
 
-                  {/* Title */}
-
                   <h3>{service.title}</h3>
 
-                  {/* Description */}
-
                   <p>{service.description}</p>
-
-                  {/* Technology */}
 
                   <div className="nxServicesGrid__tech">
                     {service.technologies.map((tech, index) => (
                       <span key={index}>{tech}</span>
                     ))}
                   </div>
-
-                  {/* Footer */}
 
                   <div className="nxServicesGrid__footer">
                     <Link
@@ -286,30 +269,28 @@ const Services = () => {
         </div>
       </section>
 
-      {/*====================================================
-                INDUSTRIES WE SERVE
-=====================================================*/}
-
       <section className="nxIndustries" id="industries-we-serve">
         <div className="container">
           <div className="nxIndustries__heading">
-            <span>INDUSTRIES</span>
+            <span data-aos="fade-up">INDUSTRIES</span>
 
-            <h2>Websites Built For Every Industry</h2>
+            <h2 data-aos="fade-up">Websites Built For Every Industry</h2>
 
-            <p>
+            <p data-aos="fade-up">
               No matter your business, we create websites that help you attract
               customers, build trust and grow online.
             </p>
           </div>
 
           <div className="row g-4">
-            {industriesData.map((industry) => (
-              <div className="col-xl-3 col-lg-4 col-md-6" key={industry.id}>
+            {industriesData.map((industry, index) => (
+              <div
+                className="col-xl-3 col-lg-4 col-md-6"
+                key={industry.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="nxIndustries__card">
-                  {/* <div className="nxIndustries__icon">
-                    <i className={industry.icon}></i>
-                  </div> */}
                   <img
                     src={industry.icon}
                     alt={industry.title}
@@ -325,22 +306,19 @@ const Services = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-                DEVELOPMENT PROCESS
-=====================================================*/}
 
       <section className="nxProcess">
         <div className="container">
           <div className="nxProcess__heading">
-            <span>OUR PROCESS</span>
+            <span data-aos="fade-up">OUR PROCESS</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               From Idea
               <br />
               To Successful Launch
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every project follows a structured workflow that ensures quality,
               transparency and on-time delivery.
             </p>
@@ -348,7 +326,12 @@ const Services = () => {
 
           <div className="nxProcess__timeline">
             {processData.map((item, index) => (
-              <div className="nxProcess__item" key={item.id}>
+              <div
+                className="nxProcess__item"
+                key={item.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 {index !== processData.length - 1 && (
                   <div className="nxProcess__line"></div>
                 )}
@@ -367,33 +350,28 @@ const Services = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-        WHY CHOOSE NEXGEN
-=====================================================*/}
 
       <section className="nxWhy">
         <div className="container">
           <div className="nxWhy__heading">
-            <span>WHY CHOOSE US</span>
+            <span data-aos="fade-up">WHY CHOOSE US</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               More Than A Website
               <br />
               We Build Digital Growth
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every project is built with performance, strategy and long-term
               business success in mind.
             </p>
           </div>
 
           <div className="row align-items-center g-5">
-            {/* LEFT */}
-
             <div className="col-lg-6">
               <div className="nxWhy__comparison">
-                <div className="nxWhy__column">
+                <div className="nxWhy__column" data-aos="fade-up">
                   <h3>Typical Agencies</h3>
 
                   <ul>
@@ -424,9 +402,11 @@ const Services = () => {
                   </ul>
                 </div>
 
-                <div className="nxWhy__vs">VS</div>
+                <div className="nxWhy__vs" data-aos="zoom-in">
+                  VS
+                </div>
 
-                <div className="nxWhy__column active">
+                <div className="nxWhy__column active" data-aos="fade-up">
                   <h3>NexGen</h3>
 
                   <ul>
@@ -458,13 +438,15 @@ const Services = () => {
                 </div>
               </div>
             </div>
-
-            {/* RIGHT */}
-
             <div className="col-lg-6">
               <div className="row g-4">
-                {whyChooseData.map((item) => (
-                  <div className="col-md-6" key={item.id}>
+                {whyChooseData.map((item, index) => (
+                  <div
+                    className="col-md-6"
+                    key={item.id}
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 100}
+                  >
                     <div className="nxWhy__feature">
                       <div className="nxWhy__icon">
                         <i className={item.icon}></i>
@@ -481,32 +463,30 @@ const Services = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-        BEFORE VS AFTER
-=====================================================*/}
 
       <section className="nxTransformation">
         <div className="container">
           <div className="nxTransformation__heading">
-            <span>DIGITAL TRANSFORMATION</span>
+            <span data-aos="fade-up">DIGITAL TRANSFORMATION</span>
 
-            <h2>
+            <h2 data-aos="fade-up">
               Transform Your Business
               <br />
               From Ordinary To Outstanding
             </h2>
 
-            <p>
+            <p data-aos="fade-up">
               We don't just create websites. We transform how customers perceive
               your business online.
             </p>
           </div>
 
           <div className="row g-5 align-items-center">
-            {/* BEFORE */}
-
             <div className="col-lg-6">
-              <div className="nxTransformation__card beforeCard">
+              <div
+                className="nxTransformation__card beforeCard"
+                data-aos="fade-up"
+              >
                 <div className="nxTransformation__label">BEFORE</div>
 
                 <div className="nxTransformation__icon">
@@ -546,11 +526,11 @@ const Services = () => {
                 </ul>
               </div>
             </div>
-
-            {/* AFTER */}
-
             <div className="col-lg-6">
-              <div className="nxTransformation__card afterCard">
+              <div
+                className="nxTransformation__card afterCard"
+                data-aos="fade-up"
+              >
                 <div className="nxTransformation__label success">AFTER</div>
 
                 <div className="nxTransformation__icon">
@@ -593,26 +573,28 @@ const Services = () => {
           </div>
         </div>
       </section>
-      {/*====================================================
-        EVERYTHING INCLUDED
-=====================================================*/}
 
       <section className="nxFeatureGrid">
         <div className="container">
           <div className="nxFeatureGrid__heading">
-            <span>INCLUDED FEATURES</span>
+            <span data-aos="fade-up">INCLUDED FEATURES</span>
 
-            <h2>Everything Your Website Needs To Succeed</h2>
+            <h2 data-aos="fade-up">Everything Your Website Needs To Succeed</h2>
 
-            <p>
+            <p data-aos="fade-up">
               Every project includes premium features designed to improve
               performance, security and customer experience.
             </p>
           </div>
 
           <div className="row g-4">
-            {featuresGridData.map((feature) => (
-              <div className="col-xl-3 col-lg-4 col-md-6" key={feature.id}>
+            {featuresGridData.map((feature, index) => (
+              <div
+                className="col-xl-3 col-lg-4 col-md-6"
+                key={feature.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <div className="nxFeatureGrid__card">
                   <div className="nxFeatureGrid__icon">
                     <i className={feature.icon}></i>
@@ -628,15 +610,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/*====================================================
-                PREMIUM CTA
-=====================================================*/}
-
       <section className="nxPremiumCta">
         <div className="container">
-          <div className="nxPremiumCta__wrapper">
-            {/* Floating Shapes */}
-
+          <div className="nxPremiumCta__wrapper" data-aos="fade-up">
             <span className="nxPremiumCta__shape shapeOne"></span>
 
             <span className="nxPremiumCta__shape shapeTwo"></span>
@@ -644,8 +620,6 @@ const Services = () => {
             <span className="nxPremiumCta__shape shapeThree"></span>
 
             <div className="row align-items-center">
-              {/* LEFT */}
-
               <div className="col-lg-7">
                 <div className="nxPremiumCta__content">
                   <span className="nxPremiumCta__tag">
@@ -707,29 +681,43 @@ const Services = () => {
                 </div>
               </div>
 
-              {/* RIGHT */}
-
               <div className="col-lg-5">
                 <div className="nxPremiumCta__dashboard">
-                  <div className="nxPremiumCta__card">
+                  <div
+                    className="nxPremiumCta__card"
+                    data-aos="zoom-in"
+                    data-aos-delay="200"
+                  >
                     <h3>100%</h3>
 
                     <span>Responsive Design</span>
                   </div>
 
-                  <div className="nxPremiumCta__card">
+                  <div
+                    className="nxPremiumCta__card"
+                    data-aos="zoom-in"
+                    data-aos-delay="400"
+                  >
                     <h3>24/7</h3>
 
                     <span>Client Support</span>
                   </div>
 
-                  <div className="nxPremiumCta__card">
+                  <div
+                    className="nxPremiumCta__card"
+                    data-aos="zoom-in"
+                    data-aos-delay="600"
+                  >
                     <h3>SEO</h3>
 
                     <span>Optimized Structure</span>
                   </div>
 
-                  <div className="nxPremiumCta__card">
+                  <div
+                    className="nxPremiumCta__card"
+                    data-aos="zoom-in"
+                    data-aos-delay="800"
+                  >
                     <h3>Fast</h3>
 
                     <span>Loading Performance</span>

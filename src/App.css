@@ -22,7 +22,8 @@
 .nx-testimonial-heading,
 .nx-cta-content,
 .nxTransformation__heading,
-.nxFeatureGrid__heading {
+.nxFeatureGrid__heading,
+.terms-final-card {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -61,7 +62,8 @@
 .browserTag,
 .nxTransformation__heading span,
 .nxFeatureGrid__heading span,
-.pricingHeroSEOHeader span {
+.pricingHeroSEOHeader span,
+.terms-final-card span {
   display: inline-block;
   padding: 0.8rem 1.8rem;
   border-radius: 5rem;
@@ -97,7 +99,8 @@
 .nx-cta-content h2,
 .nxTransformation__heading h2,
 .nxFeatureGrid__heading h2,
-.pricingHeroSEOHeader h2 {
+.pricingHeroSEOHeader h2,
+.terms-final-card h2 {
   font-size: 2rem;
   font-weight: 900;
   color: #111827;
@@ -122,7 +125,8 @@
 .nx-testimonial-heading p,
 .nxTransformation__heading p,
 .nxFeatureGrid__heading p,
-.pricingHeroSEOHeader p {
+.pricingHeroSEOHeader p,
+.terms-final-card p {
   color: #64748b;
   line-height: 2rem;
   font-size: 1.05rem;

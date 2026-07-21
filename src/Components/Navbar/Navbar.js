@@ -7,7 +7,6 @@ import { phoneNumber } from "../../Data/BrandData";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
   const [sticky, setSticky] = useState(false);
-  // const [serviceDrop, setServiceDrop] = useState(false);
   const { pathname, hash } = useLocation();
 
   const { refreshWebsiteData } = useAppData();
@@ -52,18 +51,12 @@ export default function Navbar() {
       <header className={sticky ? "navbar-area sticky" : "navbar-area"}>
         <div className="container">
           <nav className="navbar-main">
-            {/* Logo */}
-
             <Link to="/" className="logo">
               <img
                 src={require("./../../Assets/NexGen_Web_Designs_Finla_Light_Logo_With_Background.png")}
                 alt="NexGen Web Designs"
               />
-
-              {/* <span>NexGen</span> */}
             </Link>
-
-            {/* Desktop Menu */}
 
             <ul className={menu ? "nav-links active" : "nav-links"}>
               <li>
@@ -95,13 +88,9 @@ export default function Navbar() {
               </li>
             </ul>
 
-            {/* CTA */}
-
             <Link to={`tel:${phoneNumber}`} className="contact-btn">
               Let's Talk <i className="fa-solid fa-arrow-right-long ms-3"></i>
             </Link>
-
-            {/* Mobile */}
 
             <button className="mobile-btn" onClick={() => setMenu(!menu)}>
               {menu ? (

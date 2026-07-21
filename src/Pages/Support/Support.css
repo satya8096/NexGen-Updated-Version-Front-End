@@ -1,17 +1,8 @@
-/* ==========================================================
-   SUPPORT PAGE
-   NexGen Web Designs
-========================================================== */
-
 .support-page {
   background: #f8fafc;
   overflow: hidden;
   color: #111827;
 }
-
-/* ==========================================================
-   HERO
-========================================================== */
 
 .support-hero {
   position: relative;
@@ -19,8 +10,6 @@
   overflow: hidden;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 }
-
-/* Grid */
 
 .support-grid {
   position: absolute;
@@ -34,8 +23,6 @@
 
   mask-image: linear-gradient(to bottom, black, transparent);
 }
-
-/* Blur */
 
 .support-blur {
   position: absolute;
@@ -63,10 +50,6 @@
   bottom: -120px;
 }
 
-/* ==========================================================
-   Layout
-========================================================== */
-
 .support-wrapper {
   position: relative;
   z-index: 5;
@@ -77,10 +60,6 @@
 
   gap: 70px;
 }
-
-/* ==========================================================
-   LEFT
-========================================================== */
 
 .support-live {
   display: inline-flex;
@@ -116,7 +95,6 @@
 }
 
 .support-left h1 {
-  /* font-size: clamp(50px, 7vw, 74px); */
   font-size: 2rem;
 
   line-height: 1.8;
@@ -141,10 +119,6 @@
 
   max-width: 650px;
 }
-
-/* ==========================================================
-   SEARCH
-========================================================== */
 
 .support-search {
   display: flex;
@@ -200,10 +174,6 @@
   cursor: pointer;
 }
 
-/* ==========================================================
-   BUTTONS
-========================================================== */
-
 .support-buttons {
   display: flex;
 
@@ -246,10 +216,6 @@
 
   border: 2px solid #6c63ff;
 }
-
-/* ==========================================================
-   DASHBOARD
-========================================================== */
 
 .support-dashboard {
   background: #fff;
@@ -298,10 +264,6 @@
 
   font-weight: 700;
 }
-
-/* ==========================================================
-   SUPPORT CARDS
-========================================================== */
 
 .support-card-list {
   display: flex;
@@ -358,10 +320,6 @@
   color: #64748b;
 }
 
-/* ==========================================================
-   STATS
-========================================================== */
-
 .support-stats {
   display: grid;
 
@@ -399,10 +357,6 @@
 
   font-size: 14px;
 }
-
-/* ==========================================================
-   QUICK ACTIONS
-========================================================== */
 
 .support-actions {
   padding: 2rem 0;
@@ -475,13 +429,6 @@
   cursor: pointer;
 }
 
-/* =============================================================== */
-/* ==========================================================
-   PREMIUM ANIMATIONS
-========================================================== */
-
-/* Floating Dashboard */
-
 .support-dashboard {
   animation: dashboardFloat 8s ease-in-out infinite;
 }
@@ -499,8 +446,6 @@
     transform: translateY(0px);
   }
 }
-
-/* Floating Support Cards */
 
 .card-1 {
   animation: cardFloatOne 6s ease-in-out infinite;
@@ -547,8 +492,6 @@
   }
 }
 
-/* Live Dot Pulse */
-
 .live-dot {
   animation: pulseLive 1.8s infinite;
 }
@@ -572,8 +515,6 @@
     box-shadow: 0 0 0 rgba(34, 197, 94, 0);
   }
 }
-
-/* Hero Blur Movement */
 
 .blur-one {
   animation: blurMoveOne 12s ease-in-out infinite;
@@ -611,8 +552,6 @@
   }
 }
 
-/* Search Box */
-
 .support-search {
   transition: 0.35s;
 }
@@ -621,17 +560,6 @@
   border-color: #6c63ff;
 
   box-shadow: 0 20px 60px rgba(108, 99, 255, 0.15);
-}
-
-/* Buttons */
-
-.support-primary,
-.support-secondary {
-  transition:
-    transform 0.35s,
-    box-shadow 0.35s,
-    background 0.35s,
-    color 0.35s;
 }
 
 .support-primary:hover {
@@ -648,8 +576,6 @@
   transform: translateY(-6px);
 }
 
-/* Dashboard Cards */
-
 .support-info-card {
   transition: 0.35s;
 }
@@ -661,9 +587,6 @@
 
   box-shadow: 0 20px 45px rgba(108, 99, 255, 0.08);
 }
-
-/* Stats */
-
 .support-stats div {
   transition: 0.35s;
 }
@@ -673,8 +596,6 @@
 
   background: #fff;
 }
-
-/* Action Cards */
 
 .action-card {
   transition:
@@ -703,10 +624,6 @@
 .action-card:hover button {
   letter-spacing: 0.6px;
 }
-
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
 
 @media (max-width: 1200px) {
   .support-wrapper {
@@ -824,11 +741,6 @@
     padding: 28px;
   }
 }
-
-/* ============================================================== */
-/* =====================================================
-   SUPPORT SERVICES
-===================================================== */
 
 .support-services {
   padding: 2rem 0;
@@ -968,11 +880,6 @@
   }
 }
 
-/* ======================================================================= */
-/* ==========================================================
-   SUPPORT CONTACT SECTION
-========================================================== */
-
 .support-contact {
   padding: 2rem 0;
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
@@ -985,10 +892,6 @@
   align-items: start;
   margin-top: 70px;
 }
-
-/* ==========================================================
-   LEFT INFORMATION
-========================================================== */
 
 .support-form-info {
   display: flex;
@@ -1038,10 +941,6 @@
   line-height: 1.8;
 }
 
-/* ==========================================================
-   FORM CARD
-========================================================== */
-
 .support-form-card {
   position: relative;
   background: #fff;
@@ -1068,10 +967,6 @@
   z-index: 2;
 }
 
-/* ==========================================================
-   GRID
-========================================================== */
-
 .support-grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1085,10 +980,6 @@
   gap: 24px;
   margin-bottom: 24px;
 }
-
-/* ==========================================================
-   FIELDS
-========================================================== */
 
 .support-field {
   display: flex;
@@ -1134,20 +1025,12 @@
   box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
 }
 
-/* ==========================================================
-   CHARACTER COUNTER
-========================================================== */
-
 .character-counter {
   margin-top: 10px;
   text-align: right;
   font-size: 13px;
   color: #6b7280;
 }
-
-/* ==========================================================
-   CHECKBOX
-========================================================== */
 
 .support-checkbox {
   display: flex;
@@ -1168,10 +1051,6 @@
   line-height: 1.8;
   cursor: pointer;
 }
-
-/* ==========================================================
-   SUBMIT BUTTON
-========================================================== */
 
 .support-submit {
   margin-top: 35px;
@@ -1206,10 +1085,6 @@
 .support-submit button:hover i {
   transform: translateX(5px);
 }
-
-/* ==========================================================
-   RESPONSIVE
-========================================================== */
 
 @media (max-width: 1200px) {
   .support-form-wrapper {
@@ -1267,10 +1142,6 @@
     padding: 14px 16px;
   }
 }
-
-/* ============================================================= */
-/*========================*/
-
 .error-text {
   margin-top: 8px;
 
@@ -1288,10 +1159,6 @@
 
   transform: none;
 }
-/* ================================================================== */
-/*==================================================
-SUPPORT PROCESS
-==================================================*/
 
 .support-process {
   padding: 2rem 0;
@@ -1430,11 +1297,6 @@ SUPPORT PROCESS
     grid-template-columns: 1fr;
   }
 }
-
-/* ============================================================ */
-/*==================================================
-KNOWLEDGE CENTER
-==================================================*/
 
 .knowledge-center {
   padding: 2rem 0;
@@ -1604,11 +1466,6 @@ KNOWLEDGE CENTER
     grid-template-columns: 1fr;
   }
 }
-
-/* ================================================================ */
-/*==================================================
-SUPPORT PROMISE
-==================================================*/
 
 .support-promise {
   padding: 2rem 0;
@@ -1797,11 +1654,6 @@ SUPPORT PROMISE
   }
 }
 
-/* =================================================================== */
-/*==================================================
-FINAL SUPPORT CTA
-==================================================*/
-
 .support-final-cta {
   padding: 2rem 0;
 
@@ -1825,8 +1677,6 @@ FINAL SUPPORT CTA
 
   box-shadow: 0 35px 80px rgba(108, 99, 255, 0.25);
 }
-
-/*========================*/
 
 .support-circle {
   position: absolute;
@@ -1883,8 +1733,6 @@ FINAL SUPPORT CTA
   }
 }
 
-/*========================*/
-
 .support-final-content {
   position: relative;
 
@@ -1936,8 +1784,6 @@ FINAL SUPPORT CTA
 
   opacity: 0.95;
 }
-
-/*========================*/
 
 .support-final-buttons {
   display: flex;
@@ -1992,8 +1838,6 @@ FINAL SUPPORT CTA
   transform: translateY(-6px);
 }
 
-/*========================*/
-
 .support-response {
   display: grid;
 
@@ -2029,8 +1873,6 @@ FINAL SUPPORT CTA
 
   margin-top: 10px;
 }
-
-/*========================*/
 
 @media (max-width: 992px) {
   .support-response {
