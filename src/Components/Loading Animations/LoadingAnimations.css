@@ -3,7 +3,7 @@
   --text: #111827;
   --muted: #6b7280;
   --track: #e5e7eb;
-  --bg: #ffffff;
+  --bg: #fff;
 }
 
 * {
@@ -15,11 +15,9 @@
 .loader {
   position: fixed;
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: var(--bg);
   height: 100vh;
   z-index: 99999;
@@ -29,90 +27,66 @@
 
 .loader__content {
   width: min(90%, 420px);
-
   text-align: center;
-
   padding: 20px;
 }
 
 .loader__logo {
   width: 130px;
   max-width: 100%;
-
   margin-bottom: 24px;
-
   animation: floatLogo 3s ease-in-out infinite;
 }
 
 .loader__title {
   font-size: 2rem;
   font-weight: 700;
-
   color: var(--text);
-
   margin-bottom: 10px;
-
   letter-spacing: -0.5px;
 }
 
 .loader__tagline {
   color: var(--muted);
-
   font-size: 15px;
-
   margin-bottom: 34px;
 }
 
 .loader__progress {
   width: 100%;
   height: 4px;
-
   background: var(--track);
-
   border-radius: 999px;
-
   overflow: hidden;
 }
 
 .loader__progressFill {
   height: 100%;
-
   width: 0;
-
   border-radius: inherit;
-
   background: linear-gradient(90deg, #2563eb, #3b82f6);
-
   transition: width 0.25s linear;
-
   position: relative;
 }
 
 .loader__progressFill::after {
   content: "";
-
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.45),
+    rgb(255, 255, 255, 0.45),
     transparent
   );
-
   animation: shimmer 1.4s linear infinite;
 }
 
 .loader__message {
   margin-top: 22px;
-
   font-size: 15px;
-
   color: var(--muted);
-
   min-height: 22px;
-
   animation: fadeMessage 0.4s ease;
 }
 
@@ -121,7 +95,6 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-
   margin-top: 18px;
   margin-bottom: 16px;
 }
@@ -129,11 +102,8 @@
 .loader__dots span {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
-
   background: var(--primary);
-
   animation: dotBounce 1.4s infinite ease-in-out both;
 }
 
@@ -147,21 +117,15 @@
 
 .loader__percentage {
   display: block;
-
   font-size: 14px;
-
   font-weight: 600;
-
   color: var(--text);
-
   margin-bottom: 28px;
 }
 
 .loader__footer {
   font-size: 13px;
-
   color: var(--muted);
-
   letter-spacing: 0.3px;
 }
 
@@ -227,7 +191,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .loader__content {
     width: calc(100% - 40px);
   }
@@ -246,7 +210,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .loader__logo {
     width: 95px;
   }
@@ -278,6 +242,6 @@
     --bg: #0f172a;
     --text: #f8fafc;
     --muted: #94a3b8;
-    --track: rgba(255, 255, 255, 0.12);
+    --track: rgb(255, 255, 255, 0.12);
   }
 }

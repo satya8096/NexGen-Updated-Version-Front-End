@@ -1,26 +1,18 @@
 .pricingHero {
   position: relative;
-
   padding: 10rem 0 2rem;
-
   overflow: hidden;
-
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  background: linear-gradient(180deg, #fff 0%, #f8fbff 100%);
 }
 
 .pricingGrid {
   position: absolute;
-
   inset: 0;
-
   background-image:
-    linear-gradient(rgba(109, 91, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(109, 91, 255, 0.05) 1px, transparent 1px);
-
+    linear-gradient(rgb(109, 91, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(109, 91, 255, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
-
   animation: gridMove 30s linear infinite;
-
   opacity: 0.8;
 }
 
@@ -36,39 +28,26 @@
 
 .pricingBlur {
   position: absolute;
-
   border-radius: 50%;
-
   filter: blur(90px);
-
   opacity: 0.35;
 }
 
 .blurOne {
   width: 420px;
-
   height: 420px;
-
   background: #6d5bff;
-
   top: -120px;
-
   left: -120px;
-
   animation: floatBlur 8s ease-in-out infinite;
 }
 
 .blurTwo {
   width: 380px;
-
   height: 380px;
-
   background: #00c2ff;
-
   right: -100px;
-
   bottom: -120px;
-
   animation: floatBlur 10s ease-in-out infinite reverse;
 }
 
@@ -88,47 +67,32 @@
 
 .shape {
   position: absolute;
-
   border-radius: 50%;
-
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   opacity: 0.08;
 }
 
 .shape.one {
   width: 80px;
-
   height: 80px;
-
   left: 12%;
-
   top: 22%;
-
   animation: shapeFloat 7s infinite ease-in-out;
 }
 
 .shape.two {
   width: 130px;
-
   height: 130px;
-
   right: 15%;
-
   top: 18%;
-
   animation: shapeFloat 10s infinite ease-in-out;
 }
 
 .shape.three {
   width: 55px;
-
   height: 55px;
-
   right: 28%;
-
   bottom: 18%;
-
   animation: shapeFloat 6s infinite ease-in-out;
 }
 
@@ -148,83 +112,56 @@
 
 .heroContent {
   position: relative;
-
   z-index: 2;
 }
 
 .heroBadge {
   display: inline-block;
-
   padding: 10px 24px;
-
   border-radius: 50px;
-
   background: #eef2ff;
-
   color: #6d5bff;
-
   font-weight: 700;
-
   margin-bottom: 25px;
 }
 
 .heroContent h1 {
   font-size: 2rem;
-
   font-weight: 900;
-
   line-height: 1.8;
-
   color: #111827;
-
   margin-bottom: 25px;
 }
 
 .heroContent h1 span {
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
 }
 
 .heroContent p {
   max-width: 650px;
-
   font-size: 19px;
-
   line-height: 34px;
-
   color: #64748b;
 }
 
 .heroTrust {
   display: flex;
-
   gap: 18px;
-
   flex-wrap: wrap;
-
   margin-top: 35px;
 }
 
 .heroTrust div {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   padding: 12px 22px;
-
   background: #fff;
-
   border-radius: 50px;
-
   border: 1px solid #eef2f7;
-
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05);
-
+  box-shadow: 0 15px 35px rgb(15, 23, 42, 0.05);
   font-weight: 600;
 }
 
@@ -234,60 +171,42 @@
 
 .pricingHeroCard {
   position: relative;
-
   z-index: 2;
-
   background: #fff;
-
   padding: 40px;
-
   border-radius: 30px;
-
   border: 1px solid #eef2f7;
-  box-shadow: 0 35px 80px rgba(15, 23, 42, 0.1);
+  box-shadow: 0 35px 80px rgb(15, 23, 42, 0.1);
 }
 
 .pricingHeroCard h5 {
   text-align: center;
-
   font-size: 22px;
-
   font-weight: 700;
-
   margin-bottom: 25px;
 }
 
 .currencySwitch {
   display: flex;
-
   background: #f1f5f9;
-
   border-radius: 60px;
-
   padding: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.293);
+  border: 1px solid rgb(0, 0, 0, 0.293);
   margin-bottom: 35px;
 }
 
 .currencySwitch button {
   flex: 1;
-
   border: none;
-
   background: transparent;
-
   padding: 14px;
-
   border-radius: 60px;
-
   font-weight: 700;
-
   transition: 0.3s;
 }
 
 .activeCurrency {
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   color: #16a34a;
 }
 
@@ -301,57 +220,43 @@
 
 .startingPrice h2 {
   font-size: 64px;
-
   font-weight: 900;
-
   margin: 15px 0;
-
   color: #111827;
 }
 
 .startingPrice p {
   color: #64748b;
-
   line-height: 28px;
 }
 
 .miniStats {
   margin-top: 40px;
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 15px;
 }
 
 .miniStats div {
   text-align: center;
-
   padding: 18px;
-
   border-radius: 18px;
-
   background: #f8fafc;
 }
 
 .miniStats h3 {
   font-size: 30px;
-
   font-weight: 900;
-
   color: #6d5bff;
-
   margin-bottom: 5px;
 }
 
 .miniStats span {
   font-size: 14px;
-
   color: #64748b;
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .heroContent {
     text-align: center;
   }
@@ -377,7 +282,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .pricingHero {
     padding: 120px 0 70px;
   }
@@ -388,7 +293,6 @@
 
   .heroContent p {
     font-size: 16px;
-
     line-height: 30px;
   }
 
@@ -410,7 +314,6 @@
 
   .heroTrust {
     flex-direction: column;
-
     align-items: stretch;
   }
 
@@ -418,31 +321,27 @@
     justify-content: center;
   }
 }
+
 .pricing-cards-wrapper {
   justify-content: space-around;
   overflow: hidden;
-  padding: 3rem 0rem;
+  padding: 3rem 0;
   gap: 2rem;
   margin: 1rem;
 }
 
 .featureComparison {
   padding: 4rem 0;
-
   background: #fafbfd;
 }
 
 .comparisonTable {
   margin-top: 70px;
-
   overflow-x: auto;
   overflow-y: hidden;
-
   border-radius: 30px;
-
   background: #fff;
-
-  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 25px 60px rgb(15, 23, 42, 0.08);
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
@@ -456,39 +355,30 @@
   width: 100%;
   border-collapse: collapse;
 }
+
 .comparisonTable thead {
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
 }
 
 .comparisonTable thead th {
   color: #fff;
-
   padding: 24px;
-
   text-align: center;
-
   font-size: 18px;
-
   font-weight: 700;
 }
 
 .comparisonTable tbody td {
   padding: 22px;
-
   border-bottom: 1px solid #eef2f7;
-
   text-align: center;
-
   color: #475569;
-
   font-weight: 500;
 }
 
 .comparisonTable tbody td:first-child {
   text-align: left;
-
   font-weight: 700;
-
   color: #111827;
 }
 
@@ -498,7 +388,6 @@
 
 .comparisonTable i {
   color: #22c55e;
-
   font-size: 18px;
 }
 
@@ -525,35 +414,22 @@
 
 .offerCountdown {
   margin-top: 1rem;
-
   padding: 1rem;
-
   border-radius: 1rem;
-
   background: linear-gradient(135deg, #fff8ef, #fff4e3);
-
-  border: 1px solid rgba(255, 145, 0, 0.18);
+  border: 1px solid rgb(255, 145, 0, 0.18);
 }
 
 .offerCountdown__title {
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   gap: 0.5rem;
-
   font-size: 0.82rem;
-
   font-weight: 700;
-
   color: #ff6b00;
-
   margin-bottom: 0.8rem;
-
   text-transform: uppercase;
-
   letter-spacing: 0.06rem;
 }
 
@@ -563,33 +439,21 @@
 
 .offerCountdown__timer {
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   gap: 0.4rem;
 }
 
 .offerCountdown__box {
   width: 3.4rem;
-
   height: 3.4rem;
-
   display: flex;
-
   flex-direction: column;
-
   justify-content: center;
-
   align-items: center;
-
   border-radius: 0.8rem;
-
-  background: #ffffff;
-
-  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.08);
-
+  background: #fff;
+  box-shadow: 0 0.4rem 1rem rgb(0, 0, 0, 0.08);
   transition: 0.35s;
 }
 
@@ -599,31 +463,22 @@
 
 .offerCountdown__box span {
   font-size: 1.15rem;
-
   font-weight: 800;
-
   color: #ff5c35;
-
   line-height: 1;
 }
 
 .offerCountdown__box small {
   margin-top: 0.25rem;
-
   font-size: 0.62rem;
-
   font-weight: 600;
-
   color: #64748b;
-
   text-transform: uppercase;
 }
 
 .offerCountdown__separator {
   font-size: 1.4rem;
-
   font-weight: 700;
-
   color: #ff5c35;
 }
 
@@ -641,14 +496,13 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .offerCountdown {
     padding: 0.8rem;
   }
 
   .offerCountdown__box {
     width: 2.9rem;
-
     height: 2.9rem;
   }
 
@@ -667,89 +521,63 @@
 
 .mobilePlanCard {
   background: #fff;
-
   border-radius: 24px;
-
   padding: 30px;
-
   margin-bottom: 25px;
-
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 20px 50px rgb(15, 23, 42, 0.08);
 }
 
 .mobilePlanCard h3 {
   font-size: 28px;
-
   font-weight: 800;
-
   margin-bottom: 10px;
 }
 
 .mobilePlanCard h2 {
   font-size: 42px;
-
   font-weight: 900;
-
   color: #6d5bff;
-
   margin-bottom: 25px;
 }
 
 .mobilePlanCard ul {
   list-style: none;
-
   padding: 0;
-
   margin: 0;
 }
 
 .mobilePlanCard li {
   display: flex;
-
   align-items: flex-start;
-
   gap: 12px;
-
   margin-bottom: 16px;
-
   color: #475569;
 }
 
 .mobilePlanCard li i {
   color: #22c55e;
-
   margin-top: 4px;
 }
 
 .mobilePlanBtn {
   display: block;
-
   text-align: center;
-
   margin-top: 30px;
-
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   color: #fff;
-
   text-decoration: none;
-
   padding: 15px;
-
   border-radius: 50px;
-
   font-weight: 700;
-
   transition: 0.35s;
 }
 
 .mobilePlanBtn:hover {
   color: #fff;
-
   transform: translateY(-3px);
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .comparisonTable {
     display: none;
   }
@@ -765,43 +593,30 @@
 
 .developmentProcess {
   padding: 3rem 0;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .timeline {
   position: relative;
-
   max-width: 1100px;
-
   margin: 80px auto 0;
 }
 
 .timelineLine {
   position: absolute;
-
   left: 50%;
-
   top: 0;
-
   transform: translateX(-50%);
-
   width: 4px;
-
   height: 100%;
-
   border-radius: 20px;
-
   background: linear-gradient(180deg, #6d5bff, #00c2ff);
 }
 
 .timelineItem {
   width: 50%;
-
   position: relative;
-
   margin-bottom: 70px;
 }
 
@@ -811,117 +626,75 @@
 
 .timelineItem.right {
   margin-left: 50%;
-
   padding-left: 70px;
 }
 
 .timelineCard {
   background: #fff;
-
   border-radius: 28px;
-
   padding: 35px;
-
   position: relative;
-
   border: 1px solid #eef2f7;
-
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
-
+  box-shadow: 0 20px 50px rgb(15, 23, 42, 0.08);
   transition: 0.35s;
 }
 
 .timelineCard:hover {
   transform: translateY(-8px);
-
-  box-shadow: 0 30px 70px rgba(109, 91, 255, 0.15);
+  box-shadow: 0 30px 70px rgb(109, 91, 255, 0.15);
 }
 
 .timelineNumber {
   position: absolute;
-
   top: -18px;
-
   right: 25px;
-
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   color: #fff;
-
   width: 55px;
-
   height: 55px;
-
   border-radius: 50%;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   font-weight: 800;
-
   font-size: 18px;
 }
 
 .timelineIcon {
   width: 75px;
-
   height: 75px;
-
   border-radius: 22px;
-
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   color: #fff;
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   font-size: 28px;
-
   margin-bottom: 25px;
 }
 
 .timelineCard h4 {
   font-size: 28px;
-
   font-weight: 800;
-
   margin-bottom: 15px;
 }
 
 .timelineCard p {
   color: #64748b;
-
   line-height: 30px;
-
   margin: 0;
 }
 
 .timelineItem::before {
   content: "";
-
   position: absolute;
-
   top: 45px;
-
   width: 22px;
-
   height: 22px;
-
   border-radius: 50%;
-
   background: #6d5bff;
-
   border: 5px solid #fff;
-
-  box-shadow: 0 0 0 6px rgba(109, 91, 255, 0.15);
-
+  box-shadow: 0 0 0 6px rgb(109, 91, 255, 0.15);
   z-index: 5;
 }
 
@@ -933,29 +706,25 @@
   left: -11px;
 }
 
-@media (max-width: 991px) {
+@media (width <= 991px) {
   .timelineLine {
     left: 25px;
   }
 
   .timelineItem {
     width: 100%;
-
     padding-left: 70px !important;
-
     padding-right: 0 !important;
-
     margin-left: 0 !important;
   }
 
   .timelineItem::before {
     left: 14px !important;
-
     right: auto;
   }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
   .developmentProcess {
     padding: 90px 0;
   }
@@ -970,72 +739,51 @@
 
   .timelineIcon {
     width: 65px;
-
     height: 65px;
-
     font-size: 24px;
   }
 
   .timelineNumber {
     width: 45px;
-
     height: 45px;
-
     font-size: 16px;
   }
 }
 
 .pricingFaq {
   padding: 140px 0;
-
   background: #f8fafc;
 }
 
 .faqWrapper {
   max-width: 900px;
-
   margin: 70px auto 0;
 }
 
 .faqCard {
   background: #fff;
-
   border-radius: 20px;
-
   margin-bottom: 20px;
-
   overflow: hidden;
-
   border: 1px solid #eef2f7;
-
   transition: 0.35s;
 }
 
 .activeFaq {
-  box-shadow: 0 25px 50px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 25px 50px rgb(15, 23, 42, 0.08);
 }
 
 .faqQuestion {
   width: 100%;
-
   border: none;
-
   background: none;
-
   padding: 28px 30px;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   cursor: pointer;
-
   font-size: 19px;
-
   font-weight: 700;
-
   text-align: left;
 }
 
@@ -1045,9 +793,7 @@
 
 .faqAnswer {
   max-height: 0;
-
   overflow: hidden;
-
   transition: 0.4s;
 }
 
@@ -1057,9 +803,7 @@
 
 .faqAnswer p {
   padding: 0 30px 30px;
-
   color: #64748b;
-
   line-height: 30px;
 }
 
@@ -1069,142 +813,97 @@
 
 .ctaBox {
   background: linear-gradient(135deg, #6d5bff, #00c2ff);
-
   color: #fff;
-
   border-radius: 35px;
-
   padding: 90px 60px;
-
   text-align: center;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .ctaBox::before {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.15) 2px,
+    rgb(255, 255, 255, 0.15) 2px,
     transparent 2px
   );
-
   background-size: 35px 35px;
-
   opacity: 0.4;
 }
 
 .ctaBox > * {
   position: relative;
-
   z-index: 2;
 }
 
 .ctaBox span {
   display: inline-block;
-
   padding: 12px 24px;
-
   border-radius: 40px;
-
-  background: rgba(255, 255, 255, 0.15);
-
+  background: rgb(255, 255, 255, 0.15);
   margin-bottom: 25px;
-
   font-weight: 700;
 }
 
 .ctaBox h2 {
   font-size: 2rem;
-
   font-weight: 900;
-
   margin-bottom: 25px;
 }
 
 .ctaBox p {
   max-width: 720px;
-
   margin: auto;
-
   line-height: 34px;
-
   font-size: 19px;
 }
 
 .ctaButtons {
   margin-top: 45px;
-
   display: flex;
-
   justify-content: center;
-
   gap: 20px;
-
   flex-wrap: wrap;
 }
 
 .ctaPrimary {
   background: #fff;
-
   color: #111827;
-
   text-decoration: none;
-
   padding: 18px 34px;
-
   border-radius: 50px;
-
   font-weight: 700;
-
   display: flex;
-
   align-items: center;
-
   gap: 12px;
 }
 
 .ctaSecondary {
-  border: 2px solid rgba(255, 255, 255, 0.4);
-
+  border: 2px solid rgb(255, 255, 255, 0.4);
   color: #fff;
-
   text-decoration: none;
-
   padding: 18px 34px;
-
   border-radius: 50px;
-
   font-weight: 700;
 }
 
 .ctaBottom {
   margin-top: 55px;
-
   display: flex;
-
   justify-content: center;
-
   gap: 40px;
-
   flex-wrap: wrap;
 }
 
 .ctaBottom div {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .pricingFaq {
     padding: 90px 0;
   }
@@ -1223,20 +922,17 @@
 
   .ctaBox p {
     font-size: 16px;
-
     line-height: 30px;
   }
 
   .ctaPrimary,
   .ctaSecondary {
     width: 100%;
-
     justify-content: center;
   }
 
   .faqQuestion {
     font-size: 17px;
-
     padding: 22px;
   }
 }
