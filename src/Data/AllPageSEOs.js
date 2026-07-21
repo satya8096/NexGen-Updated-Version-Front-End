@@ -1,37 +1,37 @@
 import { Helmet } from "react-helmet";
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: "Web Design Portfolio - NexGen Web Designs",
-  url: "https://nexgenwebdesigns.com/portfolio",
-  description:
-    "Explore NexGen Web Designs' custom website portfolio featuring responsive, SEO-optimized projects for businesses across Hyderabad and Andhra Pradesh. See how we turn client ideas into high-performance digital solutions.",
-  mainEntity: {
-    "@type": "WebPageElement",
-    name: "Portfolio Showcase",
-    url: "https://nexgenwebdesigns.com/portfolio",
-    about: {
-      "@type": "LocalBusiness",
-      name: "NexGen Web Designs",
-      address: {
-        "@type": "PostalAddress",
-        addressRegion: "Telangana",
-        addressLocality: "Hyderabad",
-      },
-      areaServed: [
-        {
-          "@type": "Place",
-          name: "Hyderabad",
-        },
-        {
-          "@type": "Place",
-          name: "Andhra Pradesh",
-        },
-      ],
-      url: "https://nexgenwebdesigns.com",
-    },
-  },
-};
+// const jsonLd = {
+//   "@context": "https://schema.org",
+//   "@type": "CollectionPage",
+//   name: "Web Design Portfolio - NexGen Web Designs",
+//   url: "https://nexgenwebdesigns.com/portfolio",
+//   description:
+//     "Explore NexGen Web Designs' custom website portfolio featuring responsive, SEO-optimized projects for businesses across Hyderabad and Andhra Pradesh. See how we turn client ideas into high-performance digital solutions.",
+//   mainEntity: {
+//     "@type": "WebPageElement",
+//     name: "Portfolio Showcase",
+//     url: "https://nexgenwebdesigns.com/portfolio",
+//     about: {
+//       "@type": "LocalBusiness",
+//       name: "NexGen Web Designs",
+//       address: {
+//         "@type": "PostalAddress",
+//         addressRegion: "Telangana",
+//         addressLocality: "Hyderabad",
+//       },
+//       areaServed: [
+//         {
+//           "@type": "Place",
+//           name: "Hyderabad",
+//         },
+//         {
+//           "@type": "Place",
+//           name: "Andhra Pradesh",
+//         },
+//       ],
+//       url: "https://nexgenwebdesigns.com",
+//     },
+//   },
+// };
 
 export const HomePageSEO = (
   <Helmet>

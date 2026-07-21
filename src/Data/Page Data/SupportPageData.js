@@ -1,9 +1,4 @@
-import {
-  emailAddress,
-  phoneNumber,
-  whatsappLink1,
-  whatsappSupportLink,
-} from "../BrandData";
+import { emailAddress, phoneNumber, whatsappSupportLink } from "../BrandData";
 
 export const supportCards = [
   {

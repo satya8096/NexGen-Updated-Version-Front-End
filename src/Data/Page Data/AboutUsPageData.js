@@ -7,7 +7,6 @@ import {
   whatsappLink1,
 } from "../BrandData";
 
-// Ou Mission data
 export const missionData = [
   {
     id: 1,

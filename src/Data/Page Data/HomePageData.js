@@ -131,7 +131,6 @@ export const reviews = [
   },
   {
     profilePic: require("./../../Assets/Testmonial_User_Profile_Icon.jpg"),
-    name: "Rajesh Bodapati",
     name: "V Dileep Kumar",
     rating: 5,
     projectTitle: "Portfolio Website",
@@ -141,7 +140,6 @@ export const reviews = [
   },
   {
     profilePic: require("./../../Assets/Testmonial_User_Profile_Icon.jpg"),
-    name: "Rajesh Bodapati",
     name: "Ch Nagendra",
     rating: 5,
     projectTitle: "Agency",
@@ -151,7 +149,6 @@ export const reviews = [
   },
   {
     profilePic: require("./../../Assets/Testmonial_User_Profile_Icon.jpg"),
-    name: "Rajesh Bodapati",
     name: "Ch Satyanarayana",
     rating: 4.5,
     projectTitle: "Portfolio Website",
@@ -161,7 +158,6 @@ export const reviews = [
   },
   {
     profilePic: require("./../../Assets/Testmonial_User_Profile_Icon.jpg"),
-    name: "Rajesh Bodapati",
     name: "Ram Kumar",
     rating: 5,
     projectTitle: "Digital Solutions",

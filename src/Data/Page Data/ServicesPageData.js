@@ -373,7 +373,7 @@ export const servicesData = [
   },
 ];
 
-export const  industriesData = [
+export const industriesData = [
   {
     id: 1,
     title: "Web Development",
